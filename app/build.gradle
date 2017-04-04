@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+// RxBinding Butter Knife
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "hk.collaction.contentfarmblocker"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 100102
+        versionName "Herbicide I"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
+    }
+}
+
+dependencies {
+    // Google Android Support
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:preference-v14:25.3.0'
+
+    // RxBinding Butter Knife
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+
+    // Material Dialog
+    compile 'com.afollestad.material-dialogs:core:0.9.2.2'
+
+    // Roboto TextView
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+
+    // Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}

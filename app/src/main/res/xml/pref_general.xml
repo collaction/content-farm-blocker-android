@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="設定">
+
+    <PreferenceCategory android:title="一般">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_enable"
+            android:summaryOn="如啟用檢查器，請於下方選擇預設瀏覽器。"
+            android:title="啟用檢查器"/>
+
+        <Preference
+            android:key="pref_browser"
+            android:title="預設瀏覽器"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_short_url_checking"
+            android:summaryOff="不會檢查短網址的轉向網址。"
+            android:summaryOn="檢查短網址的轉向網址，支援 goo.gl 及 bit.ly。"
+            android:title="啟用短網址檢查"/>
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="pref_previous_app_detect"
+            android:title="啟用程式切換兼容（測試版）"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="關於">
+
+        <Preference
+            android:key="pref_rate"
+            android:summary="⭐️⭐️⭐️⭐️⭐️"
+            android:title="給予評分"/>
+
+        <Preference
+            android:key="pref_share"
+            android:summary="擋下內容農場網站，人人有責任，分享給你身邊的朋友吧！"
+            android:title="分享此程式"/>
+
+        <Preference
+            android:key="pref_author"
+            android:summary="查看其他 Collaction 開發的程式。"
+            android:title="更多程式"/>
+
+        <Preference
+            android:key="pref_report"
+            android:summary="糟了，我們要找滅蟲公司。🐛️"
+            android:title="回報問題"/>
+
+        <Preference
+            android:key="pref_version"
+            android:title="版本"/>
+    </PreferenceCategory>
+</PreferenceScreen>

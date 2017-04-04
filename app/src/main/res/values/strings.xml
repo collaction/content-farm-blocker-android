@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ui_okay">確定</string>
+    <string name="ui_cancel">取消</string>
+    <string name="ui_share">分享</string>
+    <string name="ui_error">錯誤</string>
+    <string name="ui_na">無法剖析</string>
+    <string name="ui_loading">載入中…</string>
+
+    <string name="app_name">內容農場檢查器</string>
+    <string name="title_activity_main">內容農場檢查器</string>
+</resources>

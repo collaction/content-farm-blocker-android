@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/farm_warning_icon"/>
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="警告"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:typeface="roboto_bold"/>
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="你正準備進入內容農場網站"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:typeface="roboto_regular"/>
+
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/domainTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="已列在內容農場監視名單之中，因此作出此提示。"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:typeface="roboto_regular"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.devspark.robototextview.widget.RobotoButton
+                android:id="@+id/backButton"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:paddingTop="20dp"
+                android:text="離開"
+                android:theme="@style/GreenButton"
+                app:typeface="roboto_regular"/>
+
+            <com.devspark.robototextview.widget.RobotoButton
+                android:id="@+id/goButton"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="繼續前往"
+                android:theme="@style/GrayButton"
+                app:typeface="roboto_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
