@@ -1,7 +1,5 @@
 # 內容農場檢查器 for Android
 
-## 這是什麼？
-
 ![alt](https://raw.githubusercontent.com/collaction/ContentFarmDetectorAndroid/master/google-cover.png)
 
 「內容農場檢查器 for Android」是 Collaction Open Source 系列的項目。安裝後只要選擇「內容農場檢查器」作為預設瀏覽器，打開內容農場時作出提示，避免假新聞、低品質文章污染你的思維。
