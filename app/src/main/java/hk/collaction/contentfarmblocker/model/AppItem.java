@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.model;
+package hk.collaction.contentfarmblocker.model;
 
 import android.graphics.drawable.Drawable;
 

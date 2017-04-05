@@ -8,10 +8,9 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "hk.collaction.contentfarmblocker"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 100102
+        versionCode 100103
         versionName "Herbicide I"
     }
     buildTypes {

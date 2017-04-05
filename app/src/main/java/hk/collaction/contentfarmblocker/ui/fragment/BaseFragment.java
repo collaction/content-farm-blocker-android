@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.fragment;
+package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;

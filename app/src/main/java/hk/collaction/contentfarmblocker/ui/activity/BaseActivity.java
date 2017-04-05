@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.activity;
+package hk.collaction.contentfarmblocker.ui.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -7,7 +7,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import hk.collaction.contentfarmdetector.C;
+import hk.collaction.contentfarmblocker.C;
 
 /**
  * Created by himphen on 21/5/16.

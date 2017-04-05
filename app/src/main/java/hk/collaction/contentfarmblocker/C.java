@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector;
+package hk.collaction.contentfarmblocker;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import hk.collaction.contentfarmdetector.ui.activity.MainActivity;
+import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
 
 public class C extends Util {
 

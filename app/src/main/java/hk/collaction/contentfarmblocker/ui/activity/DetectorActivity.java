@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.activity;
+package hk.collaction.contentfarmblocker.ui.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
-import hk.collaction.contentfarmdetector.C;
+import hk.collaction.contentfarmblocker.C;
 
 public class DetectorActivity extends BaseActivity {
 

@@ -9,7 +9,7 @@
 ![alt](https://raw.githubusercontent.com/collaction/ContentFarmDetectorAndroid/master/Screen001.jpg)
 
 Android App 下載：
-https://play.google.com/store/apps/details?id=hk.collaction.contentfarmdetector
+https://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker
 
 ## 關於我們
 

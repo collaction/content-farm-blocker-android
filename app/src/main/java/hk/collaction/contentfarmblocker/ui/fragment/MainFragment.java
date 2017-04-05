@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.fragment;
+package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.annotation.TargetApi;
 import android.content.ComponentName;
@@ -23,11 +23,11 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import java.util.ArrayList;
 import java.util.List;
 
-import hk.collaction.contentfarmdetector.C;
-import hk.collaction.contentfarmdetector.R;
-import hk.collaction.contentfarmdetector.model.AppItem;
-import hk.collaction.contentfarmdetector.ui.activity.DetectorActivity;
-import hk.collaction.contentfarmdetector.ui.adapter.AppItemAdapter;
+import hk.collaction.contentfarmblocker.C;
+import hk.collaction.contentfarmblocker.R;
+import hk.collaction.contentfarmblocker.model.AppItem;
+import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
+import hk.collaction.contentfarmblocker.ui.adapter.AppItemAdapter;
 
 public class MainFragment extends BasePreferenceFragment {
 
@@ -126,7 +126,7 @@ public class MainFragment extends BasePreferenceFragment {
 		findPreference("pref_rate").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
-				Uri uri = Uri.parse("market://details?id=hk.collaction.contentfarmdetector");
+				Uri uri = Uri.parse("market://details?id=hk.collaction.contentfarmblocker");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 				startActivity(intent);
 				return false;
@@ -139,7 +139,7 @@ public class MainFragment extends BasePreferenceFragment {
 				Intent intent = new Intent();
 				intent.setAction(Intent.ACTION_SEND);
 				intent.putExtra(Intent.EXTRA_TEXT, "擋下內容農場網站，你我有責任，快下載「內容農場檢查器」Android App！！" +
-						"\n\nhttps://play.google.com/store/apps/details?id=hk.collaction.contentfarmdetector");
+						"\n\nhttps://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker");
 				intent.setType("text/plain");
 				startActivity(Intent.createChooser(intent, "分享此程式"));
 

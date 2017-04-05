@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.activity;
+package hk.collaction.contentfarmblocker.ui.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.support.v7.widget.Toolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import hk.collaction.contentfarmdetector.C;
-import hk.collaction.contentfarmdetector.R;
-import hk.collaction.contentfarmdetector.ui.fragment.BlockerFragment;
+import hk.collaction.contentfarmblocker.C;
+import hk.collaction.contentfarmblocker.R;
+import hk.collaction.contentfarmblocker.ui.fragment.BlockerFragment;
 
 public class BlockerActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.adapter;
+package hk.collaction.contentfarmblocker.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -15,8 +15,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import hk.collaction.contentfarmdetector.R;
-import hk.collaction.contentfarmdetector.model.AppItem;
+import hk.collaction.contentfarmblocker.R;
+import hk.collaction.contentfarmblocker.model.AppItem;
 
 /**
  * Created by himphen on 25/5/16.

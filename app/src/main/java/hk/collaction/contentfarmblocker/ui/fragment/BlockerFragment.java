@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector.ui.fragment;
+package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,8 +13,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnLongClick;
 import butterknife.OnTouch;
-import hk.collaction.contentfarmdetector.C;
-import hk.collaction.contentfarmdetector.R;
+import hk.collaction.contentfarmblocker.C;
+import hk.collaction.contentfarmblocker.R;
 
 /**
  * BlockerFragment detect the urlString

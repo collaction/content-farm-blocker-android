@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="hk.collaction.contentfarmdetector">
+          package="hk.collaction.contentfarmblocker">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission
@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="hk.collaction.contentfarmdetector.ui.activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name="hk.collaction.contentfarmdetector.ui.activity.DetectorActivity"
+            android:name=".ui.activity.DetectorActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@style/ThemeTranslucent">
@@ -43,7 +43,7 @@
         </activity>
 
         <activity
-            android:name="hk.collaction.contentfarmdetector.ui.activity.BlockerActivity"
+            android:name=".ui.activity.BlockerActivity"
             android:label="@string/app_name"
             android:noHistory="true">
         </activity>

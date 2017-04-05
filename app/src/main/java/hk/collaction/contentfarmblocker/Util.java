@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmdetector;
+package hk.collaction.contentfarmblocker;
 
 import android.content.Context;
 import android.content.SharedPreferences;
