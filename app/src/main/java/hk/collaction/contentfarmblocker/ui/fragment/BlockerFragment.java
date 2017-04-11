@@ -68,7 +68,6 @@ public class BlockerFragment extends BaseFragment {
 		View rootView = inflater.inflate(R.layout.fragment_blocker, container, false);
 		ButterKnife.bind(this, rootView);
 		return rootView;
-
 	}
 
 	@Override

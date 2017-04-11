@@ -79,7 +79,6 @@ public class MainFragment extends BasePreferenceFragment {
 			@Override
 			public boolean onPreferenceChange(Preference preference, Object newValue) {
 				toggleDefaultApp((boolean) newValue);
-
 				return true;
 			}
 		});
@@ -97,7 +96,6 @@ public class MainFragment extends BasePreferenceFragment {
 					isShowMeow = true;
 				}
 				preference.setSummary(preference.getSummary() + "\uD83D\uDC31");
-
 				return false;
 			}
 		});
@@ -133,6 +131,26 @@ public class MainFragment extends BasePreferenceFragment {
 			}
 		});
 
+		findPreference("pref_testing").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				Uri uri = Uri.parse("http://www.example-contentfarm.com");
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(intent);
+				return false;
+			}
+		});
+
+		findPreference("pref_report_work").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				Uri uri = Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScP-XrmmYs3hP_uYw1rF2lotOFzVfTFKJN_MGQDNL27lO2Pkg/viewform");
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(intent);
+				return false;
+			}
+		});
+
 		findPreference("pref_share").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
@@ -142,7 +160,6 @@ public class MainFragment extends BasePreferenceFragment {
 						"\n\nhttps://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker");
 				intent.setType("text/plain");
 				startActivity(Intent.createChooser(intent, "分享此程式"));
-
 				return false;
 			}
 		});
@@ -191,7 +208,6 @@ public class MainFragment extends BasePreferenceFragment {
 					@Override
 					public boolean onPreferenceClick(Preference preference) {
 						startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
-
 						return false;
 					}
 				});

@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 100103
-        versionName "Herbicide I"
+        versionCode 100110
+        versionName "Herbicide 110"
     }
     buildTypes {
         release {
@@ -31,10 +31,10 @@ repositories {
 
 dependencies {
     // Google Android Support
-    compile 'com.android.support:appcompat-v7:25.3.0'
-    compile 'com.android.support:support-v4:25.3.0'
-    compile 'com.android.support:design:25.3.0'
-    compile 'com.android.support:preference-v14:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:preference-v14:25.3.1'
 
     // RxBinding Butter Knife
     compile 'com.jakewharton:butterknife:8.0.1'

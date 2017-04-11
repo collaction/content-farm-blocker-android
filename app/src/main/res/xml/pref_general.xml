@@ -14,6 +14,13 @@
             android:key="pref_browser"
             android:title="預設瀏覽器"/>
 
+        <Preference
+            android:key="pref_testing"
+            android:summary="開啟 example-contentfarm.com 測試連結。"
+            android:title="測試檢查"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="進階功能">
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
@@ -24,12 +31,14 @@
         <CheckBoxPreference
             android:enabled="false"
             android:key="pref_previous_app_detect"
-            android:title="啟用程式切換兼容（測試版）"/>
+            android:title="啟用程式切換兼容"/>
 
+        <Preference
+            android:summary="此程式無法偵測 Facebook、Messenger 等程式內置瀏覽器，請啟用那些程式的「外部開啟連結」功能。"
+            android:title="功能限制"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="關於">
-
         <Preference
             android:key="pref_rate"
             android:summary="⭐️⭐️⭐️⭐️⭐️"
@@ -46,12 +55,17 @@
             android:title="更多程式"/>
 
         <Preference
+            android:key="pref_report_work"
+            android:summary="如果你的設備運作程式正常，請告之我們。"
+            android:title="回報運作正常"/>
+
+        <Preference
             android:key="pref_report"
             android:summary="糟了，我們要找滅蟲公司。🐛️"
             android:title="回報問題"/>
 
         <Preference
             android:key="pref_version"
-            android:title="版本"/>
+            android:title="測試版本編號"/>
     </PreferenceCategory>
 </PreferenceScreen>

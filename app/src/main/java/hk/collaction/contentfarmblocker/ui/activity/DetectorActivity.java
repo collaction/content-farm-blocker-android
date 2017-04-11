@@ -367,6 +367,7 @@ public class DetectorActivity extends BaseActivity {
 			"readhouse.net",
 			"thehealther.com",
 			"topnews8.com",
-			"twtimes.org"
+			"twtimes.org",
+			"example-contentfarm.com"
 	};
 }
