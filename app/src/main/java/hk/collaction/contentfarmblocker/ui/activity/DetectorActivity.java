@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -78,58 +79,41 @@ public class DetectorActivity extends BaseActivity {
 	}
 
 	/**
-	 * Will take a url to host, such as http://www.stackoverflow.com and return www.stackoverflow.com
+	 * Will take a domain
+	 * Parse any blogspot to blogspot.*
 	 *
-	 * @param url String
+	 * @param urlString String
 	 * @return String
 	 */
-	private String getHost(String url) {
-		if (url == null || url.length() == 0)
-			return "";
+	private String getBaseDomain(String urlString) {
+		try {
+			URL aURL = new URL(urlString);
+			String domain = aURL.getHost();
 
-		int doubleSlash = url.indexOf("//");
-		if (doubleSlash == -1)
-			doubleSlash = 0;
-		else
-			doubleSlash += 2;
+			if (domain.contains(".blogspot.")) {
+				domain = domain.replaceAll("(.*)(\\.blogspot\\..*)", ".$1.*");
+			}
 
-		int end = url.indexOf('/', doubleSlash);
-		end = end >= 0 ? end : url.length();
-
-		int port = url.indexOf(':', doubleSlash);
-		end = (port > 0 && port < end) ? port : end;
-
-		return url.substring(doubleSlash, end);
-	}
-
-	/**
-	 * Will take a host to domain, such as www.stackoverflow.com and return stackoverflow.com
-	 *
-	 * @param url String
-	 * @return String
-	 */
-	private String getBaseDomain(String url) {
-		String host = getHost(url);
-
-		int startIndex = 0;
-		int nextIndex = host.indexOf('.');
-		int lastIndex = host.lastIndexOf('.');
-		while (nextIndex < lastIndex) {
-			startIndex = nextIndex + 1;
-			nextIndex = host.indexOf('.', startIndex);
-		}
-		if (startIndex > 0) {
-			return host.substring(startIndex);
-		} else {
-			return host;
+			return domain.startsWith("www.") ? domain.substring(4) : domain;
+		} catch (MalformedURLException ignored) {
+			return urlString;
 		}
 	}
 
 	private final String[] shortenDomainArray = {
+			"7.ly",
+			"al.ly",
+			"bit.do",
+			"bit.ly",
 			"goo.gl",
-			"bit.ly"
+			"tiny.cc",
+			"tr.im",
+			"y2u.be"
 	};
 
+	/**
+	 * https://github.com/benlau/ihatecontentfarms/blob/master/chrome/sites.js
+	 */
 	private final String[] contentFarmDomainArray = {
 			"163nvren.com",
 			"360doc.com",
@@ -158,7 +142,7 @@ public class DetectorActivity extends BaseActivity {
 			"buzzjoker.com",
 			"buzzlife.com.tw",
 			"buzznews.news",
-			"ccolorsky.blogspot.com",
+			"ccolorsky.blogspot.*",
 			"changepw.com",
 			"chaxf.com",
 			"chunew.com",
@@ -215,7 +199,6 @@ public class DetectorActivity extends BaseActivity {
 			"happyeverydaymovie.com",
 			"healthalover.com",
 			"hehuancui.com", // buzz01
-			"hk.maheshbhusal.com.np",
 			"hkwall.com",
 			"honey99.net",
 			"hothk.com",
@@ -316,9 +299,10 @@ public class DetectorActivity extends BaseActivity {
 			"thehealthdaily.org",
 			"tipelse.com",
 			"toments.com",
+			"trithe.com",
 			"ttshow.tw",
 			"tw.anyelse.com",
-			"tw.jdkartsports.nl/", // Whole HK
+			"tw.jdkartsports.nl", // Whole HK
 			"twgreatdaily.com",
 			"vdoobv.com",
 			"video-lab.net", //Whole HK,
@@ -354,7 +338,7 @@ public class DetectorActivity extends BaseActivity {
 			"dungwa.com",
 			"gjoyz.co",
 			"hkappleweekly.com",
-			"hktimes.org/",
+			"hktimes.org",
 			"imama.tw",
 			"interestingpo.com",
 			"meishuile.com",
@@ -366,6 +350,7 @@ public class DetectorActivity extends BaseActivity {
 			"thehealther.com",
 			"topnews8.com",
 			"twtimes.org",
-			"example-contentfarm.com"
+			"example-contentfarm.com",
+			"example-contentfarm.com.hk"
 	};
 }

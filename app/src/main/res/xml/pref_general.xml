@@ -25,7 +25,7 @@
             android:defaultValue="true"
             android:key="pref_short_url_checking"
             android:summaryOff="不會檢查短網址的轉向網址。"
-            android:summaryOn="檢查短網址的轉向網址，支援 goo.gl 及 bit.ly。"
+            android:summaryOn="檢查短網址的轉向網址。"
             android:title="啟用短網址檢查"/>
 
         <CheckBoxPreference

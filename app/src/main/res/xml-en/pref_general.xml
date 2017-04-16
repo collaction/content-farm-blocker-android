@@ -23,8 +23,6 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
-            android:summaryOff="Do not check shorten URL"
-            android:summaryOn="Check shorten URL such as goo.gl and bit.ly."
             android:title="Enable Shorten URL Checking"/>
 
         <CheckBoxPreference
