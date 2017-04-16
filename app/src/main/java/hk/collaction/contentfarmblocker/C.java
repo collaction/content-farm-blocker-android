@@ -25,6 +25,12 @@ public class C extends Util {
 	@SuppressWarnings("unused")
 	public static final String TAG = "TAG";
 
+	/**
+	 * Go to specific url then finish the activity
+	 *
+	 * @param mContext Activity
+	 * @param url      String
+	 */
 	public static void goToUrl(Activity mContext, String url) {
 
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);

@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 100110
-        versionName "Herbicide 110"
+        versionCode 100120
+        versionName "Herbicide 120"
     }
     buildTypes {
         release {
@@ -23,10 +23,6 @@ android {
 
 repositories {
     mavenCentral()
-
-    maven {
-        url 'http://swisscodemonkeys.github.io/appbrain-sdk/maven'
-    }
 }
 
 dependencies {
@@ -45,7 +41,4 @@ dependencies {
 
     // Roboto TextView
     compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
-
-    // Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
 }

@@ -51,7 +51,7 @@
 
         <Preference
             android:key="pref_author"
-            android:summary="查看其他 Collaction 開發的程式。"
+            android:summary="查看其他 Collaction 小隊開發的程式。"
             android:title="更多程式"/>
 
         <Preference

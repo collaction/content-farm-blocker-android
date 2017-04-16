@@ -2,17 +2,13 @@ package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.OnLongClick;
-import butterknife.OnTouch;
 import hk.collaction.contentfarmblocker.C;
 import hk.collaction.contentfarmblocker.R;
 
@@ -29,14 +25,6 @@ public class BlockerFragment extends BaseFragment {
 	@OnClick(R.id.backButton)
 	void onClickBack() {
 		mContext.finish();
-	}
-
-	@OnTouch(R.id.goButton)
-	boolean onTouchGo(View view, MotionEvent motionEvent) {
-		if (motionEvent.getAction() == MotionEvent.ACTION_DOWN)
-			Toast.makeText(mContext, "長按以進入內容農場", Toast.LENGTH_SHORT).show();
-
-		return false;
 	}
 
 	private String urlString = "";
@@ -76,10 +64,8 @@ public class BlockerFragment extends BaseFragment {
 		domainTv.setText(domain + " " + domainTv.getText());
 	}
 
-	@OnLongClick(R.id.goButton)
-	boolean goToUrl() {
+	@OnClick(R.id.goButton)
+	public void goToUrl() {
 		C.goToUrl(mContext, urlString);
-
-		return true;
 	}
 }

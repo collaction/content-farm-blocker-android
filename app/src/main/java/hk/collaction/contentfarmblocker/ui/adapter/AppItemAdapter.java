@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 import butterknife.BindView;
@@ -25,7 +23,6 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 	private List<AppItem> mDataList;
 	private ItemClickListener mListener;
-	private Context mContext;
 
 	public interface ItemClickListener {
 		void onItemDetailClick(AppItem appItem);
@@ -38,7 +35,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 	@Override
 	public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-		mContext = parent.getContext();
+		Context mContext = parent.getContext();
 
 		View itemView = LayoutInflater.from(mContext).inflate(R.layout.list_item_info_app, parent, false);
 		return new ItemViewHolder(itemView);
@@ -51,11 +48,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 		holder.titleTv.setText(item.getAppName());
 		holder.contentTv.setText(item.getPackageName());
-
-		Glide.with(mContext)
-				.load("")
-				.placeholder(item.getIcon())
-				.into(holder.iconIv);
+		holder.iconIv.setImageDrawable(item.getIcon());
 
 		holder.rootView.setTag(item);
 		holder.rootView.setOnClickListener(new View.OnClickListener() {
@@ -71,8 +64,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 		return mDataList == null ? 0 : mDataList.size();
 	}
 
-	@SuppressWarnings("WeakerAccess")
-	public static class ItemViewHolder extends RecyclerView.ViewHolder {
+	static class ItemViewHolder extends RecyclerView.ViewHolder {
 
 		@BindView(R.id.text1)
 		TextView titleTv;

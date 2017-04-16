@@ -4,24 +4,22 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Arrays;
-import java.util.List;
+import java.util.HashSet;
 
 import hk.collaction.contentfarmblocker.C;
 
 public class DetectorActivity extends BaseActivity {
 
-	private SharedPreferences settings;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		settings = android.preference.PreferenceManager.getDefaultSharedPreferences(mContext);
 
 		String urlString = getIntent().getDataString();
 		checking(urlString);
@@ -32,6 +30,7 @@ public class DetectorActivity extends BaseActivity {
 			@Override
 			protected String doInBackground(String... strings) {
 				String urlString = strings[0];
+				SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 
 				if (settings.getBoolean("pref_short_url_checking", true)) {
 					String domain = getBaseDomain(urlString);
@@ -41,8 +40,10 @@ public class DetectorActivity extends BaseActivity {
 
 							HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 							connection.connect();
-							connection.getInputStream();
-							return connection.getURL().toString();
+							InputStream is = connection.getInputStream();
+							urlString = connection.getURL().toString();
+							is.close();
+							connection.disconnect();
 						} catch (IOException ignored) {
 						}
 					}
@@ -69,15 +70,12 @@ public class DetectorActivity extends BaseActivity {
 	}
 
 	private boolean isContentFarm(String domain) {
-		List<String> siteList = Arrays.asList(contentFarmDomainArray);
-		return siteList.contains(domain);
+		return new HashSet<>(Arrays.asList(contentFarmDomainArray)).contains(domain);
 	}
 
 	private boolean isShortenUrl(String domain) {
-		List<String> siteList = Arrays.asList(shortenDomainArray);
-		return siteList.contains(domain);
+		return new HashSet<>(Arrays.asList(shortenDomainArray)).contains(domain);
 	}
-
 
 	/**
 	 * Will take a url to host, such as http://www.stackoverflow.com and return www.stackoverflow.com
@@ -127,12 +125,12 @@ public class DetectorActivity extends BaseActivity {
 		}
 	}
 
-	private String[] shortenDomainArray = {
+	private final String[] shortenDomainArray = {
 			"goo.gl",
 			"bit.ly"
 	};
 
-	private String[] contentFarmDomainArray = {
+	private final String[] contentFarmDomainArray = {
 			"163nvren.com",
 			"360doc.com",
 			"7jiu.com.hk",

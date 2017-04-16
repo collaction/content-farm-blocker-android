@@ -22,13 +22,14 @@
             android:layout_height="100dp"
             android:layout_marginBottom="24dp"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/farm_warning_icon"/>
 
         <com.devspark.robototextview.widget.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:text="警告"
+            android:text="@string/ui_warning_title"
             android:textColor="@color/white"
             android:textSize="40sp"
             app:typeface="roboto_bold"/>
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:gravity="center"
-            android:text="你正準備進入內容農場網站"
+            android:text="@string/ui_warning_subtitle"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:typeface="roboto_regular"/>
@@ -50,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="已列在內容農場監視名單之中，因此作出此提示。"
+            android:text="@string/ui_warning_desc"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:typeface="roboto_regular"/>
@@ -73,7 +74,7 @@
                 android:paddingLeft="80dp"
                 android:paddingRight="80dp"
                 android:paddingTop="20dp"
-                android:text="離開"
+                android:text="@string/ui_exit"
                 android:theme="@style/GreenButton"
                 app:typeface="roboto_regular"/>
 
@@ -82,7 +83,7 @@
                 style="@style/ButtonText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="繼續前往"
+                android:text="@string/ui_continue"
                 android:theme="@style/GrayButton"
                 app:typeface="roboto_regular"/>
         </LinearLayout>

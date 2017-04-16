@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings">
+
+    <PreferenceCategory android:title="General">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_enable"
+            android:title="Enable Detector"/>
+
+        <Preference
+            android:key="pref_browser"
+            android:title="Default Browser"/>
+
+        <Preference
+            android:key="pref_testing"
+            android:summary="Use example-contentfarm.com for testing."
+            android:title="Testing Link"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Advance">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_short_url_checking"
+            android:summaryOff="Do not check shorten URL"
+            android:summaryOn="Check shorten URL such as goo.gl and bit.ly."
+            android:title="Enable Shorten URL Checking"/>
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="pref_previous_app_detect"
+            android:title="Enable App Toggle Compatible Mode"/>
+
+        <Preference
+            android:summary="It cannot detect any website via In-App Browser such as Facebook and Messenger."
+            android:title="Limitation"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+        <Preference
+            android:key="pref_rate"
+            android:summary="⭐️⭐️⭐️⭐️⭐️"
+            android:title="Rate us"/>
+
+        <Preference
+            android:key="pref_share"
+            android:title="Share to others"/>
+
+        <Preference
+            android:key="pref_author"
+            android:title="Other Apps"/>
+
+        <Preference
+            android:key="pref_report_work"
+            android:title="Tell us if it is work"/>
+
+        <Preference
+            android:key="pref_report"
+            android:title="Report Issue"/>
+
+        <Preference
+            android:key="pref_version"
+            android:title="Version"/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_warning_title">Beware</string>
+    <string name="app_name">Content Farm Detector</string>
+    <string name="title_activity_main">Content Farm Detector</string>
+    <string name="ui_cancel">Cancel</string>
+    <string name="ui_continue">Continue</string>
+    <string name="ui_error">Error</string>
+    <string name="ui_exit">Exit</string>
+    <string name="ui_loading">Loading…</string>
+    <string name="ui_na">N/A</string>
+    <string name="ui_okay">Okay</string>
+    <string name="ui_share">Share</string>
+    <string name="ui_warning_desc">has been listed on the content farm watching list.</string>
+    <string name="ui_warning_subtitle">You\'re going to visit a content farm.</string>
+    <string name="pref_no_brwoser">No selected</string>
+    <string name="pref_report_title">Content Farm Detector Report Issue</string>
+    <string name="pref_share_desc">Please download Content Farm Detector\n\n</string>
+    <string name="pref_previous_app_not_support">Only on Android 5.1+</string>
+    <string name="pref_browser_title">Choose the default browser</string>
+    <string name="pref_previous_app_permission">App Toggle Compatible Mode need to detect the recently app list. Please grant us the system permission.</string>
+    <string name="pref_previous_app_summary_off">Use the same tab of browser to open website</string>
+    <string name="pref_previous_app_summary_on">Use the same tab for browsers and a new tab for other apps to open website.</string>
+</resources>

@@ -66,7 +66,7 @@ public class MainFragment extends BasePreferenceFragment {
 		super.onViewCreated(view, savedInstanceState);
 
 		prefBrowser = findPreference("pref_browser");
-		prefBrowser.setSummary(settings.getString("pref_browser_app_name", "沒有選擇"));
+		prefBrowser.setSummary(settings.getString("pref_browser_app_name", getString(R.string.pref_no_brwoser)));
 		prefBrowser.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 				loadBrowserList();
@@ -110,11 +110,10 @@ public class MainFragment extends BasePreferenceFragment {
 				meta += "Version: " + C.getCurrentVersionName(mContext) + "\n";
 				meta += "Brand: " + Build.BRAND + "\n";
 				meta += "Model: " + Build.MODEL + "\n\n";
-				meta += "我的訊息是如下\n\n";
 
 				intent.setType("message/rfc822");
 				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"hello@collaction.hk"});
-				intent.putExtra(Intent.EXTRA_SUBJECT, "內容農場檢查器回報問題");
+				intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.pref_report_title));
 				intent.putExtra(Intent.EXTRA_TEXT, meta);
 				startActivity(intent);
 				return false;
@@ -156,10 +155,10 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Intent intent = new Intent();
 				intent.setAction(Intent.ACTION_SEND);
-				intent.putExtra(Intent.EXTRA_TEXT, "擋下內容農場網站，你我有責任，快下載「內容農場檢查器」Android App！！" +
-						"\n\nhttps://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker");
+				intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.pref_share_desc) +
+						"https://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker");
 				intent.setType("text/plain");
-				startActivity(Intent.createChooser(intent, "分享此程式"));
+				startActivity(Intent.createChooser(intent, getString(R.string.ui_share)));
 				return false;
 			}
 		});
@@ -185,9 +184,9 @@ public class MainFragment extends BasePreferenceFragment {
 
 			if (C.isGrantedSystemPermission(mContext)) {
 				if (settings.getBoolean("pref_previous_app_detect", false)) {
-					prefPreviousAppDetect.setSummary("瀏覽器使用最後分頁開啟網址，外部程式使用瀏覽器新分頁開啟網址");
+					prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_summary_on));
 				} else {
-					prefPreviousAppDetect.setSummary("一律使用瀏覽器最後分頁開啟網址");
+					prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_summary_off));
 				}
 				prefPreviousAppDetect.setOnPreferenceClickListener(null);
 				prefPreviousAppDetect.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -195,15 +194,15 @@ public class MainFragment extends BasePreferenceFragment {
 					@Override
 					public boolean onPreferenceChange(Preference preference, Object newValue) {
 						if ((boolean) newValue) {
-							prefPreviousAppDetect.setSummary("瀏覽器使用最後分頁開啟網址，外部程式使用新分頁開啟網址");
+							prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_summary_on));
 						} else {
-							prefPreviousAppDetect.setSummary("一律使用瀏覽器最後分頁開啟網址");
+							prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_summary_off));
 						}
 						return true;
 					}
 				});
 			} else {
-				prefPreviousAppDetect.setSummary("此切換兼容需要偵測最近應用程式列表，按此手動允許本程式取得「使用記錄存取權」。");
+				prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_permission));
 				prefPreviousAppDetect.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 					@Override
 					public boolean onPreferenceClick(Preference preference) {
@@ -220,7 +219,7 @@ public class MainFragment extends BasePreferenceFragment {
 			}
 		} else {
 			prefPreviousAppDetect.setEnabled(false);
-			prefPreviousAppDetect.setSummary("只適用於 Android 5.1 或以上");
+			prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_not_support));
 		}
 	}
 
@@ -304,7 +303,7 @@ public class MainFragment extends BasePreferenceFragment {
 				});
 
 				MaterialDialog.Builder browserDialogBuilder = new MaterialDialog.Builder(mContext)
-						.title("請選擇預設瀏覽器")
+						.title(R.string.pref_browser_title)
 						.adapter(appItemAdapter, null)
 						.negativeText(R.string.ui_cancel);
 
