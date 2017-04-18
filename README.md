@@ -30,6 +30,19 @@ Copyright 2017 Collaction Team.
 內容農場檢查器 for Android is an Open Source project covered by the GNU General Public License version 3.
 
 ## Changelog
+### Herbicide 120 (2017-04-19)
+* 增加英語語言
+* 更新短網址網站列表
+* 更新內容農場列表
+* 更新程式 Icon
+* 修正短網址轉向網址檢查錯誤
+* 修正部份網站無法阻檔
+* 修正錯誤
+* 減少程式大小
+
+### Herbicide 110 (2017-04-11)
+* 增加測試連結
+* 修正錯誤
 
 ### 1.0.1 (2017-04-03)
 * 首次提交

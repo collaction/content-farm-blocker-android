@@ -27,6 +27,7 @@ import hk.collaction.contentfarmblocker.C;
 import hk.collaction.contentfarmblocker.R;
 import hk.collaction.contentfarmblocker.model.AppItem;
 import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
+import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
 import hk.collaction.contentfarmblocker.ui.adapter.AppItemAdapter;
 
 public class MainFragment extends BasePreferenceFragment {
@@ -70,6 +71,52 @@ public class MainFragment extends BasePreferenceFragment {
 		prefBrowser.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 				loadBrowserList();
+				return false;
+			}
+		});
+
+		findPreference("pref_language").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				String language = settings.getString(C.PREF_LANGUAGE, "auto");
+				int a = 0;
+				switch (language) {
+					case "auto":
+						a = 0;
+						break;
+					case "en":
+						a = 1;
+						break;
+					case "zh":
+						a = 2;
+						break;
+				}
+
+				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+						.title(R.string.action_language)
+						.items(R.array.language_choose)
+						.itemsCallbackSingleChoice(a, new MaterialDialog.ListCallbackSingleChoice() {
+							@Override
+							public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
+								switch (which) {
+									case 0:
+										settings.edit().putString(C.PREF_LANGUAGE, "auto").apply();
+										break;
+									case 1:
+										settings.edit().putString(C.PREF_LANGUAGE, "en").apply();
+										break;
+									case 2:
+										settings.edit().putString(C.PREF_LANGUAGE, "zh").apply();
+										break;
+								}
+								startActivity(new Intent(mContext, MainActivity.class));
+								mContext.finish();
+								return false;
+							}
+						})
+						.negativeText(R.string.ui_cancel);
+				dialog.show();
+
 				return false;
 			}
 		});
@@ -173,6 +220,16 @@ public class MainFragment extends BasePreferenceFragment {
 			}
 		});
 
+		findPreference("pref_collaction").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				Uri uri = Uri.parse("https://www.collaction.hk/s/collactionopensource");
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(intent);
+				return false;
+			}
+		});
+
 	}
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -202,6 +259,7 @@ public class MainFragment extends BasePreferenceFragment {
 					}
 				});
 			} else {
+				prefPreviousAppDetect.setChecked(false);
 				prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_permission));
 				prefPreviousAppDetect.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 					@Override
@@ -218,6 +276,7 @@ public class MainFragment extends BasePreferenceFragment {
 				});
 			}
 		} else {
+			prefPreviousAppDetect.setChecked(false);
 			prefPreviousAppDetect.setEnabled(false);
 			prefPreviousAppDetect.setSummary(getString(R.string.pref_previous_app_not_support));
 		}
@@ -275,7 +334,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 				/* Making the loading longer would make the world better */
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(500);
 				} catch (InterruptedException ignored) {
 				}
 				return null;

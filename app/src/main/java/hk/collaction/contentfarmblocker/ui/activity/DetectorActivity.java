@@ -2,12 +2,13 @@ package hk.collaction.contentfarmblocker.ui.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -21,6 +22,13 @@ public class DetectorActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		int currentOrientation = getResources().getConfiguration().orientation;
+		if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+		} else {
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+		}
 
 		String urlString = getIntent().getDataString();
 		checking(urlString);
@@ -40,10 +48,9 @@ public class DetectorActivity extends BaseActivity {
 							URL url = new URL(urlString);
 
 							HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-							connection.connect();
-							InputStream is = connection.getInputStream();
-							urlString = connection.getURL().toString();
-							is.close();
+							connection.setInstanceFollowRedirects(false);
+							URL secondURL = new URL(connection.getHeaderField("Location"));
+							urlString = secondURL.toString();
 							connection.disconnect();
 						} catch (IOException ignored) {
 						}

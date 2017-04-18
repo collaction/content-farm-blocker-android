@@ -30,8 +30,6 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		C.detectLanguage(mContext);
-
 		setContentView(R.layout.activity_container);
 		ButterKnife.bind(this);
 		setSupportActionBar(toolbar);

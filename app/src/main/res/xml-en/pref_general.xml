@@ -20,6 +20,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Advance">
+        <Preference
+            android:key="pref_language"
+            android:title="Language"/>
+
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
@@ -60,5 +64,10 @@
         <Preference
             android:key="pref_version"
             android:title="Version"/>
+
+        <Preference
+            android:key="pref_collaction"
+            android:summary="內容農場檢查器 for Android is an Open Source project covered by the GNU General Public License version 3."
+            android:title="Copyright 2017 Collaction Team"/>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -98,10 +98,7 @@ public class Util {
 		Configuration conf = res.getConfiguration();
 		switch (language) {
 			case "en":
-			case "es":
-			case "pt":
 			case "zh":
-			case "zh-rCN":
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 					conf.setLocale(new Locale(language));
 				} else {

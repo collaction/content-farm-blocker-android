@@ -21,6 +21,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="進階功能">
+        <Preference
+            android:key="pref_language"
+            android:title="Language（語言）"/>
+
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
@@ -67,5 +71,10 @@
         <Preference
             android:key="pref_version"
             android:title="測試版本編號"/>
+
+        <Preference
+            android:key="pref_collaction"
+            android:summary="此程式由「Collaction 小隊」製作，並以 GPL 3.0 釋出原始碼。"
+            android:title="Collaction 小隊"/>
     </PreferenceCategory>
 </PreferenceScreen>

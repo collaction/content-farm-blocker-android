@@ -23,4 +23,11 @@
     <string name="pref_previous_app_permission">此切換兼容需要偵測最近應用程式列表，按此手動允許本程式取得「使用記錄存取權」。</string>
     <string name="pref_previous_app_summary_on">瀏覽器使用最後分頁開啟網址，外部程式使用瀏覽器新分頁開啟網址</string>
     <string name="pref_previous_app_summary_off">一律使用瀏覽器最後分頁開啟網址</string>
+    <string name="action_language" translatable="false">Language</string>
+
+    <string-array name="language_choose" translatable="false">
+        <item>System Default</item>
+        <item>English</item>
+        <item>中文（正體）</item>
+    </string-array>
 </resources>
