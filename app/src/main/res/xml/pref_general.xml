@@ -44,6 +44,10 @@
 
     <PreferenceCategory android:title="關於">
         <Preference
+            android:key="pref_donate"
+            android:title="成為 Collaction 的咖啡贊助人"/>
+
+        <Preference
             android:key="pref_rate"
             android:summary="⭐️⭐️⭐️⭐️⭐️"
             android:title="給予評分"/>

@@ -21,4 +21,5 @@
     <string name="pref_previous_app_permission">App Toggle Compatible Mode need to detect the recently app list. Please grant us the system permission.</string>
     <string name="pref_previous_app_summary_off">Use the same tab of browser to open website</string>
     <string name="pref_previous_app_summary_on">Use the same tab for browsers and a new tab for other apps to open website.</string>
+    <string name="iab_complete_message">Thank you very much!</string>
 </resources>

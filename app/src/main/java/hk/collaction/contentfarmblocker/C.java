@@ -24,6 +24,9 @@ public class C extends Util {
 
 	@SuppressWarnings("unused")
 	public static final String TAG = "TAG";
+	public static final String IAP_PID_10 = "iap_10";
+	public static final String IAP_PID_20 = "iap_20";
+	public static final String IAP_PID_50 = "iap_50";
 
 	/**
 	 * Go to specific url then finish the activity
@@ -134,4 +137,7 @@ public class C extends Util {
 		return granted;
 	}
 
+	public static boolean isPurchased(SharedPreferences settings) {
+		return settings.getBoolean(Util.PREF_IAP, false);
+	}
 }

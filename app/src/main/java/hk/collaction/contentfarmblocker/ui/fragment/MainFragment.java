@@ -17,12 +17,17 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
 import android.view.View;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+import hk.collaction.contentfarmblocker.BuildConfig;
 import hk.collaction.contentfarmblocker.C;
 import hk.collaction.contentfarmblocker.R;
 import hk.collaction.contentfarmblocker.model.AppItem;
@@ -38,6 +43,8 @@ public class MainFragment extends BasePreferenceFragment {
 	private MaterialDialog browserDialog;
 	private boolean isShowMeow = false;
 	private CheckBoxPreference prefPreviousAppDetect;
+	private BillingProcessor billingProcessor;
+	private Preference prefDonate;
 
 	public static MainFragment newInstance(boolean isNoBrowser) {
 		MainFragment fragment = new MainFragment();
@@ -59,6 +66,41 @@ public class MainFragment extends BasePreferenceFragment {
 				loadBrowserList();
 			}
 		}
+
+		billingProcessor = new BillingProcessor(mContext, BuildConfig.GOOGLE_IAP_KEY,
+				new BillingProcessor.IBillingHandler() {
+					@Override
+					public void onProductPurchased(String productId, TransactionDetails details) {
+						if (productId.equals(C.IAP_PID_10)
+								|| productId.equals(C.IAP_PID_20)
+								|| productId.equals(C.IAP_PID_50)) {
+							settings.edit().putBoolean(C.PREF_IAP, true).apply();
+							purchased();
+							MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+									.customView(R.layout.dialog_donate, true)
+									.positiveText(R.string.ui_okay);
+							dialog.show();
+						}
+					}
+
+					@Override
+					public void onPurchaseHistoryRestored() {
+						if (billingProcessor.isPurchased(C.IAP_PID_10)
+								|| billingProcessor.isPurchased(C.IAP_PID_20)
+								|| billingProcessor.isPurchased(C.IAP_PID_50)) {
+							settings.edit().putBoolean(C.PREF_IAP, true).apply();
+							purchased();
+						}
+					}
+
+					@Override
+					public void onBillingError(int errorCode, Throwable error) {
+					}
+
+					@Override
+					public void onBillingInitialized() {
+					}
+				});
 	}
 
 	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
@@ -74,6 +116,46 @@ public class MainFragment extends BasePreferenceFragment {
 				return false;
 			}
 		});
+
+
+		prefDonate = findPreference("pref_donate");
+		prefDonate.setSummary(getDonateSummary());
+		if (C.isPurchased(settings)) {
+			purchased();
+		} else {
+			prefDonate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+				@Override
+				public boolean onPreferenceClick(Preference preference) {
+					MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+							.title(R.string.action_language)
+							.items(R.array.language_choose)
+							.itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallbackSingleChoice() {
+								@Override
+								public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
+									switch (which) {
+										case 0:
+											checkPayment(C.IAP_PID_10);
+											break;
+										case 1:
+											checkPayment(C.IAP_PID_20);
+											break;
+										case 2:
+											checkPayment(C.IAP_PID_50);
+											break;
+									}
+									startActivity(new Intent(mContext, MainActivity.class));
+									mContext.finish();
+									return false;
+								}
+							})
+							.negativeText(R.string.ui_cancel);
+					dialog.show();
+
+					return false;
+				}
+			});
+		}
+
 
 		findPreference("pref_language").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
@@ -282,6 +364,14 @@ public class MainFragment extends BasePreferenceFragment {
 		}
 	}
 
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+
+		if (billingProcessor != null)
+			billingProcessor.release();
+	}
+
 	/**
 	 * Get all browser apps
 	 */
@@ -381,5 +471,31 @@ public class MainFragment extends BasePreferenceFragment {
 		} else {
 			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 		}
+	}
+
+	public void checkPayment(String productId) {
+		boolean isAvailable = BillingProcessor.isIabServiceAvailable(mContext);
+		if (isAvailable) {
+			billingProcessor.purchase(mContext, productId);
+		} else {
+			Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_LONG).show();
+		}
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (!billingProcessor.handleActivityResult(requestCode, resultCode, data)) {
+			super.onActivityResult(requestCode, resultCode, data);
+		}
+	}
+
+	private void purchased() {
+		prefDonate.setOnPreferenceClickListener(null);
+	}
+
+	private String getDonateSummary() {
+		String[] array = getResources().getStringArray(R.array.donate_summary);
+		int rnd = new Random().nextInt(array.length);
+		return array[rnd];
 	}
 }

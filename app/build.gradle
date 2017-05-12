@@ -10,14 +10,29 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 100120
-        versionName "Herbicide 120"
+        versionCode 100130
+        versionName "Herbicide 130"
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
+    }
+}
+
+def getSecretKey(name) {
+    def Properties props = new Properties()
+    def File f = new File('./../Key/contentfarmdetector.secrets.properties');
+    if (f.exists()) {
+        props.load(new FileInputStream(f))
+        return props[name]
+    } else {
+        return name;
     }
 }
 
@@ -41,4 +56,7 @@ dependencies {
 
     // Roboto TextView
     compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+
+    // Simple IAB
+    compile 'com.anjlab.android.iab.v3:library:1.0.32'
 }
