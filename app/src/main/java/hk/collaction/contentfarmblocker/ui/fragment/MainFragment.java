@@ -17,7 +17,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -128,8 +127,8 @@ public class MainFragment extends BasePreferenceFragment {
 				@Override
 				public boolean onPreferenceClick(Preference preference) {
 					MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
-							.title(R.string.action_language)
-							.items(R.array.language_choose)
+							.title(R.string.ui_donate_title)
+							.items(R.array.donate_choose)
 							.itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallbackSingleChoice() {
 								@Override
 								public boolean onSelection(MaterialDialog dialog, View itemView, int which, CharSequence text) {
@@ -144,8 +143,6 @@ public class MainFragment extends BasePreferenceFragment {
 											checkPayment(C.IAP_PID_50);
 											break;
 									}
-									startActivity(new Intent(mContext, MainActivity.class));
-									mContext.finish();
 									return false;
 								}
 							})
@@ -156,14 +153,6 @@ public class MainFragment extends BasePreferenceFragment {
 				}
 			});
 		}
-
-		findPreference("pref_reset").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				clearAllBrowsersDefaultAction();
-				return false;
-			}
-		});
 
 		findPreference("pref_whitelist").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
@@ -269,11 +258,11 @@ public class MainFragment extends BasePreferenceFragment {
 			}
 		});
 
-		CheckBoxPreference prefEnable = (CheckBoxPreference) findPreference("pref_enable");
-		prefEnable.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+		findPreference("pref_enable").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 			@Override
 			public boolean onPreferenceChange(Preference preference, Object newValue) {
 				toggleDefaultApp((boolean) newValue);
+
 				return true;
 			}
 		});
@@ -463,8 +452,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 				Intent intent = new Intent(Intent.ACTION_VIEW);
 				intent.setData(Uri.parse("https://www.google.com"));
-				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent,
-						0);
+				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent, 0);
 
 				for (ResolveInfo info : pkgAppsList) {
 					String packageName = info.activityInfo.packageName;
@@ -528,56 +516,6 @@ public class MainFragment extends BasePreferenceFragment {
 		}.execute();
 	}
 
-
-	/**
-	 * Get all browser apps
-	 */
-	private void clearAllBrowsersDefaultAction() {
-		new AsyncTask<Void, Void, Void>() {
-			private MaterialDialog progressDialog;
-
-			@Override
-			protected void onPreExecute() {
-				super.onPreExecute();
-				progressDialog = new MaterialDialog.Builder(mContext)
-						.content(R.string.ui_loading)
-						.progress(true, 0)
-						.cancelable(false)
-						.show();
-				toggleDefaultApp(false);
-			}
-
-			@Override
-			protected Void doInBackground(Void... voids) {
-				PackageManager packageManager = mContext.getPackageManager();
-				appList.clear();
-
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(Uri.parse("https://www.google.com"));
-				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent,
-						PackageManager.MATCH_DEFAULT_ONLY);
-
-				for (ResolveInfo info : pkgAppsList) {
-//					String packageName = info.activityInfo.packageName;
-//					packageManager.clearPackagePreferredActivities(packageName);
-				}
-
-				/* Making the loading longer would make the world better */
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException ignored) {
-				}
-				return null;
-			}
-
-			@Override
-			protected void onPostExecute(Void aVoid) {
-				super.onPostExecute(aVoid);
-				progressDialog.dismiss();
-			}
-		}.execute();
-	}
-
 	private void toggleDefaultApp(boolean isEnable) {
 		PackageManager pm = mContext.getPackageManager();
 		ComponentName component = new ComponentName(mContext, DetectorActivity.class);
@@ -589,7 +527,7 @@ public class MainFragment extends BasePreferenceFragment {
 		}
 	}
 
-	public void checkPayment(String productId) {
+	private void checkPayment(String productId) {
 		boolean isAvailable = BillingProcessor.isIabServiceAvailable(mContext);
 		if (isAvailable) {
 			billingProcessor.purchase(mContext, productId);

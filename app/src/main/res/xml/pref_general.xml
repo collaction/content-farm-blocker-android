@@ -7,6 +7,7 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_enable"
+            android:summary="如果你發現程式發現問題，點擊這裡重新啟用檢查器。"
             android:title="啟用檢查器"/>
 
         <Preference
@@ -45,11 +46,6 @@
             android:enabled="false"
             android:key="pref_previous_app_detect"
             android:title="啟用程式切換兼容"/>
-
-        <Preference
-            android:key="pref_reset"
-            android:title="宇宙大爆炸"
-            android:summary="如果你發現程式發現問題，點擊這裡可以還原所有相關的設定。"/>
 
         <Preference
             android:summary="此程式無法偵測 Facebook、Messenger 等程式內置瀏覽器，請啟用那些程式的「外部開啟連結」功能。"

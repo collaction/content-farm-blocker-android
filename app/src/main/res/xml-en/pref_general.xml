@@ -7,6 +7,7 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_enable"
+            android:summary="If detection is not working, please try to re-enable the detector."
             android:title="Enable Detector"/>
 
         <Preference
@@ -43,11 +44,6 @@
             android:enabled="false"
             android:key="pref_previous_app_detect"
             android:title="Enable App Toggle Compatible Mode"/>
-
-        <Preference
-            android:key="pref_reset"
-            android:title="宇宙大爆炸"
-            android:summary="如果你發現程式發現問題，點擊這裡可以還原所有相關的設定。"/>
 
         <Preference
             android:summary="It cannot detect any website via In-App Browser such as Facebook and Messenger."

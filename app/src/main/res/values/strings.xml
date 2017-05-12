@@ -26,7 +26,7 @@
     <string name="pref_previous_app_summary_on">瀏覽器使用最後分頁開啟網址，外部程式使用瀏覽器新分頁開啟網址</string>
     <string name="pref_previous_app_summary_off">一律使用瀏覽器最後分頁開啟網址</string>
     <string name="action_language" translatable="false">Language</string>
-    <string name="ui_donate_title">請選擇</string>
+    <string name="ui_donate_title">請選擇贊助選項</string>
     <string name="iab_complete_message">喝著您所贊助的咖啡，謹記每杯咖啡背後的人情味，我們團隊會繼續努力實踐及堅守 Collaction 的理念，以答謝您的支持！</string>
     <string name="ui_custom_list_hint">每行輸入一個網址，不需要以 http(s):// 為字首。</string>
 
@@ -37,9 +37,9 @@
     </string-array>
 
     <string-array name="donate_choose">
-        <item>HKD 10</item>
-        <item>HKD 20</item>
-        <item>HKD 50</item>
+        <item>HKD 10 一杯咖啡</item>
+        <item>HKD 20 一盒咖啡</item>
+        <item>HKD 50 一桶咖啡</item>
     </string-array>
 
     <string-array name="donate_summary">

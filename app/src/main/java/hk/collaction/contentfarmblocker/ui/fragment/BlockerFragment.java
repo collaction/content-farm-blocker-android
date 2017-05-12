@@ -78,13 +78,13 @@ public class BlockerFragment extends BaseFragment {
 	@OnClick(R.id.whitelistButton)
 	public void whitelist() {
 		MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
-				.content("")
+				.title(R.string.ui_add_to_whitelist)
+				.content(R.string.ui_whitelist_message)
 				.positiveText(R.string.ui_okay)
 				.onPositive(new MaterialDialog.SingleButtonCallback() {
 					@Override
 					public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
 						SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
-
 						String result = settings.getString("pref_whitelist", "");
 						result = (domain.trim() + "\n" + result).trim();
 						settings.edit().putString("pref_whitelist", result).apply();
