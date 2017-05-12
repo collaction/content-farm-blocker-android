@@ -1,15 +1,13 @@
 # 內容農場檢查器 for Android
 
-![alt](https://raw.githubusercontent.com/collaction/ContentFarmDetectorAndroid/master/google-cover.png)
+![alt](https://raw.githubusercontent.com/collaction/ContentFarmBlockerAndroid/master/google-cover.png)
 
 「內容農場檢查器 for Android」是 Collaction Open Source 系列的項目。安裝後只要選擇「內容農場檢查器」作為預設瀏覽器，打開內容農場時作出提示，避免假新聞、低品質文章污染你的思維。
 
-![alt](https://raw.githubusercontent.com/collaction/ContentFarmDetectorAndroid/master/Screen001.jpg)
-
-![alt](https://raw.githubusercontent.com/collaction/ContentFarmDetectorAndroid/master/Screen001.jpg)
+![alt](https://raw.githubusercontent.com/collaction/ContentFarmBlockerAndroid/master/Screen001.jpg)
 
 Android App 下載：
-https://play.google.com/store/apps/details?id=hk.collaction.contentfarmblocker
+https://play.google.com/store/apps/details?id=hk.collaction.contentfarmdetector
 
 ## 關於我們
 
@@ -30,6 +28,15 @@ Copyright 2017 Collaction Team.
 內容農場檢查器 for Android is an Open Source project covered by the GNU General Public License version 3.
 
 ## Changelog
+
+### Herbicide 200 (Not Released)
+* 增加重設程式選項
+* 增加贊助選項
+* 更新測試用網址為 www.example.com
+* 增加白名單功能
+* 增加黑名單功能
+* 修正部份機種無法退出錯誤
+
 ### Herbicide 120 (2017-04-19)
 * 增加英語語言
 * 更新短網址網站列表
