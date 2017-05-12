@@ -7,7 +7,6 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_enable"
-            android:summaryOn="如啟用檢查器，請於下方選擇預設瀏覽器。"
             android:title="啟用檢查器"/>
 
         <Preference
@@ -16,7 +15,7 @@
 
         <Preference
             android:key="pref_testing"
-            android:summary="開啟 example-contentfarm.com 測試連結。"
+            android:summary="開啟 example.com 測試連結。"
             android:title="測試檢查"/>
     </PreferenceCategory>
 
@@ -24,6 +23,16 @@
         <Preference
             android:key="pref_language"
             android:title="Language（語言）"/>
+
+        <Preference
+            android:key="pref_whitelist"
+            android:summary="設定個人的白名單，忽略檢查你喜愛的內容農場（什麼？）"
+            android:title="編輯白名單"/>
+
+        <Preference
+            android:key="pref_blacklist"
+            android:summary="設定個人的黑名單，增加預設名單以外的內容農場"
+            android:title="編輯黑名單"/>
 
         <CheckBoxPreference
             android:defaultValue="true"

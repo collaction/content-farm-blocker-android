@@ -19,9 +19,12 @@ import hk.collaction.contentfarmblocker.C;
 
 public class DetectorActivity extends BaseActivity {
 
+	private SharedPreferences settings;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 
 		int currentOrientation = getResources().getConfiguration().orientation;
 		if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -39,7 +42,6 @@ public class DetectorActivity extends BaseActivity {
 			@Override
 			protected String doInBackground(String... strings) {
 				String urlString = strings[0];
-				SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 
 				if (settings.getBoolean("pref_short_url_checking", true)) {
 					String domain = getBaseDomain(urlString);
@@ -78,7 +80,20 @@ public class DetectorActivity extends BaseActivity {
 	}
 
 	private boolean isContentFarm(String domain) {
-		return new HashSet<>(Arrays.asList(contentFarmDomainArray)).contains(domain);
+		String[] whitelistArray = settings.getString("pref_whitelist", "").split("\\r\\n|\\n|\\r");
+		String[] blacklistArray = settings.getString("pref_blacklist", "").split("\\r\\n|\\n|\\r");
+
+		HashSet<String> defaultSet = new HashSet<>(Arrays.asList(contentFarmDomainArray));
+
+		if (blacklistArray.length > 0) {
+			defaultSet.addAll(Arrays.asList(blacklistArray));
+		}
+
+		if (whitelistArray.length > 0) {
+			defaultSet.removeAll(Arrays.asList(whitelistArray));
+		}
+
+		return defaultSet.contains(domain);
 	}
 
 	private boolean isShortenUrl(String domain) {
@@ -86,8 +101,9 @@ public class DetectorActivity extends BaseActivity {
 	}
 
 	/**
-	 * Will take a domain
-	 * Parse any blogspot to blogspot.*
+	 * Will get a domain
+	 * - Parse any blogspot to blogspot.*
+	 * - Remove www.
 	 *
 	 * @param urlString String
 	 * @return String
@@ -97,10 +113,12 @@ public class DetectorActivity extends BaseActivity {
 			URL aURL = new URL(urlString);
 			String domain = aURL.getHost();
 
+			// Parse any blogspot to blogspot.*
 			if (domain.contains(".blogspot.")) {
 				domain = domain.replaceAll("(.*)(\\.blogspot\\..*)", ".$1.*");
 			}
 
+			// Remove www.
 			return domain.startsWith("www.") ? domain.substring(4) : domain;
 		} catch (MalformedURLException ignored) {
 			return urlString;
@@ -357,7 +375,6 @@ public class DetectorActivity extends BaseActivity {
 			"thehealther.com",
 			"topnews8.com",
 			"twtimes.org",
-			"example-contentfarm.com",
-			"example-contentfarm.com.hk"
+			"example.com" // For testing
 	};
 }

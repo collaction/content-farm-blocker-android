@@ -111,4 +111,28 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <!-- EditText -->
+    <style name="InputContainer">
+        <item name="android:padding">@dimen/input_margin</item>
+    </style>
+
+    <style name="LargeInputContainer" parent="InputContainer">
+        <item name="android:paddingLeft">@dimen/input_large_margin</item>
+        <item name="android:paddingRight">@dimen/input_large_margin</item>
+        <item name="android:paddingTop">@dimen/input_margin</item>
+        <item name="android:paddingBottom">@dimen/input_margin</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:paddingTop">@dimen/hint_margin</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:overScrollMode">always</item>
+    </style>
+
+    <style name="EditTextSingleLine" parent="EditText">
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>

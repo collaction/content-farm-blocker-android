@@ -15,7 +15,7 @@
 
         <Preference
             android:key="pref_testing"
-            android:summary="Use example-contentfarm.com for testing."
+            android:summary="Use example.com for testing."
             android:title="Testing Link"/>
     </PreferenceCategory>
 
@@ -23,6 +23,16 @@
         <Preference
             android:key="pref_language"
             android:title="Language"/>
+
+        <Preference
+            android:key="pref_whitelist"
+            android:summary="Set your own personal whitelist here."
+            android:title="Edit Whitelist"/>
+
+        <Preference
+            android:key="pref_blacklist"
+            android:summary="Set your own personal blacklist here."
+            android:title="Edit Blacklist"/>
 
         <CheckBoxPreference
             android:defaultValue="true"

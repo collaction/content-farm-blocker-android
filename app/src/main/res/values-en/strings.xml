@@ -22,4 +22,15 @@
     <string name="pref_previous_app_summary_off">Use the same tab of browser to open website</string>
     <string name="pref_previous_app_summary_on">Use the same tab for browsers and a new tab for other apps to open website.</string>
     <string name="iab_complete_message">Thank you very much!</string>
+    <string name="ui_custom_list_hint">One entry per line, no starting with http(s):// required</string>
+
+    <string-array name="donate_choose">
+        <item>HKD 10</item>
+        <item>HKD 20</item>
+        <item>HKD 50</item>
+    </string-array>
+
+    <string-array name="donate_summary">
+        <item>Make Collaction Great Again</item>
+    </string-array>
 </resources>

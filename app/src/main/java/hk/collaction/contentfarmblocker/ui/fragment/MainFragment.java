@@ -13,12 +13,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
@@ -76,10 +80,7 @@ public class MainFragment extends BasePreferenceFragment {
 								|| productId.equals(C.IAP_PID_50)) {
 							settings.edit().putBoolean(C.PREF_IAP, true).apply();
 							purchased();
-							MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
-									.customView(R.layout.dialog_donate, true)
-									.positiveText(R.string.ui_okay);
-							dialog.show();
+							showDonateDialog();
 						}
 					}
 
@@ -116,7 +117,6 @@ public class MainFragment extends BasePreferenceFragment {
 				return false;
 			}
 		});
-
 
 		prefDonate = findPreference("pref_donate");
 		prefDonate.setSummary(getDonateSummary());
@@ -156,6 +156,63 @@ public class MainFragment extends BasePreferenceFragment {
 			});
 		}
 
+		findPreference("pref_whitelist").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				String whitelist = settings.getString("pref_whitelist", "");
+
+				View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_custom_list, null);
+				EditText inputEt = (EditText) view.findViewById(R.id.inputEt);
+				inputEt.setText(whitelist);
+
+				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+						.title(preference.getTitle())
+						.customView(R.layout.dialog_custom_list, true)
+						.cancelable(false)
+						.negativeText(R.string.ui_cancel)
+						.positiveText(R.string.ui_okay)
+						.onPositive(new MaterialDialog.SingleButtonCallback() {
+							@Override
+							public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+								EditText inputEt = (EditText) dialog.getView().findViewById(R.id.inputEt);
+								String result = inputEt.getText().toString().trim();
+								settings.edit().putString("pref_whitelist", result).apply();
+							}
+						});
+				dialog.show();
+
+				return false;
+			}
+		});
+
+		findPreference("pref_blacklist").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				String blacklist = settings.getString("pref_blacklist", "");
+
+				View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_custom_list, null);
+				EditText inputEt = (EditText) view.findViewById(R.id.inputEt);
+				inputEt.setText(blacklist);
+
+				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+						.title(preference.getTitle())
+						.customView(R.layout.dialog_custom_list, true)
+						.cancelable(false)
+						.negativeText(R.string.ui_cancel)
+						.positiveText(R.string.ui_okay)
+						.onPositive(new MaterialDialog.SingleButtonCallback() {
+							@Override
+							public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+								EditText inputEt = (EditText) dialog.getView().findViewById(R.id.inputEt);
+								String result = inputEt.getText().toString().trim();
+								settings.edit().putString("pref_blacklist", result).apply();
+							}
+						});
+				dialog.show();
+
+				return false;
+			}
+		});
 
 		findPreference("pref_language").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
@@ -262,7 +319,7 @@ public class MainFragment extends BasePreferenceFragment {
 		findPreference("pref_testing").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
-				Uri uri = Uri.parse("http://www.example-contentfarm.com");
+				Uri uri = Uri.parse("http://www.example.com");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 				startActivity(intent);
 				return false;
@@ -396,9 +453,9 @@ public class MainFragment extends BasePreferenceFragment {
 				appList.clear();
 
 				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.addCategory(Intent.CATEGORY_BROWSABLE);
 				intent.setData(Uri.parse("https://www.google.com"));
-				List<ResolveInfo> pkgAppsList = mContext.getPackageManager().queryIntentActivities(intent, 0);
+				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent,
+						PackageManager.MATCH_DEFAULT_ONLY);
 
 				for (ResolveInfo info : pkgAppsList) {
 					String packageName = info.activityInfo.packageName;
@@ -410,7 +467,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 					/* Add the browser to the appList */
 					try {
-						ApplicationInfo applicationInfo = mContext.getPackageManager().getApplicationInfo(packageName, 0);
+						ApplicationInfo applicationInfo = packageManager.getApplicationInfo(packageName, 0);
 
 						AppItem appItem = new AppItem();
 						appItem.setAppName(applicationInfo.loadLabel(packageManager).toString());
@@ -490,7 +547,20 @@ public class MainFragment extends BasePreferenceFragment {
 	}
 
 	private void purchased() {
-		prefDonate.setOnPreferenceClickListener(null);
+		prefDonate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				showDonateDialog();
+				return false;
+			}
+		});
+	}
+
+	private void showDonateDialog() {
+		MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+				.customView(R.layout.dialog_donate, true)
+				.positiveText(R.string.ui_okay);
+		dialog.show();
 	}
 
 	private String getDonateSummary() {
