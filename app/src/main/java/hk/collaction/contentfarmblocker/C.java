@@ -88,7 +88,6 @@ public class C extends Util {
 		return true;
 	}
 
-
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 	@Nullable
 	private static String getRunningApp(Context mContext) {

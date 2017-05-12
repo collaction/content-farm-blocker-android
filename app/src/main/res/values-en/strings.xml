@@ -33,4 +33,7 @@
     <string-array name="donate_summary">
         <item>Make Collaction Great Again</item>
     </string-array>
+    <string name="ui_add_to_whitelist">Add to Whitelist</string>
+    <string name="ui_donate_title">Please choose</string>
+    <string name="ui_whitelist_message">Are you sure?</string>
 </resources>

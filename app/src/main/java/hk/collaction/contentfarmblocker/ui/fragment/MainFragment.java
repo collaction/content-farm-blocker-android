@@ -17,6 +17,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -156,6 +157,14 @@ public class MainFragment extends BasePreferenceFragment {
 			});
 		}
 
+		findPreference("pref_reset").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				clearAllBrowsersDefaultAction();
+				return false;
+			}
+		});
+
 		findPreference("pref_whitelist").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
@@ -167,7 +176,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
 						.title(preference.getTitle())
-						.customView(R.layout.dialog_custom_list, true)
+						.customView(view, true)
 						.cancelable(false)
 						.negativeText(R.string.ui_cancel)
 						.positiveText(R.string.ui_okay)
@@ -196,7 +205,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
 						.title(preference.getTitle())
-						.customView(R.layout.dialog_custom_list, true)
+						.customView(view, true)
 						.cancelable(false)
 						.negativeText(R.string.ui_cancel)
 						.positiveText(R.string.ui_okay)
@@ -455,7 +464,7 @@ public class MainFragment extends BasePreferenceFragment {
 				Intent intent = new Intent(Intent.ACTION_VIEW);
 				intent.setData(Uri.parse("https://www.google.com"));
 				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent,
-						PackageManager.MATCH_DEFAULT_ONLY);
+						0);
 
 				for (ResolveInfo info : pkgAppsList) {
 					String packageName = info.activityInfo.packageName;
@@ -515,6 +524,56 @@ public class MainFragment extends BasePreferenceFragment {
 
 				browserDialog = browserDialogBuilder.build();
 				browserDialog.show();
+			}
+		}.execute();
+	}
+
+
+	/**
+	 * Get all browser apps
+	 */
+	private void clearAllBrowsersDefaultAction() {
+		new AsyncTask<Void, Void, Void>() {
+			private MaterialDialog progressDialog;
+
+			@Override
+			protected void onPreExecute() {
+				super.onPreExecute();
+				progressDialog = new MaterialDialog.Builder(mContext)
+						.content(R.string.ui_loading)
+						.progress(true, 0)
+						.cancelable(false)
+						.show();
+				toggleDefaultApp(false);
+			}
+
+			@Override
+			protected Void doInBackground(Void... voids) {
+				PackageManager packageManager = mContext.getPackageManager();
+				appList.clear();
+
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse("https://www.google.com"));
+				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent,
+						PackageManager.MATCH_DEFAULT_ONLY);
+
+				for (ResolveInfo info : pkgAppsList) {
+//					String packageName = info.activityInfo.packageName;
+//					packageManager.clearPackagePreferredActivities(packageName);
+				}
+
+				/* Making the loading longer would make the world better */
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException ignored) {
+				}
+				return null;
+			}
+
+			@Override
+			protected void onPostExecute(Void aVoid) {
+				super.onPostExecute(aVoid);
+				progressDialog.dismiss();
 			}
 		}.execute();
 	}

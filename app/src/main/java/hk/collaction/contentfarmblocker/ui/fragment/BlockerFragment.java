@@ -1,10 +1,16 @@
 package hk.collaction.contentfarmblocker.ui.fragment;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -67,5 +73,25 @@ public class BlockerFragment extends BaseFragment {
 	@OnClick(R.id.goButton)
 	public void goToUrl() {
 		C.goToUrl(mContext, urlString);
+	}
+
+	@OnClick(R.id.whitelistButton)
+	public void whitelist() {
+		MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
+				.content("")
+				.positiveText(R.string.ui_okay)
+				.onPositive(new MaterialDialog.SingleButtonCallback() {
+					@Override
+					public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+						SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
+
+						String result = settings.getString("pref_whitelist", "");
+						result = (domain.trim() + "\n" + result).trim();
+						settings.edit().putString("pref_whitelist", result).apply();
+						goToUrl();
+					}
+				})
+				.negativeText(R.string.ui_cancel);
+		dialog.show();
 	}
 }

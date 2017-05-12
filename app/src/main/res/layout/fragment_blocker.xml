@@ -78,14 +78,30 @@
                 android:theme="@style/GreenButton"
                 app:typeface="roboto_regular"/>
 
-            <com.devspark.robototextview.widget.RobotoButton
-                android:id="@+id/goButton"
-                style="@style/ButtonText"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ui_continue"
-                android:theme="@style/GrayButton"
-                app:typeface="roboto_regular"/>
+                android:gravity="center">
+
+                <com.devspark.robototextview.widget.RobotoButton
+                    android:id="@+id/goButton"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ui_continue"
+                    android:theme="@style/GrayButton"
+                    app:typeface="roboto_regular"/>
+
+                <com.devspark.robototextview.widget.RobotoButton
+                    android:id="@+id/whitelistButton"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ui_add_to_whitelist"
+                    android:theme="@style/GrayButton"
+                    app:typeface="roboto_regular"/>
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
