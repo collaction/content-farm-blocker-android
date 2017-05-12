@@ -27,6 +27,7 @@
 
         <activity
             android:name=".ui.activity.DetectorActivity"
+            android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true"
             android:theme="@style/ThemeTranslucent">
