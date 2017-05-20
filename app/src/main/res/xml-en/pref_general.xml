@@ -7,8 +7,8 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_enable"
-            android:summary="If detection is not working, please try to re-enable the detector."
-            android:title="Enable Detector"/>
+            android:summary="If it is not working, please try to re-enable."
+            android:title="Enable Blocker"/>
 
         <Preference
             android:key="pref_browser"

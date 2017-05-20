@@ -5,11 +5,15 @@ import android.app.Activity;
 import android.app.AppOpsManager;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.Browser;
 import android.support.annotation.Nullable;
@@ -18,6 +22,7 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
 import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
 
 public class C extends Util {
@@ -35,7 +40,6 @@ public class C extends Util {
 	 * @param url      String
 	 */
 	public static void goToUrl(Activity mContext, String url) {
-
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 		String packageName = settings.getString("pref_browser", "");
 
@@ -45,9 +49,16 @@ public class C extends Util {
 		}
 
 		try {
+			/* Make sure it has packageName */
+			if (packageName.equals("")) {
+				throw new Exception();
+			}
+
+			/* Try to disable the default app behavior temperately */
+			toggleDefaultApp(mContext, false);
+
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 			intent.setData(Uri.parse(url));
-			intent.setPackage(packageName);
 			if (isUsingSameTab(mContext)) {
 				intent.putExtra(Browser.EXTRA_APPLICATION_ID, packageName);
 			}
@@ -56,11 +67,34 @@ public class C extends Util {
 			mContext.startActivity(intent);
 			mContext.overridePendingTransition(0, 0);
 		} catch (Exception e) {
-			Intent intent = new Intent().setClass(mContext, MainActivity.class);
-			intent.putExtra("no_browser", true);
-			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			/* If something wrong, fallback to using default browser */
+			try {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse(url));
+				intent.setPackage(packageName);
+				if (isUsingSameTab(mContext)) {
+					intent.putExtra(Browser.EXTRA_APPLICATION_ID, packageName);
+				}
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-			mContext.startActivity(intent);
+				mContext.startActivity(intent);
+				mContext.overridePendingTransition(0, 0);
+			} catch (Exception e2) {
+				Intent intent = new Intent().setClass(mContext, MainActivity.class);
+				intent.putExtra("no_browser", true);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+				mContext.startActivity(intent);
+			}
+		} finally {
+			new AsyncTask<Context, Void, Void>() {
+				@Override
+				protected Void doInBackground(Context... mContext) {
+					SystemClock.sleep(1000);
+					toggleDefaultApp(mContext[0], true);
+					return null;
+				}
+			}.execute(mContext);
 		}
 
 		mContext.finish();
@@ -138,5 +172,16 @@ public class C extends Util {
 
 	public static boolean isPurchased(SharedPreferences settings) {
 		return settings.getBoolean(Util.PREF_IAP, false);
+	}
+
+	public static void toggleDefaultApp(Context mContext, boolean isEnable) {
+		PackageManager pm = mContext.getPackageManager();
+		ComponentName component = new ComponentName(mContext, DetectorActivity.class);
+
+		if (isEnable) {
+			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+		} else {
+			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+		}
 	}
 }

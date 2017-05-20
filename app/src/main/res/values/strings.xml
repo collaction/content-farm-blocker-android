@@ -17,7 +17,7 @@
     <string name="ui_continue">繼續前往</string>
     <string name="ui_add_to_whitelist">加入白名單</string>
     <string name="ui_whitelist_message">確定加入白名單？</string>
-    <string name="pref_no_brwoser">沒有選擇</string>
+    <string name="pref_no_browser">沒有選擇</string>
     <string name="pref_report_title">內容農場檢查器回報問題</string>
     <string name="pref_share_desc">擋下內容農場網站，你我有責任，快下載「內容農場檢查器」Android App！！\n\n</string>
     <string name="pref_previous_app_not_support">只適用於 Android 5.1 或以上</string>

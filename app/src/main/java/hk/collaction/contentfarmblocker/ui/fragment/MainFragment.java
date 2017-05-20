@@ -1,7 +1,6 @@
 package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.annotation.TargetApi;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -35,7 +34,6 @@ import hk.collaction.contentfarmblocker.BuildConfig;
 import hk.collaction.contentfarmblocker.C;
 import hk.collaction.contentfarmblocker.R;
 import hk.collaction.contentfarmblocker.model.AppItem;
-import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
 import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
 import hk.collaction.contentfarmblocker.ui.adapter.AppItemAdapter;
 
@@ -110,7 +108,7 @@ public class MainFragment extends BasePreferenceFragment {
 		super.onViewCreated(view, savedInstanceState);
 
 		prefBrowser = findPreference("pref_browser");
-		prefBrowser.setSummary(settings.getString("pref_browser_app_name", getString(R.string.pref_no_brwoser)));
+		prefBrowser.setSummary(settings.getString("pref_browser_app_name", getString(R.string.pref_no_browser)));
 		prefBrowser.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 				loadBrowserList();
@@ -261,7 +259,7 @@ public class MainFragment extends BasePreferenceFragment {
 		findPreference("pref_enable").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 			@Override
 			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				toggleDefaultApp((boolean) newValue);
+				C.toggleDefaultApp(mContext, (boolean) newValue);
 
 				return true;
 			}
@@ -442,7 +440,7 @@ public class MainFragment extends BasePreferenceFragment {
 						.progress(true, 0)
 						.cancelable(false)
 						.show();
-				toggleDefaultApp(false);
+				C.toggleDefaultApp(mContext, false);
 			}
 
 			@Override
@@ -488,7 +486,7 @@ public class MainFragment extends BasePreferenceFragment {
 			protected void onPostExecute(Void aVoid) {
 				super.onPostExecute(aVoid);
 				if (settings.getBoolean("pref_enable", true)) {
-					toggleDefaultApp(true);
+					C.toggleDefaultApp(mContext, true);
 				}
 
 				progressDialog.dismiss();
@@ -514,17 +512,6 @@ public class MainFragment extends BasePreferenceFragment {
 				browserDialog.show();
 			}
 		}.execute();
-	}
-
-	private void toggleDefaultApp(boolean isEnable) {
-		PackageManager pm = mContext.getPackageManager();
-		ComponentName component = new ComponentName(mContext, DetectorActivity.class);
-
-		if (isEnable) {
-			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-		} else {
-			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-		}
 	}
 
 	private void checkPayment(String productId) {
