@@ -32,10 +32,11 @@ Copyright 2017 Collaction Team.
 ### Herbicide 200 (Not Released)
 * 增加重設程式選項
 * 增加贊助選項
-* 更新測試用網址為 www.example.com
 * 增加白名單功能
 * 增加黑名單功能
+* 更新測試用網址為 www.example.com
 * 修正部份機種無法退出錯誤
+* 修正切換程式兼容錯誤
 
 ### Herbicide 120 (2017-04-19)
 * 增加英語語言
