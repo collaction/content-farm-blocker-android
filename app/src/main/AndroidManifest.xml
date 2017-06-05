@@ -17,7 +17,7 @@
 
         <activity
             android:name=".ui.activity.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -46,6 +46,7 @@
 
         <activity
             android:name=".ui.activity.BlockerActivity"
+            android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true">
         </activity>

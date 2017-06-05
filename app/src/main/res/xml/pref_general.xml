@@ -46,10 +46,21 @@
             android:enabled="false"
             android:key="pref_previous_app_detect"
             android:title="啟用程式切換兼容"/>
+    </PreferenceCategory>
 
+    <PreferenceCategory android:title="功能限制">
         <Preference
-            android:summary="此程式無法偵測 Facebook、Messenger 等程式內置瀏覽器，請啟用那些程式的「外部開啟連結」功能。"
-            android:title="功能限制"/>
+            android:summary="此程式無法偵測 Facebook、Messenger 等程式內置瀏覽器內網址，請啟用那些程式的「外部開啟連結」功能。"
+            android:title="內置瀏覽器"/>
+        <Preference
+            android:summary="此程式無法偵測無痕模式內網址。"
+            android:title="無痕模式"/>
+        <Preference
+            android:summary="此程式無法偵測手動開新分頁的網址。"
+            android:title="手動開新分頁"/>
+        <Preference
+            android:summary="此程式受 Android 系統限制，瀏覽器內點擊網址，一律使用相同分頁開啟網址。"
+            android:title="瀏覽器使用相同分頁"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="關於">

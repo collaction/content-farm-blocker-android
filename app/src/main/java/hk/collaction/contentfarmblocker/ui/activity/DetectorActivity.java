@@ -6,7 +6,10 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -14,8 +17,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 import hk.collaction.contentfarmblocker.C;
+import hk.collaction.contentfarmblocker.R;
 
 public class DetectorActivity extends BaseActivity {
 
@@ -46,16 +51,14 @@ public class DetectorActivity extends BaseActivity {
 				if (settings.getBoolean("pref_short_url_checking", true)) {
 					String domain = getBaseDomain(urlString);
 					if (isShortenUrl(domain)) {
-						try {
-							URL url = new URL(urlString);
+						Handler handler = new Handler(mContext.getMainLooper());
+						handler.post(new Runnable() {
+							public void run() {
+								Toast.makeText(mContext, R.string.toast_redirecting, Toast.LENGTH_LONG).show();
+							}
+						});
 
-							HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-							connection.setInstanceFollowRedirects(false);
-							URL secondURL = new URL(connection.getHeaderField("Location"));
-							urlString = secondURL.toString();
-							connection.disconnect();
-						} catch (IOException ignored) {
-						}
+						urlString = getRedirectUrl(urlString);
 					}
 				}
 
@@ -133,7 +136,8 @@ public class DetectorActivity extends BaseActivity {
 			"goo.gl",
 			"tiny.cc",
 			"tr.im",
-			"y2u.be"
+			"y2u.be",
+			"lm.facebook.com"
 	};
 
 	/**
@@ -377,4 +381,30 @@ public class DetectorActivity extends BaseActivity {
 			"twtimes.org",
 			"example.com" // For testing
 	};
+
+	private String getRedirectUrl(String urlString) {
+		try {
+			URL url = new URL(urlString);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setInstanceFollowRedirects(false);
+
+			String redirectUrl = connection.getHeaderField("Location");
+			if (redirectUrl == null) {
+				List<String> entrySet = connection.getHeaderFields().get("Refresh");
+				if (entrySet != null) {
+					for (String refreshUrl : entrySet) {
+						redirectUrl = refreshUrl.replace("1;URL=", "");
+					}
+				}
+			}
+
+			if (redirectUrl != null) {
+				urlString = getRedirectUrl(redirectUrl);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return urlString;
+	}
 }

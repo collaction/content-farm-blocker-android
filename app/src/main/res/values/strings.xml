@@ -9,7 +9,7 @@
     <string name="ui_loading">載入中…</string>
 
     <string name="app_name">內容農場檢查器</string>
-    <string name="title_activity_main">內容農場檢查器</string>
+    <string name="title_activity_main">內容農場檢查器（預覽版）</string>
     <string name="ui_warning_title">警告</string>
     <string name="ui_warning_subtitle">你正準備進入內容農場網站</string>
     <string name="ui_warning_desc">已被列在內容農場監視名單之中，因此作出此提示。</string>
@@ -23,12 +23,13 @@
     <string name="pref_previous_app_not_support">只適用於 Android 5.1 或以上</string>
     <string name="pref_browser_title">請選擇預設瀏覽器</string>
     <string name="pref_previous_app_permission">此切換兼容需要偵測最近應用程式列表，按此手動允許本程式取得「使用記錄存取權」。</string>
-    <string name="pref_previous_app_summary_on">瀏覽器使用最後分頁開啟網址，外部程式使用瀏覽器新分頁開啟網址</string>
-    <string name="pref_previous_app_summary_off">一律使用瀏覽器最後分頁開啟網址</string>
+    <string name="pref_previous_app_summary_on">瀏覽器使用相同分頁開啟網址，外部程式使用瀏覽器新分頁開啟網址</string>
+    <string name="pref_previous_app_summary_off">一律使用瀏覽器相同／最後分頁開啟網址</string>
     <string name="action_language" translatable="false">Language</string>
     <string name="ui_donate_title">請選擇贊助選項</string>
     <string name="iab_complete_message">喝著您所贊助的咖啡，謹記每杯咖啡背後的人情味，我們團隊會繼續努力實踐及堅守 Collaction 的理念，以答謝您的支持！</string>
     <string name="ui_custom_list_hint">每行輸入一個網址，不需要以 http(s):// 為字首。</string>
+    <string name="toast_redirecting">短網址檢查中</string>
 
     <string-array name="language_choose" translatable="false">
         <item>System Default</item>

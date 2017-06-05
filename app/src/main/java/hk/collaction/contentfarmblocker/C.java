@@ -17,6 +17,7 @@ import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.Browser;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import java.util.List;
 import java.util.SortedMap;
