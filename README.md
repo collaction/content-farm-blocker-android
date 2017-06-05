@@ -29,7 +29,7 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
-### Herbicide 200 (Not Released)
+### Herbicide 200 (2017-06-08)
 * 增加重設程式選項
 * 增加贊助選項
 * 增加白名單功能
