@@ -29,6 +29,9 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 201 (2017-06-09)
+* 修正錯誤
+
 ### Herbicide 200 (2017-06-08)
 * 增加重設程式選項
 * 增加贊助選項

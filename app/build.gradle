@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 150200
-        versionName "Herbicide 200"
+        versionCode 150201
+        versionName "Herbicide 201"
     }
     buildTypes {
         debug {
