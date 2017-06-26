@@ -44,10 +44,18 @@
             android:enabled="false"
             android:key="pref_previous_app_detect"
             android:title="Enable App Toggle Compatible Mode"/>
+    </PreferenceCategory>
 
+    <PreferenceCategory android:title="功能限制">
         <Preference
-            android:summary="It cannot detect any website via In-App Browser such as Facebook and Messenger."
-            android:title="Limitation"/>
+            android:summary="Cannot detect In-App Browser such as Facebook and Messenger."
+            android:title="In-App Browser"/>
+        <Preference
+            android:summary="Cannot detect Browser Incognito Mode."
+            android:title="Incognito Mode"/>
+        <Preference
+            android:summary="Cannot detect Manually New Tab."
+            android:title="Manually New Tab"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="About">

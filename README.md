@@ -29,6 +29,9 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 202 (2017-06-23)
+* 修正短網址檢查速度
+
 ### Herbicide 201 (2017-06-09)
 * 修正錯誤
 

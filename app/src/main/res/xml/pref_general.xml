@@ -46,6 +46,7 @@
             android:enabled="false"
             android:key="pref_previous_app_detect"
             android:title="啟用程式切換兼容"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:title="功能限制">

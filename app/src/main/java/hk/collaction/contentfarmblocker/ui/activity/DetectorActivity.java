@@ -8,7 +8,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -383,26 +382,29 @@ public class DetectorActivity extends BaseActivity {
 	};
 
 	private String getRedirectUrl(String urlString) {
-		try {
-			URL url = new URL(urlString);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.setInstanceFollowRedirects(false);
+		String domain = getBaseDomain(urlString);
+		if (isShortenUrl(domain)) {
+			try {
+				URL url = new URL(urlString);
+				HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+				connection.setInstanceFollowRedirects(false);
 
-			String redirectUrl = connection.getHeaderField("Location");
-			if (redirectUrl == null) {
-				List<String> entrySet = connection.getHeaderFields().get("Refresh");
-				if (entrySet != null) {
-					for (String refreshUrl : entrySet) {
-						redirectUrl = refreshUrl.replace("1;URL=", "");
+				String redirectUrl = connection.getHeaderField("Location");
+				if (redirectUrl == null) {
+					List<String> entrySet = connection.getHeaderFields().get("Refresh");
+					if (entrySet != null) {
+						for (String refreshUrl : entrySet) {
+							redirectUrl = refreshUrl.replace("1;URL=", "");
+						}
 					}
 				}
-			}
 
-			if (redirectUrl != null) {
-				urlString = getRedirectUrl(redirectUrl);
+				if (redirectUrl != null) {
+					urlString = getRedirectUrl(redirectUrl);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 
 		return urlString;
