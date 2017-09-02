@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.service;
+package hk.collaction.contentfarmblocker.ui.receiver;
 
 /**
  * Created by Himphen on 2/9/2017.

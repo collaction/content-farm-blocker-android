@@ -29,6 +29,9 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 301 (2017-09-03)
+* 修正 Android Quick Settings 功能
+
 ### Herbicide 300 (2017-09-02)
 * 增加開機檢查功能
 * 增加 Android Quick Settings 功能

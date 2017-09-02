@@ -2,6 +2,7 @@ package hk.collaction.contentfarmblocker.ui.service;
 
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.service.quicksettings.Tile;
@@ -16,16 +17,6 @@ public class ToggleTileService extends TileService {
 	@Override
 	public void onStartListening() {
 		super.onStartListening();
-		Log.d("TEST", "Launch onStartListening()");
-
-		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-		toggleTile(settings.getBoolean("pref_enable", false));
-	}
-
-	@Override
-	public void onStopListening() {
-		super.onStopListening();
-		Log.d("TEST", "Launch onStopListening()");
 
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 		toggleTile(settings.getBoolean("pref_enable", false));
@@ -34,31 +25,31 @@ public class ToggleTileService extends TileService {
 	@Override
 	public void onClick() {
 		super.onClick();
-		Log.d("TEST", "Launch onClick()");
 
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-		boolean result = !settings.getBoolean("pref_enable", false);
-		toggleTile(result);
-		settings.edit().putBoolean("pref_enable", result).apply();
+		boolean currentEnabled = settings.getBoolean("pref_enable", false);
+		boolean targetEnabled = !currentEnabled;
+		toggleTile(targetEnabled);
+
+		settings.edit().putBoolean("pref_enable", targetEnabled).apply();
+		C.toggleDefaultApp(this, targetEnabled);
 	}
 
-	private void toggleTile(boolean isEnable) {
+	private void toggleTile(boolean enable) {
 		Tile tile = getQsTile();
 
-		if (isEnable) {
-			tile.setLabel(getString(R.string.app_name));
-			tile.setContentDescription(getString(R.string.ui_enable));
+		if (enable) {
+			tile.setLabel(getString(R.string.ui_enable));
 			tile.setState(Tile.STATE_ACTIVE);
+			tile.setIcon(Icon.createWithResource(this, R.drawable.qs_locked));
 			tile.updateTile();
-			Log.d("TEST", "toggleTile true");
 		} else {
-			tile.setLabel(getString(R.string.app_name));
-			tile.setContentDescription(getString(R.string.ui_disable));
+			tile.setLabel(getString(R.string.ui_disable));
 			tile.setState(Tile.STATE_INACTIVE);
+			tile.setIcon(Icon.createWithResource(this, R.drawable.qs_unlocked));
 			tile.updateTile();
-			Log.d("TEST", "toggleTile false");
 		}
-
-		C.toggleDefaultApp(this, isEnable);
 	}
+
+
 }

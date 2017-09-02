@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 150300
-        versionName "Herbicide 300"
+        versionCode 150301
+        versionName "Herbicide 301"
     }
     buildTypes {
         debug {
