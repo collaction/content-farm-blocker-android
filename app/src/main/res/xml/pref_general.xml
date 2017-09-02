@@ -5,7 +5,6 @@
 
     <PreferenceCategory android:title="一般">
         <CheckBoxPreference
-            android:defaultValue="true"
             android:key="pref_enable"
             android:summary="如果你發現程式發現問題，點擊這裡重新啟用檢查器。"
             android:title="啟用檢查器"/>
@@ -91,7 +90,7 @@
 
         <Preference
             android:key="pref_report"
-            android:summary="糟了，我們要找滅蟲公司。🐛️"
+            android:summary="糟了，我們要找滅蟲公司。️"
             android:title="回報問題"/>
 
         <Preference

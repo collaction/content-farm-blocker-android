@@ -29,6 +29,11 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 300 (2017-09-02)
+* 增加開機檢查功能
+* 增加 Android Quick Settings 功能
+* 修正初始化錯誤
+
 ### Herbicide 202 (2017-06-23)
 * 修正短網址檢查速度
 

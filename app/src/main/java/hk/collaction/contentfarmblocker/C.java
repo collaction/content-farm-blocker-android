@@ -184,5 +184,7 @@ public class C extends Util {
 		} else {
 			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 		}
+
+		Log.d(C.TAG, "toggleDefaultApp() " + isEnable);
 	}
 }

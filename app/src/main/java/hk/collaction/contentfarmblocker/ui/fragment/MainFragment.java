@@ -16,6 +16,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -485,7 +486,7 @@ public class MainFragment extends BasePreferenceFragment {
 			@Override
 			protected void onPostExecute(Void aVoid) {
 				super.onPostExecute(aVoid);
-				if (settings.getBoolean("pref_enable", true)) {
+				if (settings.getBoolean("pref_enable", false)) {
 					C.toggleDefaultApp(mContext, true);
 				}
 

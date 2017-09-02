@@ -3,6 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="hk.collaction.contentfarmblocker">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.android.vending.BILLING"/>
     <uses-permission
@@ -10,11 +11,27 @@
         tools:ignore="ProtectedPermissions"/>
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
+
+        <service
+            android:name=".ui.service.ToggleTileService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".ui.service.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name=".ui.activity.MainActivity"
@@ -25,7 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.activity.DetectorActivity"
             android:enabled="false"
@@ -44,14 +60,12 @@
                 <data android:host="*"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.activity.BlockerActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true">
         </activity>
-
     </application>
 
 </manifest>

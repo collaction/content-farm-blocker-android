@@ -1,17 +1,14 @@
 apply plugin: 'com.android.application'
 
-// RxBinding Butter Knife
-apply plugin: 'com.neenbedankt.android-apt'
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 150202
-        versionName "Herbicide 202"
+        targetSdkVersion 26
+        versionCode 150300
+        versionName "Herbicide 300"
     }
     buildTypes {
         debug {
@@ -42,21 +39,21 @@ repositories {
 
 dependencies {
     // Google Android Support
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:preference-v14:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    compile 'com.android.support:support-v4:26.0.0'
+    compile 'com.android.support:design:26.0.0'
+    compile 'com.android.support:preference-v14:26.0.0'
 
     // RxBinding Butter Knife
-    compile 'com.jakewharton:butterknife:8.0.1'
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
 
     // Material Dialog
-    compile 'com.afollestad.material-dialogs:core:0.9.2.2'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
 
     // Roboto TextView
-    compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+    compile 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
 
     // Simple IAB
-    compile 'com.anjlab.android.iab.v3:library:1.0.32'
+    compile 'com.anjlab.android.iab.v3:library:1.0.44'
 }

@@ -5,7 +5,6 @@
 
     <PreferenceCategory android:title="General">
         <CheckBoxPreference
-            android:defaultValue="true"
             android:key="pref_enable"
             android:summary="If it is not working, please try to re-enable."
             android:title="Enable Blocker"/>

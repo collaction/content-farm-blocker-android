@@ -23,6 +23,8 @@
     <string name="pref_previous_app_summary_on">Use the same tab for browsers and a new tab for other apps to open website.</string>
     <string name="iab_complete_message">Thank you very much!</string>
     <string name="ui_custom_list_hint">One entry per line, no starting with http(s):// required</string>
+    <string name="ui_enable">Enable Blocker</string>
+    <string name="ui_disable">Disable Blocker</string>
 
     <string-array name="donate_choose">
         <item>HKD 10</item>
