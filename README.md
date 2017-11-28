@@ -29,6 +29,9 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 310 (2017-10-13)
+* 更新內容農場列表
+
 ### Herbicide 301 (2017-09-03)
 * 修正 Android Quick Settings 功能
 

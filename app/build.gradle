@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 150301
-        versionName "Herbicide 301"
+        versionCode 150310
+        versionName "Herbicide 310"
     }
     buildTypes {
         debug {
@@ -22,31 +22,27 @@ android {
     }
 }
 
-def getSecretKey(name) {
-    def Properties props = new Properties()
-    def File f = new File('./../Key/contentfarmdetector.secrets.properties');
+static def getSecretKey(name) {
+    Properties props = new Properties()
+    File f = new File('./../Key/contentfarmdetector.secrets.properties')
     if (f.exists()) {
         props.load(new FileInputStream(f))
         return props[name]
     } else {
-        return name;
+        return name
     }
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
     // Google Android Support
-    compile 'com.android.support:appcompat-v7:26.0.0'
-    compile 'com.android.support:support-v4:26.0.0'
-    compile 'com.android.support:design:26.0.0'
-    compile 'com.android.support:preference-v14:26.0.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:preference-v14:26.1.0'
 
     // RxBinding Butter Knife
-    compile 'com.jakewharton:butterknife:8.8.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // Material Dialog
     compile 'com.afollestad.material-dialogs:core:0.9.4.5'

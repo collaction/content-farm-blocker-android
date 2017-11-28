@@ -45,7 +45,7 @@
             android:title="Enable App Toggle Compatible Mode"/>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="功能限制">
+    <PreferenceCategory android:title="Restriction">
         <Preference
             android:summary="Cannot detect In-App Browser such as Facebook and Messenger."
             android:title="In-App Browser"/>
@@ -89,7 +89,7 @@
 
         <Preference
             android:key="pref_collaction"
-            android:summary="內容農場檢查器 for Android is an Open Source project covered by the GNU General Public License version 3."
+            android:summary="Content Farm Blocker for Android is an Open Source project covered by the GNU General Public License version 3."
             android:title="Copyright 2017 Collaction Team"/>
     </PreferenceCategory>
 </PreferenceScreen>
