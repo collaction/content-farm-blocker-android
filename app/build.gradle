@@ -1,21 +1,27 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 150310
-        versionName "Herbicide 310"
+        versionCode 150321
+        versionName "Herbicide 321"
+        multiDexEnabled true
+        resConfigs "en", "zh"
     }
     buildTypes {
         debug {
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
         release {
+            shrinkResources true
             minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
@@ -24,7 +30,7 @@ android {
 
 static def getSecretKey(name) {
     Properties props = new Properties()
-    File f = new File('./../Key/contentfarmdetector.secrets.properties')
+    File f = new File('./../Key/contentfarmblocker.secrets.properties')
     if (f.exists()) {
         props.load(new FileInputStream(f))
         return props[name]
@@ -35,21 +41,32 @@ static def getSecretKey(name) {
 
 dependencies {
     // Google Android Support
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:support-v4:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support:preference-v14:26.1.0'
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support:support-v4:27.1.0'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.android.support:preference-v14:27.1.0'
 
     // RxBinding Butter Knife
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // Material Dialog
-    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
+    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     // Roboto TextView
     compile 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
 
     // Simple IAB
     compile 'com.anjlab.android.iab.v3:library:1.0.44'
+
+    // Firebase
+    compile 'com.google.firebase:firebase-core:11.8.0'
+
+    // Crashlytics
+    compile('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+        transitive = true
+    }
 }
+
+apply plugin: 'com.google.gms.google-services'

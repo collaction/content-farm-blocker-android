@@ -29,6 +29,13 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 321 (2018-03-14)
+* 修正嚴重錯誤，我們深以為歉、謹此致歉
+
+### Herbicide 320 (2018-03-09)
+* 修正錯誤
+* 減少程式大小
+
 ### Herbicide 310 (2017-10-13)
 * 更新內容農場列表
 

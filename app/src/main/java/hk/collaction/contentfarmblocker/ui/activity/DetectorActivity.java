@@ -1,5 +1,6 @@
 package hk.collaction.contentfarmblocker.ui.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -11,6 +12,7 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -23,12 +25,58 @@ import hk.collaction.contentfarmblocker.R;
 
 public class DetectorActivity extends BaseActivity {
 
-	private SharedPreferences settings;
+	private static class CheckingAsyncTask extends AsyncTask<String, Void, String> {
+
+		private WeakReference<Activity> weakReference;
+		private SharedPreferences settings;
+
+		CheckingAsyncTask(Activity mContext, SharedPreferences settings) {
+			weakReference = new WeakReference<>(mContext);
+			this.settings = settings;
+		}
+
+		@Override
+		protected String doInBackground(String... strings) {
+			String urlString = strings[0];
+
+			if (settings.getBoolean("pref_short_url_checking", true)) {
+				String domain = getBaseDomain(urlString);
+				if (isShortenUrl(domain)) {
+					Handler handler = new Handler(weakReference.get().getMainLooper());
+					handler.post(new Runnable() {
+						public void run() {
+							Toast.makeText(weakReference.get(), R.string.toast_redirecting, Toast.LENGTH_LONG).show();
+						}
+					});
+
+					urlString = getRedirectUrl(urlString);
+				}
+			}
+
+			return urlString;
+		}
+
+		@Override
+		protected void onPostExecute(String urlString) {
+			String domain = getBaseDomain(urlString);
+			if (isContentFarm(domain, settings)) {
+				Intent intent = new Intent().setClass(weakReference.get(), BlockerActivity.class);
+				intent.putExtra("url", urlString);
+				intent.putExtra("domain", domain);
+
+				weakReference.get().startActivity(intent);
+				weakReference.get().finish();
+			} else {
+				C.goToUrl(weakReference.get(), urlString);
+			}
+		}
+
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		settings = PreferenceManager.getDefaultSharedPreferences(mContext);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 
 		int currentOrientation = getResources().getConfiguration().orientation;
 		if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -38,50 +86,10 @@ public class DetectorActivity extends BaseActivity {
 		}
 
 		String urlString = getIntent().getDataString();
-		checking(urlString);
+		new CheckingAsyncTask(mContext, settings).execute(urlString);
 	}
 
-	private void checking(String urlString) {
-		new AsyncTask<String, Void, String>() {
-			@Override
-			protected String doInBackground(String... strings) {
-				String urlString = strings[0];
-
-				if (settings.getBoolean("pref_short_url_checking", true)) {
-					String domain = getBaseDomain(urlString);
-					if (isShortenUrl(domain)) {
-						Handler handler = new Handler(mContext.getMainLooper());
-						handler.post(new Runnable() {
-							public void run() {
-								Toast.makeText(mContext, R.string.toast_redirecting, Toast.LENGTH_LONG).show();
-							}
-						});
-
-						urlString = getRedirectUrl(urlString);
-					}
-				}
-
-				return urlString;
-			}
-
-			@Override
-			protected void onPostExecute(String urlString) {
-				String domain = getBaseDomain(urlString);
-				if (isContentFarm(domain)) {
-					Intent intent = new Intent().setClass(mContext, BlockerActivity.class);
-					intent.putExtra("url", urlString);
-					intent.putExtra("domain", domain);
-
-					startActivity(intent);
-					mContext.finish();
-				} else {
-					C.goToUrl(mContext, urlString);
-				}
-			}
-		}.execute(urlString);
-	}
-
-	private boolean isContentFarm(String domain) {
+	private static boolean isContentFarm(String domain, SharedPreferences settings) {
 		String[] whitelistArray = settings.getString("pref_whitelist", "").split("\\r\\n|\\n|\\r");
 		String[] blacklistArray = settings.getString("pref_blacklist", "").split("\\r\\n|\\n|\\r");
 
@@ -98,7 +106,7 @@ public class DetectorActivity extends BaseActivity {
 		return defaultSet.contains(domain);
 	}
 
-	private boolean isShortenUrl(String domain) {
+	private static boolean isShortenUrl(String domain) {
 		return new HashSet<>(Arrays.asList(shortenDomainArray)).contains(domain);
 	}
 
@@ -110,7 +118,7 @@ public class DetectorActivity extends BaseActivity {
 	 * @param urlString String
 	 * @return String
 	 */
-	private String getBaseDomain(String urlString) {
+	private static String getBaseDomain(String urlString) {
 		try {
 			URL aURL = new URL(urlString);
 			String domain = aURL.getHost();
@@ -127,7 +135,7 @@ public class DetectorActivity extends BaseActivity {
 		}
 	}
 
-	private final String[] shortenDomainArray = {
+	private final static String[] shortenDomainArray = {
 			"7.ly",
 			"al.ly",
 			"bit.do",
@@ -143,7 +151,7 @@ public class DetectorActivity extends BaseActivity {
 	 * https://github.com/benlau/ihatecontentfarms/blob/master/chrome/sites.js
 	 * https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
 	 */
-	private final String[] contentFarmDomainArray = {
+	private final static String[] contentFarmDomainArray = {
 			// For testing
 			"example.com",
 			// ihatecontentfarms
@@ -649,7 +657,7 @@ public class DetectorActivity extends BaseActivity {
 			"zuopy.com",
 	};
 
-	private String getRedirectUrl(String urlString) {
+	private static String getRedirectUrl(String urlString) {
 		String domain = getBaseDomain(urlString);
 		if (isShortenUrl(domain)) {
 			try {
