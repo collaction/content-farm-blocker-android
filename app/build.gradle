@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 150321
-        versionName "Herbicide 321"
+        versionCode 150322
+        versionName "Herbicide 322"
         multiDexEnabled true
         resConfigs "en", "zh"
     }
@@ -21,7 +21,6 @@ android {
             shrinkResources true
             minifyEnabled true
             useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }

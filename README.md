@@ -29,8 +29,11 @@ Copyright 2017 Collaction Team.
 
 ## Changelog
 
+### Herbicide 322 (2018-03-15)
+* 修正錯誤
+
 ### Herbicide 321 (2018-03-14)
-* 修正嚴重錯誤，我們深以為歉、謹此致歉
+* 修正因使用 targetSdkVersion 27 而發生之嚴重錯誤
 
 ### Herbicide 320 (2018-03-09)
 * 修正錯誤
