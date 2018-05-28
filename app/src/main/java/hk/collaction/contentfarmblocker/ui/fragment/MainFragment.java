@@ -1,6 +1,7 @@
 package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -16,7 +17,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.Preference;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +27,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,8 +43,6 @@ public class MainFragment extends BasePreferenceFragment {
 
 	private Preference prefBrowser;
 	private SharedPreferences settings;
-	private ArrayList<AppItem> appList = new ArrayList<>();
-	private MaterialDialog browserDialog;
 	private boolean isShowMeow = false;
 	private CheckBoxPreference prefPreviousAppDetect;
 	private BillingProcessor billingProcessor;
@@ -73,7 +72,7 @@ public class MainFragment extends BasePreferenceFragment {
 		billingProcessor = new BillingProcessor(mContext, BuildConfig.GOOGLE_IAP_KEY,
 				new BillingProcessor.IBillingHandler() {
 					@Override
-					public void onProductPurchased(String productId, TransactionDetails details) {
+					public void onProductPurchased(@NonNull String productId, TransactionDetails details) {
 						if (productId.equals(C.IAP_PID_10)
 								|| productId.equals(C.IAP_PID_20)
 								|| productId.equals(C.IAP_PID_50)) {
@@ -105,7 +104,7 @@ public class MainFragment extends BasePreferenceFragment {
 
 	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
 	@Override
-	public void onViewCreated(View view, Bundle savedInstanceState) {
+	public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 
 		prefBrowser = findPreference("pref_browser");
@@ -159,7 +158,7 @@ public class MainFragment extends BasePreferenceFragment {
 				String whitelist = settings.getString("pref_whitelist", "");
 
 				View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_custom_list, null);
-				EditText inputEt = (EditText) view.findViewById(R.id.inputEt);
+				EditText inputEt = view.findViewById(R.id.inputEt);
 				inputEt.setText(whitelist);
 
 				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
@@ -171,7 +170,7 @@ public class MainFragment extends BasePreferenceFragment {
 						.onPositive(new MaterialDialog.SingleButtonCallback() {
 							@Override
 							public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-								EditText inputEt = (EditText) dialog.getView().findViewById(R.id.inputEt);
+								EditText inputEt = dialog.getView().findViewById(R.id.inputEt);
 								String result = inputEt.getText().toString().trim();
 								settings.edit().putString("pref_whitelist", result).apply();
 							}
@@ -188,7 +187,7 @@ public class MainFragment extends BasePreferenceFragment {
 				String blacklist = settings.getString("pref_blacklist", "");
 
 				View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_custom_list, null);
-				EditText inputEt = (EditText) view.findViewById(R.id.inputEt);
+				EditText inputEt = view.findViewById(R.id.inputEt);
 				inputEt.setText(blacklist);
 
 				MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
@@ -200,7 +199,7 @@ public class MainFragment extends BasePreferenceFragment {
 						.onPositive(new MaterialDialog.SingleButtonCallback() {
 							@Override
 							public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-								EditText inputEt = (EditText) dialog.getView().findViewById(R.id.inputEt);
+								EditText inputEt = dialog.getView().findViewById(R.id.inputEt);
 								String result = inputEt.getText().toString().trim();
 								settings.edit().putString("pref_blacklist", result).apply();
 							}
@@ -430,89 +429,111 @@ public class MainFragment extends BasePreferenceFragment {
 	 * Get all browser apps
 	 */
 	private void loadBrowserList() {
-		new AsyncTask<Void, Void, Void>() {
-			private MaterialDialog progressDialog;
+		new LoadBrowserListAsyncTask(mContext, prefBrowser).execute();
+	}
 
-			@Override
-			protected void onPreExecute() {
-				super.onPreExecute();
-				progressDialog = new MaterialDialog.Builder(mContext)
-						.content(R.string.ui_loading)
-						.progress(true, 0)
-						.cancelable(false)
-						.show();
-				C.toggleDefaultApp(mContext, false);
-			}
+	private static class LoadBrowserListAsyncTask extends AsyncTask<Void, Void, Void> {
 
-			@Override
-			protected Void doInBackground(Void... voids) {
-				PackageManager packageManager = mContext.getPackageManager();
-				appList.clear();
+		private final SharedPreferences settings;
+		private final WeakReference<Activity> weakReference;
+		private final Preference prefBrowser;
+		private MaterialDialog progressDialog;
+		private MaterialDialog browserDialog;
+		private ArrayList<AppItem> appList = new ArrayList<>();
 
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(Uri.parse("https://www.google.com"));
-				List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent, 0);
+		LoadBrowserListAsyncTask(Activity mContext, Preference prefBrowser) {
+			weakReference = new WeakReference<>(mContext);
+			settings = PreferenceManager.getDefaultSharedPreferences(mContext);
+			this.prefBrowser = prefBrowser;
+		}
 
-				for (ResolveInfo info : pkgAppsList) {
-					String packageName = info.activityInfo.packageName;
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			progressDialog = new MaterialDialog.Builder(weakReference.get())
+					.content(R.string.ui_loading)
+					.progress(true, 0)
+					.cancelable(false)
+					.show();
+			C.toggleDefaultApp(weakReference.get(), false);
+		}
 
-					/* Just skip this app */
-					if (packageName.equals(mContext.getPackageName())) {
-						continue;
-					}
+		@Override
+		protected Void doInBackground(Void... voids) {
+			PackageManager packageManager = weakReference.get().getPackageManager();
+			appList.clear();
 
-					/* Add the browser to the appList */
-					try {
-						ApplicationInfo applicationInfo = packageManager.getApplicationInfo(packageName, 0);
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setData(Uri.parse("https://www.google.com"));
+			List<ResolveInfo> pkgAppsList = packageManager.queryIntentActivities(intent, 0);
 
-						AppItem appItem = new AppItem();
-						appItem.setAppName(applicationInfo.loadLabel(packageManager).toString());
-						appItem.setPackageName(applicationInfo.packageName);
-						appItem.setIcon(applicationInfo.loadIcon(packageManager));
+			for (ResolveInfo info : pkgAppsList) {
+				String packageName = info.activityInfo.packageName;
 
-						appList.add(appItem);
-					} catch (PackageManager.NameNotFoundException ignored) {
-					}
+				/* Just skip this app */
+				if (packageName.equals(weakReference.get().getPackageName())) {
+					continue;
 				}
 
-				/* Making the loading longer would make the world better */
+				/* Add the browser to the appList */
 				try {
-					Thread.sleep(500);
-				} catch (InterruptedException ignored) {
+					ApplicationInfo applicationInfo = packageManager.getApplicationInfo(packageName, 0);
+
+					AppItem appItem = new AppItem();
+					appItem.setAppName(applicationInfo.loadLabel(packageManager).toString());
+					appItem.setPackageName(applicationInfo.packageName);
+					appItem.setIcon(applicationInfo.loadIcon(packageManager));
+
+					appList.add(appItem);
+				} catch (PackageManager.NameNotFoundException ignored) {
 				}
-				return null;
 			}
 
-			@Override
-			protected void onPostExecute(Void aVoid) {
-				super.onPostExecute(aVoid);
-				if (settings.getBoolean("pref_enable", false)) {
-					C.toggleDefaultApp(mContext, true);
+			/* Making the loading longer would make the world better */
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException ignored) {
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void aVoid) {
+			super.onPostExecute(aVoid);
+
+			if (weakReference.get().isDestroyed()) {
+				return;
+			}
+
+			if (settings.getBoolean("pref_enable", false)) {
+				C.toggleDefaultApp(weakReference.get(), true);
+			}
+
+			progressDialog.dismiss();
+
+			AppItemAdapter appItemAdapter = new AppItemAdapter(appList, new AppItemAdapter.ItemClickListener() {
+				@Override
+				public void onItemDetailClick(AppItem appItem) {
+					settings.edit()
+							.putString("pref_browser", appItem.getPackageName())
+							.putString("pref_browser_app_name", appItem.getAppName())
+							.apply();
+					prefBrowser.setSummary(settings.getString("pref_browser_app_name", appItem.getAppName()));
+					browserDialog.dismiss();
 				}
+			});
 
-				progressDialog.dismiss();
+			MaterialDialog.Builder browserDialogBuilder = new MaterialDialog.Builder(weakReference.get())
+					.title(R.string.pref_browser_title)
+					.adapter(appItemAdapter, null)
+					.negativeText(R.string.ui_cancel);
 
-				AppItemAdapter appItemAdapter = new AppItemAdapter(appList, new AppItemAdapter.ItemClickListener() {
-					@Override
-					public void onItemDetailClick(AppItem appItem) {
-						settings.edit()
-								.putString("pref_browser", appItem.getPackageName())
-								.putString("pref_browser_app_name", appItem.getAppName())
-								.apply();
-						prefBrowser.setSummary(settings.getString("pref_browser_app_name", appItem.getAppName()));
-						browserDialog.dismiss();
-					}
-				});
+			browserDialog = browserDialogBuilder.build();
 
-				MaterialDialog.Builder browserDialogBuilder = new MaterialDialog.Builder(mContext)
-						.title(R.string.pref_browser_title)
-						.adapter(appItemAdapter, null)
-						.negativeText(R.string.ui_cancel);
-
-				browserDialog = browserDialogBuilder.build();
+			if (weakReference.get().hasWindowFocus()) {
 				browserDialog.show();
 			}
-		}.execute();
+		}
 	}
 
 	private void checkPayment(String productId) {

@@ -8,16 +8,21 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 150322
-        versionName "Herbicide 322"
+        versionCode 153252 // 0 = alpha, 1 = beta, 2 = release
+        versionName "Herbicide 325"
         multiDexEnabled true
         resConfigs "en", "zh"
     }
     buildTypes {
         debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            useProguard false
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
         release {
+            debuggable false
             shrinkResources true
             minifyEnabled true
             useProguard true
@@ -40,30 +45,30 @@ static def getSecretKey(name) {
 
 dependencies {
     // Google Android Support
-    compile 'com.android.support:multidex:1.0.3'
-    compile 'com.android.support:appcompat-v7:27.1.0'
-    compile 'com.android.support:support-v4:27.1.0'
-    compile 'com.android.support:design:27.1.0'
-    compile 'com.android.support:preference-v14:27.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:preference-v14:27.1.1'
 
     // RxBinding Butter Knife
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     // Material Dialog
-    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     // Roboto TextView
-    compile 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
+    implementation 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
 
     // Simple IAB
-    compile 'com.anjlab.android.iab.v3:library:1.0.44'
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
 
     // Firebase
-    compile 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-core:16.0.0'
 
     // Crashlytics
-    compile('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
         transitive = true
     }
 }

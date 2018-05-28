@@ -20,6 +20,7 @@ import android.provider.Browser;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -41,12 +42,12 @@ public class C extends Util {
 	 * @param mContext Activity
 	 * @param url      String
 	 */
-	@SuppressLint("StaticFieldLeak")
 	public static void goToUrl(Activity mContext, String url) {
-		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
-		String packageName = settings.getString("pref_browser", "");
-
+		String packageName = null;
 		try {
+			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
+			packageName = settings.getString("pref_browser", "");
+
 			if (url == null) {
 				throw new Exception();
 			}
@@ -57,7 +58,7 @@ public class C extends Util {
 			}
 
 			/* Make sure it has packageName */
-			if (packageName.equals("")) {
+			if ("".equals(packageName)) {
 				throw new Exception();
 			}
 
@@ -94,17 +95,25 @@ public class C extends Util {
 				mContext.startActivity(intent);
 			}
 		} finally {
-			new AsyncTask<Context, Void, Void>() {
-				@Override
-				protected Void doInBackground(Context... mContext) {
-					SystemClock.sleep(1000);
-					toggleDefaultApp(mContext[0], true);
-					return null;
-				}
-			}.execute(mContext);
+			new toggleDefaultAppAsyncTask(mContext).execute();
 		}
 
 		mContext.finish();
+	}
+
+	private static class toggleDefaultAppAsyncTask extends AsyncTask<Void, Void, Void> {
+		private WeakReference<Activity> weakReference;
+
+		toggleDefaultAppAsyncTask(Activity mContext) {
+			weakReference = new WeakReference<>(mContext);
+		}
+
+		@Override
+		protected Void doInBackground(Void... voids) {
+			SystemClock.sleep(1000);
+			toggleDefaultApp(weakReference.get(), true);
+			return null;
+		}
 	}
 
 	/**
@@ -121,9 +130,7 @@ public class C extends Util {
 			String browserPackageName = settings.getString("pref_browser", "");
 			String lastAppPackageName = getRunningApp(mContext);
 
-			if (!browserPackageName.equals(lastAppPackageName)) {
-				return false;
-			}
+			return browserPackageName.equals(lastAppPackageName);
 		}
 
 		return true;

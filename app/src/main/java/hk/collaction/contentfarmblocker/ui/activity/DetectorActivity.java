@@ -42,12 +42,14 @@ public class DetectorActivity extends BaseActivity {
 			if (settings.getBoolean("pref_short_url_checking", true)) {
 				String domain = getBaseDomain(urlString);
 				if (isShortenUrl(domain)) {
-					Handler handler = new Handler(weakReference.get().getMainLooper());
-					handler.post(new Runnable() {
-						public void run() {
-							Toast.makeText(weakReference.get(), R.string.toast_redirecting, Toast.LENGTH_LONG).show();
-						}
-					});
+					if (weakReference.get() != null) {
+						Handler handler = new Handler(weakReference.get().getMainLooper());
+						handler.post(new Runnable() {
+							public void run() {
+								Toast.makeText(weakReference.get(), R.string.toast_redirecting, Toast.LENGTH_LONG).show();
+							}
+						});
+					}
 
 					urlString = getRedirectUrl(urlString);
 				}
