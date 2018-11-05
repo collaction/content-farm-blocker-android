@@ -1,6 +1,7 @@
 package hk.collaction.contentfarmblocker.ui.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +34,9 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 		this.mListener = mListener;
 	}
 
+	@NonNull
 	@Override
-	public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+	public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		Context mContext = parent.getContext();
 
 		View itemView = LayoutInflater.from(mContext).inflate(R.layout.list_item_info_app, parent, false);
@@ -42,7 +44,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 	}
 
 	@Override
-	public void onBindViewHolder(RecyclerView.ViewHolder rawHolder, int position) {
+	public void onBindViewHolder(@NonNull RecyclerView.ViewHolder rawHolder, int position) {
 		AppItem item = mDataList.get(position);
 		ItemViewHolder holder = (ItemViewHolder) rawHolder;
 
@@ -61,7 +63,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 	@Override
 	public int getItemCount() {
-		return mDataList == null ? 0 : mDataList.size();
+		return mDataList.size();
 	}
 
 	static class ItemViewHolder extends RecyclerView.ViewHolder {

@@ -1,7 +1,9 @@
 package hk.collaction.contentfarmblocker.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -27,7 +29,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -61,13 +62,6 @@ public class MainFragment extends BasePreferenceFragment {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.pref_general);
 		settings = PreferenceManager.getDefaultSharedPreferences(mContext);
-
-		if (getArguments() != null) {
-			boolean isNoBrowser = getArguments().getBoolean("no_browser");
-			if (isNoBrowser) {
-				loadBrowserList();
-			}
-		}
 
 		billingProcessor = new BillingProcessor(mContext, BuildConfig.GOOGLE_IAP_KEY,
 				new BillingProcessor.IBillingHandler() {
@@ -307,7 +301,11 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Uri uri = Uri.parse("market://details?id=hk.collaction.contentfarmblocker");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(intent);
+				try {
+					startActivity(intent);
+				} catch (ActivityNotFoundException e) {
+					Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_SHORT).show();
+				}
 				return false;
 			}
 		});
@@ -317,7 +315,11 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Uri uri = Uri.parse("http://www.example.com");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(intent);
+				try {
+					startActivity(intent);
+				} catch (ActivityNotFoundException e) {
+					Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_SHORT).show();
+				}
 				return false;
 			}
 		});
@@ -327,7 +329,11 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Uri uri = Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScP-XrmmYs3hP_uYw1rF2lotOFzVfTFKJN_MGQDNL27lO2Pkg/viewform");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(intent);
+				try {
+					startActivity(intent);
+				} catch (ActivityNotFoundException e) {
+					Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_SHORT).show();
+				}
 				return false;
 			}
 		});
@@ -350,7 +356,11 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Uri uri = Uri.parse("market://search?q=pub:\"Collaction 小隊\"");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(intent);
+				try {
+					startActivity(intent);
+				} catch (ActivityNotFoundException e) {
+					Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_SHORT).show();
+				}
 				return false;
 			}
 		});
@@ -360,11 +370,21 @@ public class MainFragment extends BasePreferenceFragment {
 			public boolean onPreferenceClick(Preference preference) {
 				Uri uri = Uri.parse("https://www.collaction.hk/s/collactionopensource");
 				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-				startActivity(intent);
+				try {
+					startActivity(intent);
+				} catch (ActivityNotFoundException e) {
+					Toast.makeText(mContext, R.string.ui_error, Toast.LENGTH_SHORT).show();
+				}
 				return false;
 			}
 		});
 
+		if (getArguments() != null) {
+			boolean isNoBrowser = getArguments().getBoolean("no_browser");
+			if (isNoBrowser) {
+				loadBrowserList();
+			}
+		}
 	}
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -432,17 +452,18 @@ public class MainFragment extends BasePreferenceFragment {
 		new LoadBrowserListAsyncTask(mContext, prefBrowser).execute();
 	}
 
-	private static class LoadBrowserListAsyncTask extends AsyncTask<Void, Void, Void> {
+	@SuppressLint("StaticFieldLeak")
+	private class LoadBrowserListAsyncTask extends AsyncTask<Void, Void, Void> {
 
 		private final SharedPreferences settings;
-		private final WeakReference<Activity> weakReference;
+		private final Activity mContext;
 		private final Preference prefBrowser;
 		private MaterialDialog progressDialog;
 		private MaterialDialog browserDialog;
 		private ArrayList<AppItem> appList = new ArrayList<>();
 
 		LoadBrowserListAsyncTask(Activity mContext, Preference prefBrowser) {
-			weakReference = new WeakReference<>(mContext);
+			this.mContext = mContext;
 			settings = PreferenceManager.getDefaultSharedPreferences(mContext);
 			this.prefBrowser = prefBrowser;
 		}
@@ -450,17 +471,17 @@ public class MainFragment extends BasePreferenceFragment {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			progressDialog = new MaterialDialog.Builder(weakReference.get())
+			progressDialog = new MaterialDialog.Builder(mContext)
 					.content(R.string.ui_loading)
 					.progress(true, 0)
 					.cancelable(false)
 					.show();
-			C.toggleDefaultApp(weakReference.get(), false);
+			C.toggleDefaultApp(mContext, false);
 		}
 
 		@Override
 		protected Void doInBackground(Void... voids) {
-			PackageManager packageManager = weakReference.get().getPackageManager();
+			PackageManager packageManager = mContext.getPackageManager();
 			appList.clear();
 
 			Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -471,7 +492,7 @@ public class MainFragment extends BasePreferenceFragment {
 				String packageName = info.activityInfo.packageName;
 
 				/* Just skip this app */
-				if (packageName.equals(weakReference.get().getPackageName())) {
+				if (packageName.equals(mContext.getPackageName())) {
 					continue;
 				}
 
@@ -500,13 +521,8 @@ public class MainFragment extends BasePreferenceFragment {
 		@Override
 		protected void onPostExecute(Void aVoid) {
 			super.onPostExecute(aVoid);
-
-			if (weakReference.get().isDestroyed()) {
-				return;
-			}
-
 			if (settings.getBoolean("pref_enable", false)) {
-				C.toggleDefaultApp(weakReference.get(), true);
+				C.toggleDefaultApp(mContext, true);
 			}
 
 			progressDialog.dismiss();
@@ -523,16 +539,13 @@ public class MainFragment extends BasePreferenceFragment {
 				}
 			});
 
-			MaterialDialog.Builder browserDialogBuilder = new MaterialDialog.Builder(weakReference.get())
+			MaterialDialog.Builder browserDialogBuilder = new MaterialDialog.Builder(mContext)
 					.title(R.string.pref_browser_title)
 					.adapter(appItemAdapter, null)
 					.negativeText(R.string.ui_cancel);
 
 			browserDialog = browserDialogBuilder.build();
-
-			if (weakReference.get().hasWindowFocus()) {
-				browserDialog.show();
-			}
+			browserDialog.show();
 		}
 	}
 

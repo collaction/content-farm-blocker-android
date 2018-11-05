@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_dark"
@@ -10,14 +10,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-        <ImageView
+        <android.support.v7.widget.AppCompatImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginBottom="24dp"
@@ -25,27 +26,26 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/farm_warning_icon"/>
 
-        <com.devspark.robototextview.widget.RobotoTextView
+        <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-condensed"
             android:text="@string/ui_warning_title"
             android:textColor="@color/white"
-            android:textSize="40sp"
-            app:robotoTypeface="roboto_bold"/>
+            android:textSize="40sp"/>
 
-        <com.devspark.robototextview.widget.RobotoTextView
+        <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="@string/ui_warning_subtitle"
             android:textColor="@color/white"
-            android:textSize="24sp"
-            app:robotoTypeface="roboto_regular"/>
+            android:textSize="24sp"/>
 
 
-        <com.devspark.robototextview.widget.RobotoTextView
+        <android.support.v7.widget.AppCompatTextView
             android:id="@+id/domainTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,8 +53,7 @@
             android:gravity="center"
             android:text="@string/ui_warning_desc"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            app:robotoTypeface="roboto_regular"/>
+            android:textSize="16sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,44 +63,40 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.devspark.robototextview.widget.RobotoButton
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/backButton"
                 style="@style/ButtonText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:paddingBottom="20dp"
                 android:paddingLeft="80dp"
-                android:paddingRight="80dp"
                 android:paddingTop="20dp"
+                android:paddingRight="80dp"
+                android:paddingBottom="20dp"
                 android:text="@string/ui_exit"
-                android:theme="@style/GreenButton"
-                app:robotoTypeface="roboto_regular"/>
+                android:theme="@style/GreenButton"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
-                <com.devspark.robototextview.widget.RobotoButton
+                <android.support.v7.widget.AppCompatButton
                     android:id="@+id/goButton"
                     style="@style/ButtonText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ui_continue"
-                    android:theme="@style/GrayButton"
-                    app:robotoTypeface="roboto_regular"/>
+                    android:theme="@style/GrayButton"/>
 
-                <com.devspark.robototextview.widget.RobotoButton
+                <android.support.v7.widget.AppCompatButton
                     android:id="@+id/whitelistButton"
                     style="@style/ButtonText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ui_add_to_whitelist"
-                    android:theme="@style/GrayButton"
-                    app:robotoTypeface="roboto_regular"/>
+                    android:theme="@style/GrayButton"/>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

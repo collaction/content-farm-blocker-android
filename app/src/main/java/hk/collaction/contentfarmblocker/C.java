@@ -20,15 +20,15 @@ import android.provider.Browser;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import hk.collaction.contentfarmblocker.helper.UtilHelper;
 import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
 import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
 
-public class C extends Util {
+public class C extends UtilHelper {
 
 	@SuppressWarnings("unused")
 	public static final String TAG = "TAG";
@@ -95,25 +95,17 @@ public class C extends Util {
 				mContext.startActivity(intent);
 			}
 		} finally {
-			new toggleDefaultAppAsyncTask(mContext).execute();
+			new AsyncTask<Context, Void, Void>() {
+				@Override
+				protected Void doInBackground(Context... mContext) {
+					SystemClock.sleep(1000);
+					toggleDefaultApp(mContext[0], true);
+					return null;
+				}
+			}.execute(mContext);
 		}
 
 		mContext.finish();
-	}
-
-	private static class toggleDefaultAppAsyncTask extends AsyncTask<Void, Void, Void> {
-		private WeakReference<Activity> weakReference;
-
-		toggleDefaultAppAsyncTask(Activity mContext) {
-			weakReference = new WeakReference<>(mContext);
-		}
-
-		@Override
-		protected Void doInBackground(Void... voids) {
-			SystemClock.sleep(1000);
-			toggleDefaultApp(weakReference.get(), true);
-			return null;
-		}
 	}
 
 	/**
@@ -189,19 +181,21 @@ public class C extends Util {
 	}
 
 	public static boolean isPurchased(SharedPreferences settings) {
-		return settings.getBoolean(Util.PREF_IAP, false);
+		return settings.getBoolean(UtilHelper.PREF_IAP, false);
 	}
 
 	public static void toggleDefaultApp(Context mContext, boolean isEnable) {
-		PackageManager pm = mContext.getPackageManager();
-		ComponentName component = new ComponentName(mContext, DetectorActivity.class);
+		if (mContext != null) {
+			PackageManager pm = mContext.getPackageManager();
+			ComponentName component = new ComponentName(mContext, DetectorActivity.class);
 
-		if (isEnable) {
-			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-		} else {
-			pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+			if (isEnable) {
+				pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+			} else {
+				pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+			}
+
+			Log.d(C.TAG, "toggleDefaultApp() " + isEnable);
 		}
-
-		Log.d(C.TAG, "toggleDefaultApp() " + isEnable);
 	}
 }

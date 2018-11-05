@@ -1,10 +1,9 @@
 package hk.collaction.contentfarmblocker.ui.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,7 +11,6 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import java.io.IOException;
-import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -25,13 +23,14 @@ import hk.collaction.contentfarmblocker.R;
 
 public class DetectorActivity extends BaseActivity {
 
-	private static class CheckingAsyncTask extends AsyncTask<String, Void, String> {
+	@SuppressLint("StaticFieldLeak")
+	private class CheckingAsyncTask extends AsyncTask<String, Void, String> {
 
-		private WeakReference<Activity> weakReference;
+		private Activity mContext;
 		private SharedPreferences settings;
 
 		CheckingAsyncTask(Activity mContext, SharedPreferences settings) {
-			weakReference = new WeakReference<>(mContext);
+			this.mContext = mContext;
 			this.settings = settings;
 		}
 
@@ -39,14 +38,16 @@ public class DetectorActivity extends BaseActivity {
 		protected String doInBackground(String... strings) {
 			String urlString = strings[0];
 
+			urlString = urlString.toLowerCase();
+
 			if (settings.getBoolean("pref_short_url_checking", true)) {
 				String domain = getBaseDomain(urlString);
 				if (isShortenUrl(domain)) {
-					if (weakReference.get() != null) {
-						Handler handler = new Handler(weakReference.get().getMainLooper());
+					if (mContext != null) {
+						Handler handler = new Handler(mContext.getMainLooper());
 						handler.post(new Runnable() {
 							public void run() {
-								Toast.makeText(weakReference.get(), R.string.toast_redirecting, Toast.LENGTH_LONG).show();
+								Toast.makeText(mContext, R.string.toast_redirecting, Toast.LENGTH_LONG).show();
 							}
 						});
 					}
@@ -60,16 +61,20 @@ public class DetectorActivity extends BaseActivity {
 
 		@Override
 		protected void onPostExecute(String urlString) {
+			if (mContext == null) {
+				return;
+			}
+
 			String domain = getBaseDomain(urlString);
 			if (isContentFarm(domain, settings)) {
-				Intent intent = new Intent().setClass(weakReference.get(), BlockerActivity.class);
+				Intent intent = new Intent().setClass(mContext, BlockerActivity.class);
 				intent.putExtra("url", urlString);
 				intent.putExtra("domain", domain);
 
-				weakReference.get().startActivity(intent);
-				weakReference.get().finish();
+				mContext.startActivity(intent);
+				mContext.finish();
 			} else {
-				C.goToUrl(weakReference.get(), urlString);
+				C.goToUrl(mContext, urlString);
 			}
 		}
 
@@ -79,13 +84,6 @@ public class DetectorActivity extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
-
-		int currentOrientation = getResources().getConfiguration().orientation;
-		if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-		} else {
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-		}
 
 		String urlString = getIntent().getDataString();
 		new CheckingAsyncTask(mContext, settings).execute(urlString);
@@ -155,6 +153,7 @@ public class DetectorActivity extends BaseActivity {
 	 */
 	private final static String[] contentFarmDomainArray = {
 			// For testing
+			"www.example.com",
 			"example.com",
 			// ihatecontentfarms
 			"163nvren.com",

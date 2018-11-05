@@ -90,6 +90,6 @@
         <Preference
             android:key="pref_collaction"
             android:summary="Content Farm Blocker for Android is an Open Source project covered by the GNU General Public License version 3."
-            android:title="Copyright 2017 Collaction Team"/>
+            android:title="Copyright 2018 Collaction Team"/>
     </PreferenceCategory>
 </PreferenceScreen>

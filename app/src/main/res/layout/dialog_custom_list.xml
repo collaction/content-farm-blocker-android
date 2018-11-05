@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.devspark.robototextview.widget.RobotoTextView
+    <android.support.v7.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ui_custom_list_hint"/>
 
-    <EditText
+    <android.support.v7.widget.AppCompatEditText
         android:id="@+id/inputEt"
         style="@style/EditTextSingleLine"
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
         android:inputType="textMultiLine|textUri"
         android:maxLines="10"
         android:minLines="4"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
 
 </LinearLayout>
