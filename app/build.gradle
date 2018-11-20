@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 193402 // 0 = alpha, 1 = beta, 2 = release
-        versionName "Herbicide 340"
+        versionCode 193502 // 0 = alpha, 1 = beta, 2 = release
+        versionName "Herbicide 350"
         multiDexEnabled true
         resConfigs "en", "zh"
     }

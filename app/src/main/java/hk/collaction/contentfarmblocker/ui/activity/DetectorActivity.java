@@ -38,8 +38,6 @@ public class DetectorActivity extends BaseActivity {
 		protected String doInBackground(String... strings) {
 			String urlString = strings[0];
 
-			urlString = urlString.toLowerCase();
-
 			if (settings.getBoolean("pref_short_url_checking", true)) {
 				String domain = getBaseDomain(urlString);
 				if (isShortenUrl(domain)) {
@@ -90,6 +88,8 @@ public class DetectorActivity extends BaseActivity {
 	}
 
 	private static boolean isContentFarm(String domain, SharedPreferences settings) {
+		domain = domain.toLowerCase();
+
 		String[] whitelistArray = settings.getString("pref_whitelist", "").split("\\r\\n|\\n|\\r");
 		String[] blacklistArray = settings.getString("pref_blacklist", "").split("\\r\\n|\\n|\\r");
 
