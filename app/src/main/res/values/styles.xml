@@ -14,7 +14,6 @@
         <item name="colorSwitchThumbNormal">@color/primary</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
     <style name="ThemeTranslucent" parent="Theme.AppCompat.NoActionBar">
@@ -82,7 +81,6 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
 
     <style name="MainButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:gravity">center</item>
