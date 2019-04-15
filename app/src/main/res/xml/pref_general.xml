@@ -70,7 +70,6 @@
 
         <Preference
             android:key="pref_rate"
-            android:summary="⭐️⭐️⭐️⭐️⭐️"
             android:title="給予評分"/>
 
         <Preference
