@@ -3,7 +3,6 @@ package hk.collaction.contentfarmblocker.ui.fragment;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import androidx.annotation.NonNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -70,12 +70,12 @@ public class BlockerFragment extends BaseFragment {
 	}
 
 	@OnClick(R.id.goButton)
-	public void goToUrl() {
+	void goToUrl() {
 		C.goToUrl(mContext, urlString);
 	}
 
 	@OnClick(R.id.whitelistButton)
-	public void whitelist() {
+	void whitelist() {
 		MaterialDialog.Builder dialog = new MaterialDialog.Builder(mContext)
 				.title(R.string.ui_add_to_whitelist)
 				.content(R.string.ui_whitelist_message)

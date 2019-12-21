@@ -2,6 +2,7 @@ package hk.collaction.contentfarmblocker.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
+
 import androidx.preference.PreferenceFragmentCompat;
 
 public class BasePreferenceFragment extends PreferenceFragmentCompat {

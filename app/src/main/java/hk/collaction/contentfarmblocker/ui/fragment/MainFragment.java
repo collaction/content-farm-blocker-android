@@ -259,7 +259,7 @@ public class MainFragment extends BasePreferenceFragment {
 			}
 		});
 
-		prefPreviousAppDetect = (CheckBoxPreference) findPreference("pref_previous_app_detect");
+		prefPreviousAppDetect = findPreference("pref_previous_app_detect");
 
 		/* Set version */
 		Preference prefVersion = findPreference("pref_version");
@@ -282,7 +282,7 @@ public class MainFragment extends BasePreferenceFragment {
 				Intent intent = new Intent(Intent.ACTION_SEND);
 
 				String meta = "Android Version: " + android.os.Build.VERSION.RELEASE + "\n";
-				meta += "SDK Level: " + String.valueOf(android.os.Build.VERSION.SDK_INT) + "\n";
+				meta += "SDK Level: " + Build.VERSION.SDK_INT + "\n";
 				meta += "Version: " + C.getCurrentVersionName(mContext) + "\n";
 				meta += "Brand: " + Build.BRAND + "\n";
 				meta += "Model: " + Build.MODEL + "\n\n";

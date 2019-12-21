@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "hk.collaction.contentfarmblocker"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
-        versionCode 193602 // 0 = alpha, 1 = beta, 2 = release
-        versionName "Herbicide 360"
+        versionCode 193702 // 0 = alpha, 1 = beta, 2 = release
+        versionName "Herbicide 370"
         multiDexEnabled true
         resConfigs "en", "zh"
     }
@@ -20,14 +20,12 @@ android {
             debuggable true
             minifyEnabled false
             shrinkResources false
-            useProguard false
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
         release {
             debuggable false
             shrinkResources true
             minifyEnabled true
-            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "String", "GOOGLE_IAP_KEY", "\"" + getSecretKey("GOOGLE_IAP_KEY") + "\""
         }
@@ -56,18 +54,17 @@ static def getSecretKey(name) {
 
 dependencies {
     // Google Android Support
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.preference:preference:1.0.0'
+    implementation 'androidx.preference:preference:1.1.0'
 
     // Google Play Services
-    implementation 'com.google.firebase:firebase-core:16.0.8'
-    implementation 'com.google.firebase:firebase-perf:16.2.5'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-perf:19.0.4'
 
     // RxBinding Butter Knife
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     // Material Dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
@@ -76,10 +73,10 @@ dependencies {
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'
 
     // Crashlytics
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     // https://github.com/Blankj/AndroidUtilCode
-    implementation 'com.blankj:utilcode:1.23.7'
+    implementation 'com.blankj:utilcode:1.25.9'
 }
 
 apply plugin: 'com.google.gms.google-services'

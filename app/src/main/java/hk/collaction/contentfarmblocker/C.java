@@ -17,13 +17,13 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.Browser;
-import androidx.annotation.Nullable;
 import android.util.Log;
 
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import androidx.annotation.Nullable;
 import hk.collaction.contentfarmblocker.helper.UtilHelper;
 import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity;
 import hk.collaction.contentfarmblocker.ui.activity.MainActivity;
@@ -122,6 +122,7 @@ public class C extends UtilHelper {
 			String browserPackageName = settings.getString("pref_browser", "");
 			String lastAppPackageName = getRunningApp(mContext);
 
+			assert browserPackageName != null;
 			return browserPackageName.equals(lastAppPackageName);
 		}
 

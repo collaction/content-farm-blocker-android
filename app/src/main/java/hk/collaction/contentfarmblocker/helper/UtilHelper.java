@@ -65,7 +65,6 @@ public class UtilHelper {
 		return bigDecimal.toPlainString();
 	}
 
-	@SuppressWarnings("deprecation")
 	public static void detectLanguage(Context context) {
 		SharedPreferences setting = PreferenceManager
 				.getDefaultSharedPreferences(context);

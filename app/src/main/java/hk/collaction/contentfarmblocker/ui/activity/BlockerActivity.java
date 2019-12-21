@@ -2,11 +2,12 @@ package hk.collaction.contentfarmblocker.ui.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import hk.collaction.contentfarmblocker.C;
@@ -19,7 +20,7 @@ public class BlockerActivity extends BaseActivity {
 	Toolbar toolbar;
 
 	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
+	public void onConfigurationChanged(@NonNull Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		C.detectLanguage(mContext);
 		ActionBar ab = initActionBar(getSupportActionBar(), R.string.title_activity_main);
