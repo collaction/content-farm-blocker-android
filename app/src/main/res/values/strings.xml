@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="ui_okay">確定</string>
     <string name="ui_cancel">取消</string>
@@ -40,13 +40,25 @@
         <item>中文（正體）</item>
     </string-array>
 
+    <string-array name="language_locale_code" translatable="false">
+        <item />
+        <item>en</item>
+        <item>zh</item>
+    </string-array>
+
+    <string-array name="language_locale_country_code" translatable="false">
+        <item />
+        <item />
+        <item />
+    </string-array>
+
     <string-array name="donate_choose">
         <item>HKD 10 一杯咖啡</item>
         <item>HKD 20 一盒咖啡</item>
         <item>HKD 50 一桶咖啡</item>
     </string-array>
 
-    <string-array name="donate_summary">
+    <string-array name="donate_summary" tools:ignore="InconsistentArrays">
         <item>點滴在心頭，小隊馬上精神抖擻</item>
         <item>您的咖啡是我們的重要養分喔！</item>
         <item>殊！好像聽到我們的伺服器喝咖啡的聲音</item>

@@ -1,95 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="Settings">
 
     <PreferenceCategory android:title="General">
         <CheckBoxPreference
             android:key="pref_enable"
             android:summary="If it is not working, please try to re-enable."
-            android:title="Enable Blocker"/>
+            android:title="Enable Blocker" />
 
         <Preference
             android:key="pref_browser"
-            android:title="Default Browser"/>
+            android:title="Default Browser" />
 
         <Preference
             android:key="pref_testing"
             android:summary="Use example.com for testing."
-            android:title="Testing Link"/>
+            android:title="Testing Link" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Advance">
         <Preference
             android:key="pref_language"
-            android:title="Language"/>
+            android:title="Language" />
 
         <Preference
             android:key="pref_whitelist"
             android:summary="Set your own personal whitelist here."
-            android:title="Edit Whitelist"/>
+            android:title="Edit Whitelist" />
 
         <Preference
             android:key="pref_blacklist"
             android:summary="Set your own personal blacklist here."
-            android:title="Edit Blacklist"/>
+            android:title="Edit Blacklist" />
 
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
-            android:title="Enable Shorten URL Checking"/>
+            android:title="Enable Shorten URL Checking" />
 
         <CheckBoxPreference
             android:enabled="false"
             android:key="pref_previous_app_detect"
-            android:title="Enable App Toggle Compatible Mode"/>
+            android:title="Enable App Toggle Compatible Mode" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Restriction">
         <Preference
             android:summary="Cannot detect In-App Browser such as Facebook and Messenger."
-            android:title="In-App Browser"/>
+            android:title="In-App Browser" />
         <Preference
             android:summary="Cannot detect Browser Incognito Mode."
-            android:title="Incognito Mode"/>
+            android:title="Incognito Mode" />
         <Preference
             android:summary="Cannot detect Manually New Tab."
-            android:title="Manually New Tab"/>
+            android:title="Manually New Tab" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="About">
         <Preference
             android:key="pref_donate"
-            android:title="Buy us a coffee"/>
+            android:title="Buy us a coffee" />
 
         <Preference
             android:key="pref_rate"
             android:summary="⭐️⭐️⭐️⭐️⭐️"
-            android:title="Rate us"/>
+            android:title="Rate us" />
 
         <Preference
             android:key="pref_share"
-            android:title="Share to others"/>
+            android:title="Share to others" />
 
         <Preference
             android:key="pref_author"
-            android:title="Other Apps"/>
+            android:title="Other Apps" />
 
         <Preference
             android:key="pref_report_work"
-            android:title="Tell us if it is work"/>
+            android:title="Tell us if it is work" />
 
         <Preference
             android:key="pref_report"
-            android:title="Report Issue"/>
+            android:title="Report Issue" />
 
         <Preference
             android:key="pref_version"
-            android:title="Version"/>
+            android:title="Version" />
 
         <Preference
             android:key="pref_collaction"
             android:summary="Content Farm Blocker for Android is an Open Source project covered by the GNU General Public License version 3."
-            android:title="Copyright 2018 Collaction Team"/>
+            android:title="Copyright 2018 Collaction Team" />
     </PreferenceCategory>
 </PreferenceScreen>

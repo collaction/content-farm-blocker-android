@@ -1,104 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="設定">
 
     <PreferenceCategory android:title="一般">
         <CheckBoxPreference
             android:key="pref_enable"
             android:summary="如果你發現程式發現問題，點擊這裡重新啟用檢查器。"
-            android:title="啟用檢查器"/>
+            android:title="啟用檢查器" />
 
         <Preference
             android:key="pref_browser"
-            android:title="預設瀏覽器"/>
+            android:title="預設瀏覽器" />
 
         <Preference
             android:key="pref_testing"
             android:summary="開啟 example.com 測試連結。"
-            android:title="測試檢查"/>
+            android:title="測試檢查" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="進階功能">
         <Preference
             android:key="pref_language"
-            android:title="Language（語言）"/>
+            android:title="Language（語言）" />
 
         <Preference
             android:key="pref_whitelist"
             android:summary="設定個人的白名單，忽略檢查你喜愛的內容農場（什麼？）"
-            android:title="編輯白名單"/>
+            android:title="編輯白名單" />
 
         <Preference
             android:key="pref_blacklist"
             android:summary="設定個人的黑名單，增加預設名單以外的內容農場"
-            android:title="編輯黑名單"/>
+            android:title="編輯黑名單" />
 
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="pref_short_url_checking"
             android:summaryOff="不會檢查短網址的轉向網址。"
             android:summaryOn="檢查短網址的轉向網址。"
-            android:title="啟用短網址檢查"/>
+            android:title="啟用短網址檢查" />
 
         <CheckBoxPreference
             android:enabled="false"
             android:key="pref_previous_app_detect"
-            android:title="啟用程式切換兼容"/>
+            android:title="啟用程式切換兼容" />
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="功能限制">
         <Preference
             android:summary="此程式無法偵測 Facebook、Messenger 等程式內置瀏覽器內網址，請啟用那些程式的「外部開啟連結」功能。"
-            android:title="內置瀏覽器"/>
+            android:title="內置瀏覽器" />
         <Preference
             android:summary="此程式無法偵測無痕模式內網址。"
-            android:title="無痕模式"/>
+            android:title="無痕模式" />
         <Preference
             android:summary="此程式無法偵測手動開新分頁的網址。"
-            android:title="手動開新分頁"/>
+            android:title="手動開新分頁" />
         <Preference
             android:summary="此程式受 Android 系統限制，瀏覽器內點擊網址，一律使用相同分頁開啟網址。"
-            android:title="瀏覽器使用相同分頁"/>
+            android:title="瀏覽器使用相同分頁" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="關於">
         <Preference
             android:key="pref_donate"
-            android:title="成為 Collaction 的咖啡贊助人"/>
+            android:title="成為 Collaction 的咖啡贊助人" />
 
         <Preference
             android:key="pref_rate"
-            android:title="給予評分"/>
+            android:title="給予評分" />
 
         <Preference
             android:key="pref_share"
             android:summary="擋下內容農場網站，人人有責任，分享給你身邊的朋友吧！"
-            android:title="分享此程式"/>
+            android:title="分享此程式" />
 
         <Preference
             android:key="pref_author"
             android:summary="查看其他 Collaction 小隊開發的程式。"
-            android:title="更多程式"/>
+            android:title="更多程式" />
 
         <Preference
             android:key="pref_report_work"
             android:summary="如果你的設備運作程式正常，請告之我們。"
-            android:title="回報運作正常"/>
+            android:title="回報運作正常" />
 
         <Preference
             android:key="pref_report"
             android:summary="糟了，我們要找滅蟲公司。️"
-            android:title="回報問題"/>
+            android:title="回報問題" />
 
         <Preference
             android:key="pref_version"
-            android:title="測試版本編號"/>
+            android:title="測試版本編號" />
 
         <Preference
             android:key="pref_collaction"
             android:summary="此程式由「Collaction 小隊」製作，並以 GPL 3.0 釋出原始碼。"
-            android:title="Collaction 小隊"/>
+            android:title="Collaction 小隊" />
     </PreferenceCategory>
 </PreferenceScreen>

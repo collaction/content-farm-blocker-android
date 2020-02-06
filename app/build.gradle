@@ -1,17 +1,18 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         applicationId "hk.collaction.contentfarmblocker"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 193702 // 0 = alpha, 1 = beta, 2 = release
-        versionName "Herbicide 370"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 194002 // 0 = alpha, 1 = beta, 2 = release
+        versionName "Herbicide 400"
         multiDexEnabled true
         resConfigs "en", "zh"
     }
@@ -54,20 +55,16 @@ static def getSecretKey(name) {
 
 dependencies {
     // Google Android Support
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.preference:preference:1.1.0'
 
     // Google Play Services
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-perf:19.0.4'
-
-    // RxBinding Butter Knife
-    implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.google.firebase:firebase-core:17.1.0'
 
     // Material Dialog
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:core:3.1.1'
 
     // Simple IAB
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'
@@ -76,7 +73,12 @@ dependencies {
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     // https://github.com/Blankj/AndroidUtilCode
-    implementation 'com.blankj:utilcode:1.25.9'
+    implementation 'com.blankj:utilcode:1.26.0'
+    implementation "androidx.core:core-ktx:1.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}
