@@ -13,7 +13,6 @@ class MainActivity : BaseFragmentActivity() {
         val isNoBrowser: Boolean = intent.getBooleanExtra("no_browser", false)
         fragment = MainFragment.newInstance(isNoBrowser)
         super.onCreate(savedInstanceState)
-        UtilHelper.forceShowMenu(this)
         supportActionBar?.setHomeButtonEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }

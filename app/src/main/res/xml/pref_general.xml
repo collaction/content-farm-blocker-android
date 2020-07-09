@@ -24,6 +24,10 @@
             android:title="Language（語言）" />
 
         <Preference
+            android:key="pref_default_list"
+            android:title="檢視預設名單" />
+
+        <Preference
             android:key="pref_whitelist"
             android:summary="設定個人的白名單，忽略檢查你喜愛的內容農場（什麼？）"
             android:title="編輯白名單" />

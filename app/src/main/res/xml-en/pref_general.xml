@@ -24,6 +24,10 @@
             android:title="Language" />
 
         <Preference
+            android:key="pref_default_list"
+            android:title="View Preset List" />
+
+        <Preference
             android:key="pref_whitelist"
             android:summary="Set your own personal whitelist here."
             android:title="Edit Whitelist" />

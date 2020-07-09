@@ -56,7 +56,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     fun initFragment(fragment: Fragment?, titleString: String?, titleId: Int?) {
         fragment?.let {
-            setContentView(R.layout.activity_container)
+            setContentView(R.layout.activity_container_adview)
             initActionBar(toolbar, titleString = titleString, titleId = titleId)
 
             supportFragmentManager.beginTransaction()

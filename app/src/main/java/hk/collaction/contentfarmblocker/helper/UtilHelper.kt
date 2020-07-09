@@ -1,5 +1,6 @@
 package hk.collaction.contentfarmblocker.helper
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
@@ -11,11 +12,20 @@ import android.net.Uri
 import android.os.Build
 import android.os.Handler
 import android.provider.Browser
+import android.provider.Settings
 import android.util.Log
-import android.view.ViewConfiguration
+import android.widget.RelativeLayout
 import androidx.preference.PreferenceManager
+import com.blankj.utilcode.util.SizeUtils
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+import hk.collaction.contentfarmblocker.BuildConfig
 import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity
 import hk.collaction.contentfarmblocker.ui.activity.MainActivity
+import java.math.BigInteger
+import java.security.MessageDigest
 import java.util.Locale
 
 /**
@@ -23,19 +33,36 @@ import java.util.Locale
  * Created by Himphen on 10/1/2016.
  */
 object UtilHelper {
+    const val DELAY_AD_LAYOUT = 100L
     const val PREF_IAP = "iap"
     const val PREF_LANGUAGE = "PREF_LANGUAGE"
     const val PREF_LANGUAGE_COUNTRY = "PREF_LANGUAGE_COUNTRY"
 
-    fun forceShowMenu(context: Context?) {
-        try {
-            val config = ViewConfiguration.get(context)
-            val menuKeyField = ViewConfiguration::class.java
-                    .getDeclaredField("sHasPermanentMenuKey")
-            menuKeyField.isAccessible = true
-            menuKeyField.setBoolean(config, false)
-        } catch (ignored: Exception) {
+    fun initAdView(
+        context: Context?,
+        adLayout: RelativeLayout,
+        isPreserveSpace: Boolean = false
+    ): AdView? {
+        if (context == null) return null
+
+        if (isPreserveSpace) {
+            adLayout.layoutParams.height = SizeUtils.dp2px(50f)
         }
+        val defaultPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+
+        try {
+            if (!defaultPreferences.getBoolean(PREF_IAP, false)) {
+                val adView = AdView(context)
+                adView.adUnitId = BuildConfig.ADMOB_BANNER_ID
+                adView.adSize = AdSize.BANNER
+                adLayout.addView(adView)
+                adView.loadAd(AdRequest.Builder().build())
+                return adView
+            }
+        } catch (e: Exception) {
+            logException(e)
+        }
+        return null
     }
 
     @Suppress("DEPRECATION")
@@ -67,6 +94,7 @@ object UtilHelper {
     const val IAP_PID_10 = "iap_10"
     const val IAP_PID_20 = "iap_20"
     const val IAP_PID_50 = "iap_50"
+
     /**
      * Go to specific url then finish the activity
      *
@@ -91,7 +119,10 @@ object UtilHelper {
                 if ("" == packageName) {
                     throw Exception()
                 }
-                /* Try to disable the default app behavior temperately */toggleDefaultApp(activity, false)
+                /* Try to disable the default app behavior temperately */toggleDefaultApp(
+                    activity,
+                    false
+                )
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = Uri.parse(tempUrl)
                 if (isUsingSameTab(activity)) {
@@ -110,7 +141,7 @@ object UtilHelper {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     activity.startActivity(intent)
                 } catch (e2: Exception) {
-                    val intent = Intent().setClass(activity, MainActivity::class.java)
+                    val intent = Intent(activity, MainActivity::class.java)
                     intent.putExtra("no_browser", true)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     activity.startActivity(intent)
@@ -133,7 +164,11 @@ object UtilHelper {
      */
     private fun isUsingSameTab(activity: Activity): Boolean {
         val settings = PreferenceManager.getDefaultSharedPreferences(activity)
-        if (AppUsageUtil.checkAppUsagePermission(activity) && settings.getBoolean("pref_previous_app_detect", false)) {
+        if (AppUsageUtil.checkAppUsagePermission(activity) && settings.getBoolean(
+                "pref_previous_app_detect",
+                false
+            )
+        ) {
             val browserPackageName = settings.getString("pref_browser", "")
             val lastAppPackageName = AppUsageUtil.getTopActivityPackageName(activity)
             return browserPackageName == lastAppPackageName
@@ -150,11 +185,43 @@ object UtilHelper {
             val pm = context.packageManager
             val component = ComponentName(context, DetectorActivity::class.java)
             if (isEnable) {
-                pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                pm.setComponentEnabledSetting(
+                    component,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP
+                )
             } else {
-                pm.setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+                pm.setComponentEnabledSetting(
+                    component,
+                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                    PackageManager.DONT_KILL_APP
+                )
             }
             Log.d(TAG, "toggleDefaultApp() $isEnable")
         }
+    }
+
+    fun logException(e: Exception) {
+        if (BuildConfig.DEBUG) {
+            e.printStackTrace()
+        } else {
+            FirebaseCrashlytics.getInstance().recordException(e)
+        }
+    }
+
+    @SuppressLint("HardwareIds")
+    fun getAdMobDeviceID(context: Context): String {
+        val androidId =
+            Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
+        return androidId.md5().toUpperCase(Locale.getDefault())
+    }
+}
+
+fun String.md5(): String {
+    return try {
+        val md = MessageDigest.getInstance("MD5")
+        BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
+    } catch (e: Exception) {
+        ""
     }
 }

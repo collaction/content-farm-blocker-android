@@ -1,15 +1,12 @@
-www.example.com
-example.com
-hklocalpress.com
-news-lihkg.com
-backup-lihkg.com
+example.com // 測試用
 0101.tw
 10000.tw
+100ke.info
 100lucky.net
 102like.com
 104.news
 11i.info
-121-254-64-91.veetime.com
+121-254-64-91.veetime.com //指動傳播科技有限公司
 13n.com
 15jb.net
 163nvren.com
@@ -18,11 +15,15 @@ backup-lihkg.com
 168ptt.xyz
 17cloud.cc
 17fafun.com
-17goforward.com
+17goforward.com //BuzzHand
 17moveon.com
 17no1.com
+17qq.com
 17travel.net
 19long.com
+1applehealth.com
+1r1g.com
+1winpress.cc
 24cnews.com
 2936366.com
 300.tw
@@ -31,29 +32,38 @@ backup-lihkg.com
 360doc.com
 3cjohnhardware.wordpress.com
 4000000958.com
+4910.com
 51flash.com
 51kannews.com
 51manager.net
 51yangsheng.com
 52114.org
 52food.co
+52ptt.com
+5588tha.com
 5ichong.com
+60xw.com
 6739oehdpjg.blog.fc2.com
 69vj.xyz
+6uodaily.com //愛縮兔 (農場轉址)
+6uodailynews.com //愛縮兔 (農場轉址)
+6uonewsdaily.com //愛縮兔 (農場轉址)
 6wunk205gk.blog.fc2.com
 74.iekah6ei.xyz
 7624.net
-77qi.xyz
-77s.today
+77qi.xyz //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+77s.today //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 7jiu.com.hk
 7net.co
+7qiqi7.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 7y7.com
 88gag.com
+8degree.cc
 8im.co
 8im.info
 8im.me
 8im.site
-8md.me
+8md.me //Media8傳媒
 9-9822.com
 900.tw
 91917.com
@@ -100,6 +110,7 @@ a8eyo8io0k.blog.fc2.com
 a8kes6sqee.pixnet.net
 a8sey0mce4.pixnet.net
 a8uao8qusw.blog.fc2.com
+a9a9.net
 a9i6d973ozz.blog.fc2.com
 a9k3x5u4yz6.blog.fc2.com
 a9qfx7f0qo3.blog.fc2.com
@@ -109,11 +120,11 @@ abcnews.asia
 aboluowang.com
 about.com
 aboutfighter.com
-aboutfitnesser.com
-abouthealther.com
+aboutfitnesser.com //歡享網
+abouthealther.com //歡享網
 aboutlove.cc
 acedqmrm7pt9x.pixnet.net
-acg.ms
+acg.ms //LIFE生活網
 acika801cu.blog.fc2.com
 ad22hnpearlyu.pixnet.net
 ad37221168.blog.fc2.com
@@ -121,7 +132,7 @@ adamsfra66341.pixnet.net
 adelapc911.wordpress.com
 adfhdfgrrwe.pixnet.net
 admirelove.com
-adqoo.tw
+adqoo.tw //BuzzHand
 adu17dv00a.blog.fc2.com
 ae80gu0q.blog.fc2.com
 aekpc018oy.pixnet.net
@@ -140,16 +151,17 @@ aiheaven.com
 aipetweb.com
 aiqing.com
 aiqing.tw
-aishareunion.com
+aishareunion.com //歡享網
 aishow.co
 aiweinews.com
+aj315293.pixnet.net
 ajbdfs.blogspot.*
 ajsl6ovpf.pixnet.net
 ajy13as00v.blog.fc2.com
 ak77449074.blog.fc2.com
 alanmossliqb.pixnet.net
 albertorh5p.pixnet.net
-alenshare.life
+alenshare.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 alfredriyuh8.pixnet.net
 alkf043.pixnet.net
 allanhodgeshx.pixnet.net
@@ -174,6 +186,7 @@ andreals8ne.pixnet.net
 andrewolsoher.pixnet.net
 andysutt22644.pixnet.net
 angelande6490.pixnet.net
+anime01kingdom.com
 annanderum.pixnet.net
 anneedwin7631.pixnet.net
 annettebrowbe.pixnet.net
@@ -185,10 +198,9 @@ anufh886wl.pixnet.net
 anyelse.com
 anytime999.blogspot.*
 anyv.net
-aoaowatch.com
+aoaowatch.com //樂享網
 aobwfwglechri.pixnet.net
 aof96qo87r.pixnet.net
-aol.com
 aol.my
 aom09rs65r.pixnet.net
 aorfei524.pixnet.net
@@ -202,8 +214,9 @@ app.myzaker.com
 apple.ipub.fun
 apple01.co
 apple01.net
-applenews.ws
-appleship.club
+applenews.ws //愛縮兔 (農場轉址)
+appleship.club //愛縮兔 (農場轉址)
+appliances123.pixnet.net
 appobs.com
 aprilkristobr.pixnet.net
 apu9228tch.pixnet.net
@@ -212,6 +225,7 @@ aqo4314aij.blog.fc2.com
 aqpcjv857.pixnet.net
 ardpn25903.pixnet.net
 armandtdawnqi.pixnet.net
+artez.org.cn
 arthurbertros.pixnet.net
 arthurwtnc4n.pixnet.net
 articlesbase.com
@@ -221,9 +235,9 @@ arv87jm17f.blog.fc2.com
 as25587065.pixnet.net
 as62030297.pixnet.net
 ase86vy16d.pixnet.net
-asexpro.com
+asexpro.com //*.~ 都是垃圾購物站
 asia01.club
-asiamedia.tw
+asiamedia.tw //指動傳播科技有限公司
 asianews.cc
 ask.com
 aspkdx012.pixnet.net
@@ -247,6 +261,7 @@ axb7165xhs.pixnet.net
 axechi.pixnet.net
 axeshio.pixnet.net
 axn2000.blogspot.*
+aya.news
 ays8r3z.pixnet.net
 aywdt295wv.pixnet.net
 azo18by44c.blog.fc2.com
@@ -340,7 +355,7 @@ b9n7b1nzpf.pixnet.net
 b9n7l5xn15.pixnet.net
 b9tlt1x3bth.blog.fc2.com
 b9tzd3fdv5.pixnet.net
-b9vrt9hrz9.pixnet.net
+b9vrt9hrz9.pixnet.net //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 b9xpt1d3tp3.pixnet.net
 b9zll1dznf.pixnet.net
 baby01.tv
@@ -348,6 +363,7 @@ babymaycry.com
 babyonea.com
 babyou.com
 babywindvane.com
+backup-lihkg.com //愛縮兔 (農場轉址)
 bagswallet.blog.fc2.com
 baiyongqin.cc
 ballgametime.com
@@ -355,12 +371,13 @@ ballnewmanxmr.pixnet.net
 bananadaily.net
 bangdezs.com
 bangqu.com
-baobao.today
+baobao.today //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 baobaokan.com
-baoshijiels.com
+baoliaonews.com
+baoshijiels.com //歡享網
 baoxiaovideo.com
 baoxiaovideo.tv
-barbarla.net
+barbarla.net //樂享網
 barnettcha748.pixnet.net
 barretwesllcl.pixnet.net
 batadfg.blogspot.*
@@ -390,18 +407,18 @@ bdfqy.com
 bdt71rt99d.pixnet.net
 bear.umtalk.net
 beauties.life
-beautifullife.top
+beautifullife.top //樂享網
 beautygirl01.com
 beckerminnmar.pixnet.net
 beefun01.com
 beep01.com
-beeper.live
-beeper.site
+beeper.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //food.~, fun.~, life.~, read.~, ...
+beeper.site //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //food.~, fun.~, life.~, read.~, malaysia.~, ...
 beetify.com
 beforeout.com
 belindanvj8.blog.fc2.com
 belongday.com
-benenews.tw
+benenews.tw //指動傳播科技有限公司
 benl337uccf4.pixnet.net
 bensonpw3xchy.pixnet.net
 benzfa.pixnet.net
@@ -409,7 +426,7 @@ bernardbertyt.pixnet.net
 bernarmediane.pixnet.net
 berryq3.wordpress.com
 beskh818iu.pixnet.net
-bestzhnews.com
+bestzhnews.com //歡享網
 bettymanod.pixnet.net
 betweengos.com
 beulahvz481.blog.fc2.com
@@ -434,10 +451,11 @@ bia2ttoddead.pixnet.net
 bicvgw534.pixnet.net
 big5news.com
 biginfo4u.com
+biglife.fun
 bignews01.com
 bigshuang.com
-bigusd.club
-bike66.club
+bigusd.club //愛縮兔 (農場轉址)
+bike66.club //愛縮兔 (農場轉址)
 bishoplawmarl.pixnet.net
 bizcomziper.com
 bizrate.com
@@ -448,7 +466,7 @@ bjb53vb37t.pixnet.net
 bjfdf59371.pixnet.net
 bjkwin148.pixnet.net
 bjtdf55957.pixnet.net
-bjtriz.com
+bjtriz.com //樂享網
 bka37117.blog.fc2.com
 bknm069.pixnet.net
 bl5fharryr5oq.pixnet.net
@@ -458,14 +476,15 @@ blanchegf920.wordpress.com
 bldaily.com
 blessyou88.com
 blr97jb11b.blog.fc2.com
-blublu365.com
+blublu365.com //樂享網
 blubluu.com
 bluesbear.tw
-blukoko.com
+blukoko.com //歡享網
 blx59zt55n.blog.fc2.com
 bmx3009drs.blog.fc2.com
 bn51nr3j.blog.fc2.com
 bn81448126.pixnet.net
+bnf5j5b395p.pixnet.net
 bnj7irbyrva.pixnet.net
 bnp79jp93p.blog.fc2.com
 bnvdz31515.pixnet.net
@@ -473,23 +492,27 @@ bobbierichsd.pixnet.net
 bobbies4b43c3.pixnet.net
 bobbyv0h6dqpy.pixnet.net
 bobo01.com
-bobtify.cc
+bobofun.com
+bobtify.cc //歡享網
 bobtify.wiki
-bomb01.asia
-bomb01.cc
-bomb01.club
-bomb01.co
-bomb01.com
-bomb01.me
-bomb01.media
-bomb01.online
-bomb01.org
-bomb01.party
-bomb01.tw
-bomb01.vip
-bomb01.xyz
+bomb01.asia //boMb01
+bomb01.cc //boMb01
+bomb01.club //boMb01
+bomb01.co //boMb01
+bomb01.com //boMb01
+bomb01.life //boMb01
+bomb01.me //boMb01
+bomb01.media //boMb01
+bomb01.online //boMb01
+bomb01.org //boMb01
+bomb01.party //boMb01
+bomb01.today //boMb01
+bomb01.tw //boMb01
+bomb01.vip //boMb01
+bomb01.xyz //boMb01
 bomb99.com
 bonnielindh4y.pixnet.net
+booksee261.pixnet.net
 boosuccess.org
 bossmurmur.com
 bosu.pixnet.net
@@ -501,6 +524,7 @@ bowengk444ne.pixnet.net
 bowenm7ebvb3.pixnet.net
 boydmaxinl84i.pixnet.net
 bplxn77355.pixnet.net
+bpm1579.com
 bpx31nz91b.pixnet.net
 bqaeghj.blogspot.*
 bqwfpu809.pixnet.net
@@ -527,11 +551,12 @@ bu86sjimenpup.pixnet.net
 bubuko.com
 bucktop.com
 bud.healthdaily.tw
-buddhafate.com
+buddhafate.com //歡享網
 buddhanet01.com
 bullticle.com
-bumkaka.com
+bumkaka.com //樂享網
 bumread.com
+bunian.cn
 bunnygo.net
 burgessandrsm.pixnet.net
 burnsjesusvt8.pixnet.net
@@ -545,9 +570,9 @@ buzz01.site
 buzzbooklet.com
 buzzer123.com
 buzzfeed.com
-buzzhand.com
-buzzhand.net
-buzzhand.org
+buzzhand.com //BuzzHand
+buzzhand.net //BuzzHand
+buzzhand.org //BuzzHand
 buzzjoker.com
 buzzle.com
 buzzle.ml
@@ -556,7 +581,7 @@ buzzlife.com.tw
 buzznews.news
 buzznews01.org
 buzznewshk.com
-buzzworld.tech
+buzzworld.tech //愛縮兔 (農場轉址)
 bv7z108.pixnet.net
 bv97773395.blog.fc2.com
 bw2t110.pixnet.net
@@ -611,12 +636,13 @@ c9hfg2tmj4.blog.fc2.com
 c9i3o6.wordpress.com
 c9s7w6.wordpress.com
 c9ugg1lvhs.blog.fc2.com
-caca.press
-cacanews.com
+caca.press //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+cacanews.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+cam4.pixnet.net
 camillesw94.pixnet.net
-canbeast.online
+canbeast.online //愛縮兔 (農場轉址)
 candymush.com
-caremura.cc
+caremura.cc //樂享網
 caretify.com
 carheadline.com
 carlholl14594.pixnet.net
@@ -661,7 +687,7 @@ chain01.com
 chamberhalldu.pixnet.net
 changepw.com
 changlong552.blog.fc2.com
-changyenew.com
+changyenew.com //歡享網
 chapmanj35075.pixnet.net
 charlehele844.pixnet.net
 charlev1xnvd.pixnet.net
@@ -671,12 +697,14 @@ charlobritidf.pixnet.net
 chavezcarropx.pixnet.net
 chavezw15462.pixnet.net
 chaxf.com
-checkiton.club
+checked.news //redirects to ifunblog.com
+checkiton.club //愛縮兔 (農場轉址)
 cheer01.me
 chen-ton.com
-chias.tw
+cherylalg482.pixnet.net
+chias.tw //指動傳播科技有限公司
 chiefstock.com
-chinadaily.tw
+chinadaily.tw //指動傳播科技有限公司
 chinanewstruth.blogspot.*
 chinatt.news
 chinese.efreenews.com
@@ -684,27 +712,27 @@ chinesealliance.net
 chinesearticle666.blogspot.*
 chineseweb.net
 chinesewords.org
-chiyidavip.com
-chnzodiac.com
+chiyidavip.com //歡享網
+chnzodiac.com //歡享網
 chongchonggou.com
 christbw6141.pixnet.net
 christhecpric.pixnet.net
 christx48nh7.pixnet.net
 chsjtl.com
-chtime.com.tw
+chtime.com.tw //指動傳播科技有限公司
 chunew.com
 chunew.net
 cib67bm27z.blog.fc2.com
 cibeiwen.com
-cicicou.com
-circle01.com
-circle01.life
-cititown.tw
-ciyun.life
+cicicou.com //樂享網
+circle01.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+circle01.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+cititown.tw //指動傳播科技有限公司
+ciyun.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 cj3f8.pixnet.net
 cjzvie230.pixnet.net
 ck101.com
-ck8.me
+ck8.me //Media8傳媒
 cki83.pixnet.net
 ckzja726ax.pixnet.net
 cl19s7.pixnet.net
@@ -716,53 +744,56 @@ cliffodavetr.pixnet.net
 clintontoddm8.pixnet.net
 clj72pp35e.blog.fc2.com
 clo.tw
+clo01.hk
 clon7hlopegbs.pixnet.net
 clp27ub76f.blog.fc2.com
 clrh0i8.pixnet.net
 clydebrittkq.pixnet.net
 cm72517269.blog.fc2.com
 cmoney.tw
-cnba.live
-cnews.world
+cnba.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+cnews.world //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 cnread.news
 coachinga01.com
-coco01.cc
-coco01.club
-coco01.findx2.net
-coco01.me
-coco01.net
-coco01.today
-coco01.tv
-coco01.tw
-coco01.vip
-coco02.com
-coco02.net
-coco02.vip
+coco01.cc //COCO01
+coco01.club //COCO01
+coco01.findx2.net //COCO01
+coco01.me //COCO01
+coco01.net //COCO01
+coco01.today //COCO01
+coco01.tv //COCO01
+coco01.tw //COCO01
+coco01.vip //COCO01
+coco02.com //COCO01
+coco02.net //COCO01
+coco02.vip //COCO01
 coco99.net
-cocobuzz.today
-cocobuzz.vip
-cocohk.cc
+cocobuzz.today //COCO01
+cocobuzz.vip //COCO01
+cocohk.cc //COCO01
 cocohk.com
-cocohk.me
-cocohk.net
-cocohk.today
-cocohk.tv
-cocohk.vip
-cocomy.cc
-cocomy.me
-cocomy.net
-cocomy.vip
-coconow.cc
-coconow.today
-coconow.vip
+cocohk.me //COCO01
+cocohk.net //COCO01
+cocohk.today //COCO01
+cocohk.tv //COCO01
+cocohk.vip //COCO01
+cocomy.cc //COCO01
+cocomy.me //COCO01
+cocomy.net //COCO01
+cocomy.vip //COCO01
+coconow.cc //COCO01
+coconow.today //COCO01
+coconow.vip //COCO01
 cocoptt.com
-cocosg.cc
-cocosg.net
-cocotw.net
-cocowow.cc
-cocowow.net
-cocowow.today
-cocowow.vip
+cocosg.cc //COCO01
+cocosg.net //COCO01
+cocotw.net //COCO01
+cocowow.cc //COCO01
+cocowow.net //COCO01
+cocowow.today //COCO01
+cocowow.vip //COCO01
+code345.com
+codebug.vip
 codeday.me
 codertw.com
 codyadamfe.pixnet.net
@@ -773,10 +804,11 @@ coleflydiav4w.pixnet.net
 colemanlyc.pixnet.net
 colleewalgonz.pixnet.net
 collinmakiw.pixnet.net
-comese.club
-comeseeit.club
+comese.club //愛縮兔 (農場轉址)
+comeseeit.club //愛縮兔 (農場轉址)
 commreader.com
 coms.pub
+conc100.pixnet.net
 conroy712.pixnet.net
 constair57.pixnet.net
 content719092691.wordpress.com
@@ -786,17 +818,20 @@ cooco.pixnet.net
 cooker01.com
 cooksamunv.pixnet.net
 cooktin.com
-coola.pro
+coola.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 coolfity.com
+coolnews.cc
 coowx.com
-cosoread.com
+copyan.com
+cosoread.com //樂享網
 cph18ee35r.pixnet.net
 cpna.tw
-cpon3.online
+cpon3.online //愛縮兔 (農場轉址)
 cpt78linphili.pixnet.net
 cq9f7.pixnet.net
 cqj79lf99e.pixnet.net
 cqw4im48.blog.fc2.com
+cqwxsd.com
 craigob640ij.pixnet.net
 crazyfun698.net
 crffj937ze.pixnet.net
@@ -816,16 +851,16 @@ curryanniet26.pixnet.net
 cutiesgeneration.com
 cv10570945.pixnet.net
 cv71314834.pixnet.net
-cwcrazypet.com
+cwcrazypet.com //歡享網
 cx1uba2ynt.pixnet.net
 cxa3lsedsi.pixnet.net
 cxiywn201.pixnet.net
-cycreator.com
-cyfightvip.com
-cyhappytify.com
+cycreator.com //歡享網
+cyfightvip.com //歡享網
+cyhappytify.com //歡享網
 cyhappytify.info
 cyk4oa28.blog.fc2.com
-cypioneer.com
+cypioneer.com //歡享網
 cyqi5rjocpu.pixnet.net
 cyy6gg68.blog.fc2.com
 cz54246551.pixnet.net
@@ -936,6 +971,7 @@ d9t9d377xdz.pixnet.net
 d9toi9ywck.pixnet.net
 d9vhv3hzh5.blog.fc2.com
 d9zuq0zmup.pixnet.net
+da-quan.net
 da65347603.pixnet.net
 dah05uy43k.blog.fc2.com
 daigashare.com
@@ -951,11 +987,11 @@ daliulian.com
 daliulian.net
 dam33mo42z.pixnet.net
 damabest.com
-damaday.com
-damanew.com
+damaday.com //歡享網
+damanew.com //歡享網
 damaxww.com
 danaxk6q6e75l.pixnet.net
-danceking.us
+danceking.us //愛縮兔 (農場轉址)
 danielconneo5.pixnet.net
 danieljun7788.pixnet.net
 dannyj8qu2sp.pixnet.net
@@ -971,9 +1007,11 @@ davidsovics70.pixnet.net
 davisram32833.pixnet.net
 dawnmyrtlv4.pixnet.net
 daydayin.com
-daydaynews.me
-daydaynews.tv
+daydaynews.cc //天天要聞/每日要聞
+daydaynews.me //愛縮兔 (農場轉址)
+daydaynews.tv //愛縮兔 (農場轉址)
 dayhot.news
+daynews.co
 dayspot.net
 db55vz1j.blog.fc2.com
 dbgt57sot.pixnet.net
@@ -990,20 +1028,24 @@ ddelgadoaq.pixnet.net
 ddlld19939.pixnet.net
 ddmf.net
 ddnews.me
+ddnews.xyz
 ddrf9xb17.pixnet.net
 ddz3410aql.pixnet.net
 deandaniej2.pixnet.net
 deannamarijfq.pixnet.net
+debdez99074.pixnet.net
 deborahl59083.pixnet.net
-decibo.com
-defense.rocks
+decibo.com //TEEPR
+defense.rocks //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 demh429.pixnet.net
-demon.irish
+demon.irish //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 deniseaf656.wordpress.com
 derrichagt0.pixnet.net
 desenoboschhcg.blog.fc2.com
 design-fabrica.com
+desotalk.com //密訊
 desperately.site
+developreference.com
 dezwuv942.pixnet.net
 df56163128.pixnet.net
 df79997937.blog.fc2.com
@@ -1027,23 +1069,27 @@ di50775354.blog.fc2.com
 dianebarnnoe.pixnet.net
 dianecummia2.pixnet.net
 diannepedroby.pixnet.net
-diawjj.club
-didiadidia.com
+diawjj.club //愛縮兔 (農場轉址)
+dida321.com
+didiadidia.com //歡享網
 dif41vp73y.blog.fc2.com
-dingdnews.com
+digwow.net
+dingdnews.com //歡享網
 dioks.blogspot.*
 discoss.com
 dit65xo96o.pixnet.net
 dj442or.pixnet.net
 djb44gq82g.pixnet.net
 djlin10550.pixnet.net
+dk7d3s.pixnet.net
+dkck.uk.com
 dlg53he44v.blog.fc2.com
 dll53tl95z.pixnet.net
 dlr11zh97p.blog.fc2.com
 dlv63kh57g.pixnet.net
 dmadvanced.cc
-dmfighter.com
-dmhappytify.info
+dmfighter.com //歡享網
+dmhappytify.info //歡享網
 dmkixs659.pixnet.net
 dml1064bku.pixnet.net
 dn77919793.blog.fc2.com
@@ -1053,7 +1099,8 @@ dnf1121cru.pixnet.net
 dnp82gi25k.blog.fc2.com
 dnxvjvtfbp.pixnet.net
 doc01.cc
-dodomin.com
+dodomin.com //樂享網
+dofe.com.cn
 dog93tw31c.pixnet.net
 doggyhouse.idv.tw
 doh18xm95p.blog.fc2.com
@@ -1064,6 +1111,7 @@ dongqiuxiang.net
 dorh73.pixnet.net
 dp53651294.blog.fc2.com
 dpb95hz53x.blog.fc2.com
+dpgxh3trk.pixnet.net
 dph51zp37j.blog.fc2.com
 dplt71plh.pixnet.net
 dpr11fnd9d.pixnet.net
@@ -1073,9 +1121,10 @@ dqnk22808410pins.wordpress.com
 dr17bz1t.blog.fc2.com
 dr381e7aie.blog.fc2.com
 dragontechs.live
-dragontechs2.live
+dragontechs2.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+drama01.com
 drbl99tfn.pixnet.net
-dreamerwin.com
+dreamerwin.com //歡享網
 drfdlnznnzbd.blog.fc2.com
 drlvx15551.pixnet.net
 drol248.pixnet.net
@@ -1083,11 +1132,13 @@ ds2464th27.blog.fc2.com
 dsfgfhg12.blogspot.*
 dsrfo411vl.pixnet.net
 dsy39.com
-dtdsnx.com
+dtdsnx.com //歡享網
 dtj63br86a.pixnet.net
 dtj79bd11l.blog.fc2.com
 dtvg87wlz.pixnet.net
 duanzh.com
+duckbk.com
+duckhk.com
 duncanjan3984.pixnet.net
 dungwa.com
 dustinwandcon.pixnet.net
@@ -1164,6 +1215,7 @@ e9j3l41ht3.blog.fc2.com
 e9l4z794dbp.pixnet.net
 e9nmy24bwi.pixnet.net
 e9sal876vy3.blog.fc2.com
+eaglefiy.com //歡享網
 eandn720lq.pixnet.net
 earlcaldwelgq.pixnet.net
 eastday.com
@@ -1176,6 +1228,7 @@ eazon.com
 ebcbuzz.com
 ebcbuzz.net.tw
 ebcbuzz.tw
+ebsk579.pixnet.net
 eda33.pixnet.net
 edc1014077.pixnet.net
 edc1014079.pixnet.net
@@ -1198,6 +1251,7 @@ eggplantwiy.blog.fc2.com
 eghsbs.blogspot.*
 egy20qi62m.blog.fc2.com
 ehow.com
+eisoria.com
 ejlp681875.blog.fc2.com
 ejoyland.com
 ek21.com
@@ -1214,13 +1268,13 @@ ema633rogejg.pixnet.net
 emckoeoq0w.blog.fc2.com
 ememsmqgqs.pixnet.net
 emfg91zqif1.pixnet.net
-eminmmm.online
+eminmmm.online //愛縮兔 (農場轉址)
 emq7bfdelh84.pixnet.net
 en09223623.pixnet.net
 enews.com.tw
 enews.tw
 enewspace.com
-enjoyartlife.com
+enjoyartlife.com //歡享網
 enl01.info
 ent.fanpiece.com
 entkx44812.blog.fc2.com
@@ -1228,7 +1282,7 @@ entrepreneur.com
 envyzk796.pixnet.net
 eny65tv61e.blog.fc2.com
 enymv67177.pixnet.net
-eoeo365.com
+eoeo365.com //歡享網
 epn71gr56a.blog.fc2.com
 epu94mp85h.blog.fc2.com
 epufmallj85.pixnet.net
@@ -1264,7 +1318,7 @@ ewhjw146oi.pixnet.net
 ewl20ny43h.blog.fc2.com
 ex28305017.pixnet.net
 examiner.com
-expensive88.online
+expensive88.online //愛縮兔 (農場轉址)
 experts-exchange.com
 expertvillage.com
 ext7429zoq.blog.fc2.com
@@ -1376,7 +1430,7 @@ f8mwv80xnh.pixnet.net
 f8x8n43ov5.pixnet.net
 f8ybi9zee7.blog.fc2.com
 f9a2b08qt1.blog.fc2.com
-f9b5l3p7vxl.pixnet.net
+f9b5l3p7vxl.pixnet.net //BuzzHand
 f9dnt7fh55.pixnet.net
 f9eob052gn0.pixnet.net
 f9f9f3lznr.pixnet.net
@@ -1395,24 +1449,27 @@ f9z7r5bzdb.blog.fc2.com
 f9z9n9rjxx.pixnet.net
 f9z9t9rdvf.pixnet.net
 f9zxt31xh5.pixnet.net
+fact.checked.news //愛縮兔 (農場轉址)
 fafa01.com
 fafa1288.com
 fafaup.com
 fairness.group
-families.pro
-family543.com
+falotat.com //密訊
+families.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+family543.com //BuzzHand
 faminereports.blogspot.*
-fanaystart.com
+fanaystart.com //樂享網
 fanli7.net
 fanpiece.com
 fanswong.com
 farmerb7760.pixnet.net
 fashionmanbuy.blogspot.*
 fashionwaltz.com
+fastnewsroom.com //愛縮兔 (農場轉址)
 favorites.news
 favourpets.com
 fb97343322.pixnet.net
-fbia.cc
+fbia.cc //樂享網
 fbn19pd73z.blog.fc2.com
 fbs.one
 fbu89ip47y.blog.fc2.com
@@ -1446,15 +1503,16 @@ fhyvckhoffmrl.pixnet.net
 fi56878932.pixnet.net
 fi85715510.blog.fc2.com
 fidabc926.pixnet.net
-fightertify.com
+fightertify.com //歡享網
 fijvlydialoui.pixnet.net
 file007.com
 findarticles.com
-finefinesh.club
+finefinesh.club //愛縮兔 (農場轉址)
 fingerdaily.com
-fingermedia.tw
-finkintime.club
-fitnessmura.com
+fingermedia.tw //指動傳播科技有限公司
+finkintime.club //愛縮兔 (農場轉址)
+finzkm490.pixnet.net
+fitnessmura.com //歡享網
 fiwom867gr.blog.fc2.com
 fixya.com
 fj01983313.pixnet.net
@@ -1462,6 +1520,7 @@ fj888l4f.pixnet.net
 fj99397135.pixnet.net
 fjb74fo40u.pixnet.net
 fk10926990.blog.fc2.com
+fkpi581.pixnet.net
 fl19767199.pixnet.net
 fl99v97hdvv.pixnet.net
 flnxxzfxhfjd.blog.fc2.com
@@ -1481,7 +1540,7 @@ focustimeshk.com
 fofo.news
 fofunny.com
 foodytw.com
-forgreatdaily.cc
+forgreatdaily.cc //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 formomo.com
 fortuneinsight.com
 fortunetelling.cc
@@ -1490,7 +1549,8 @@ fov75yy61k.pixnet.net
 foxege.pixnet.net
 foxeweie.pixnet.net
 foyuan.news
-foyuanvip.com
+foyuannew.com //歡享網
+foyuanvip.com //歡享網
 fp33599733.blog.fc2.com
 fp9vbdx99.pixnet.net
 fpdzrdt9zth.pixnet.net
@@ -1515,7 +1575,7 @@ ft777j5l95.blog.fc2.com
 fta32dc89f.blog.fc2.com
 ftes173.pixnet.net
 ftlh1tl7j.pixnet.net
-ftsunflower.top
+ftsunflower.top //樂享網
 ftz13np15t.pixnet.net
 fullerlenakqb.pixnet.net
 fullyu.com
@@ -1537,29 +1597,30 @@ fundiscuss.com
 funfun.pro
 funhk01.date
 funhk01.men
-funhk01.xyz
-funnews.news
+funhk01.xyz //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+funnews.news //愛縮兔 (農場轉址)
 funnews.today
 funnies.cc
 funnies.online
 funny199.com
-funnyanecdote.com
-funnycheck.online
-funnydream.co
+funnyanecdote.com //歡享網
+funnycheck.online //愛縮兔 (農場轉址)
+funnydream.co //愛縮兔 (農場轉址)
 funnyp.co
 funnyp.info
 funnyp.online
 funnytw.com
 funptt.com
-funqiqu.com
+funqiqu.com //歡享網
 funssy.co
 funssy.com
-funstory.co
-funstory.org
-funstory.top
+funstory.co //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+funstory.org //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+funstory.site //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+funstory.top //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 funtoday.news
 funvdo01.com
-funyouworld.com
+funyouworld.com //歡享網
 funyouworld.xyz
 fuvi2xevna.pixnet.net
 fvt59vn11h.blog.fc2.com
@@ -1568,16 +1629,17 @@ fwfdg72989.pixnet.net
 fxghghj105.blogspot.*
 fxm8641lex.blog.fc2.com
 fxv32sl62d.blog.fc2.com
-fybuddha.com
+fybuddha.com //歡享網
+fydqw.com
 fyhappytify.com
-fyhappytify.info
+fyhappytify.info //歡享網
 fyqyz93555.pixnet.net
 fyync66677.pixnet.net
 fzh55hq28j.blog.fc2.com
 fzl9bt37.blog.fc2.com
 fzp35lv79b.blog.fc2.com
 fzrui637tq.pixnet.net
-g.odam.us
+g.odam.us //愛縮兔 (農場轉址)
 g0g8x55qt8.blog.fc2.com
 g0kzr5nxf5.pixnet.net
 g0nei0c5bl.pixnet.net
@@ -1628,7 +1690,8 @@ gac10vk71x.pixnet.net
 gae04ws80u.pixnet.net
 gagatai.com
 game2.tw
-gamer-ps3-ps4-web-3ds.blogspot.*
+gamer-ps3-ps4-web-3ds.blogspot.* //boMb01
+gamergamer.net
 gaochuji.com
 garfieldrr86.wordpress.com
 gaseu8mms.pixnet.net
@@ -1640,6 +1703,7 @@ gbjzot451.pixnet.net
 gbk92ew05p.blog.fc2.com
 gca5735zxf.pixnet.net
 gcuyosmmyo.pixnet.net
+geek-share.com
 gegugu.com
 genedelgadls.pixnet.net
 geoffreyts809.wordpress.com
@@ -1655,11 +1719,13 @@ geum6eusw.pixnet.net
 gf83919904.blog.fc2.com
 gfxen2fmc.pixnet.net
 ggr4.pixnet.net
+ghostislandmadnews.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 ghy60ql47m.pixnet.net
 giftflower.com
 gigacircle.com
 gigcasa.com
 gik48tq35k.blog.fc2.com
+givemeawish.net
 gj215t3zgy.blog.fc2.com
 gjczz.com
 gjoyz.co
@@ -1685,29 +1751,32 @@ gmter.com
 gny7725lvz.blog.fc2.com
 go1p.com
 godayup.com
+godloveme.cn
 goez1.com
 goez3.com
 gogo.pet
 gogoadvise.com.hk
 gogodayday.com
 gogofit.cc
-gogomun.club
+gogomun.club //愛縮兔 (農場轉址)
 gogonews.cc
 gohappyfoo.com
-gohappytify.com
+gohappytify.com //歡享網
 gohaveababy.com
 gohealth01.com
-gohealther.com
+gohealther.com //歡享網
 gohong01.com
 golflink.cn
 golflink.com
-gomynews.net
-goo.cafe
+gomynews.net //愛縮兔 (農場轉址)
+gonzomura.cc //歡享網
+gonzosky.com //歡享網
+goo.cafe //愛縮兔 (農場轉址)
 good301.wordpress.com
 good3492.wordpress.com
-good543.com
+good543.com //BuzzHand
 good635.wordpress.com
-goodarticle.life
+goodarticle.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 goodgoodread.com
 goodlifeyou.bumbnews.com
 goodmastegve0.pixnet.net
@@ -1720,7 +1789,7 @@ googlechrome2017download.com
 gooread.com
 gordonnews.com
 gp44512935.pixnet.net
-gpqii.com
+gpqii.com //歡享網
 gqd90bq72e.blog.fc2.com
 gqx7978732re.wordpress.com
 gr80611263.pixnet.net
@@ -1728,17 +1797,18 @@ gra55ajessisv.pixnet.net
 grahamiy40.pixnet.net
 grantleerx.pixnet.net
 gravespagoyrr.pixnet.net
-greatdaily.fun
-greatdaily.me
-greatdaily.pro
-greatdaily.site
-greatdaily.xyz
-greatdailytw.com
+greatdaily.fun //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatdaily.me //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatdaily.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatdaily.site //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatdaily.xyz //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatdailytw.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+greatpo.com
 greenelagawr.pixnet.net
 gregorbetrjdm.pixnet.net
 grf6271rwj.pixnet.net
 griffik1xb1.pixnet.net
-groupnetzh.com
+groupnetzh.com //歡享網
 gscfyi370.pixnet.net
 gsdtgfrhg18.blogspot.*
 gsusa4mg8.pixnet.net
@@ -1757,11 +1827,12 @@ gw50727724.pixnet.net
 gwendoe74l34.pixnet.net
 gwvy274.pixnet.net
 gx389r0b.blog.fc2.com
-gxfunnyworld.com
-gyfunnews.com
+gxfunnyworld.com //歡享網
+gyfunnews.com //密訊
 gyhzx846rl.blog.fc2.com
 gyman49.pixnet.net
 gyp4600lnr.pixnet.net
+gzmjhzs.com
 gzx80925715shibi.wordpress.com
 h00h13m.pixnet.net
 h0b3x11.pixnet.net
@@ -1864,13 +1935,13 @@ h9zxt7nxrp.blog.fc2.com
 haai0bm01t.blog.fc2.com
 haejare.blogspot.*
 haetgad.blogspot.*
-haharead.com
+haharead.com //樂享網
 hahaya01.website
-hamisu88.com
+hamisu88.com //歡享網
 hammonlillws.pixnet.net
 handread.cc
 hansonfrahro.pixnet.net
-haohao16.com
+haohao16.com //歡享網
 haolookr.com
 haoyunmyt.com
 haoyuntt.com
@@ -1880,48 +1951,48 @@ happies.life
 happies.news
 happiness.beauties.life
 happy01.co
-happy123.org
+happy123.org //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 happy715568049.blog
 happy88.news
 happychen5888.com
 happyday543.com
-happydecastle.com
-happydedu.com
-happydefy.com
+happydecastle.com //歡享網
+happydedu.com //歡享網
+happydefy.com //歡享網
 happydivination.xyz
 happyeverydaymovie.com
-happyfoo.cc
-happyfoo.com
+happyfoo.cc //歡享網
+happyfoo.com //歡享網
 happylady.cc
-happyland.life
-happypress.cc
+happyland.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+happypress.cc //微享網
 happypropies.com
-happysharing360.com
-happysharingteam.com
-happytify.cc
-happytify.club
-happytify.com
-happytify.net
-happytify.news
-happytifyaged.com
-happytifybaby.com
-happytifybaby.info
-happytifycon.com
-happytifycy.com
-happytifydog.com
-happytifyfood.com
-happytifyfy.com
-happytifygo.com
-happytifyhome.com
-happytifyhotel.com
-happytifyjianshen8.com
-happytifyjk.com
-happytifynet.com
-happytifyold.com
-happytifypet.com
-happytifywin.com
-happytifyye.com
-happytifyzh.com
+happysharing360.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+happysharingteam.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+happytify.cc //歡享網
+happytify.club //歡享網
+happytify.com //歡享網
+happytify.net //歡享網
+happytify.news //歡享網
+happytifyaged.com //歡享網
+happytifybaby.com //歡享網
+happytifybaby.info //歡享網
+happytifycon.com //歡享網
+happytifycy.com //歡享網
+happytifydog.com //歡享網
+happytifyfood.com //歡享網
+happytifyfy.com //歡享網
+happytifygo.com //歡享網
+happytifyhome.com //歡享網
+happytifyhotel.com //歡享網
+happytifyjianshen8.com //歡享網
+happytifyjk.com //歡享網
+happytifynet.com //歡享網
+happytifyold.com //歡享網
+happytifypet.com //歡享網
+happytifywin.com //歡享網
+happytifyye.com //歡享網
+happytifyzh.com //歡享網
 happytvnews.life
 happytw.net
 happyue.com
@@ -1938,20 +2009,21 @@ hazelk6h5gl5.pixnet.net
 hbbzd33131.pixnet.net
 hbfbt77199.pixnet.net
 hbg4714qqr.pixnet.net
-hbxfm267pw.pixnet.ne
+hbxfm267pw.pixnet.net
 hbzrhf.com
 hc0b7pr6gk.pixnet.net
 hcu30ng27g.blog.fc2.com
 hcvxtr827.pixnet.net
 hda81pm42a.blog.fc2.com
 hdapei.com
-hdctrf.com
+hdctrf.com //歡享網
 hdhbz57179.pixnet.net
 hdi92gk83z.blog.fc2.com
 hdpp560becnat.pixnet.net
+headpophk.com //redirects to apple01.co
 health-express.cc
 health1.tw
-health580.net
+health580.net //BuzzHand
 healthalover.com
 healthdaily.tw
 healthlooker.com
@@ -1959,12 +2031,12 @@ healthnews99.com
 healthofall.com
 healthreaoo.com
 healthtip.cc
-healthylives.tw
+healthylives.tw //LIFE生活網
 healthyshare.life
 healthysharing.life
 healthyssky.com
 healthyssky.xyz
-heartguider.com
+heartguider.com //歡享網
 heasay.com
 heathestoneuc.pixnet.net
 hecwk13833.pixnet.net
@@ -1983,7 +2055,7 @@ hfrhdalfrh8r.pixnet.net
 hhd35cz16z.blog.fc2.com
 hhx9xh93.blog.fc2.com
 hi56oo.pixnet.net
-high745.club
+high745.club //愛縮兔 (農場轉址)
 hildajacwsnp.pixnet.net
 hilldiana7652.pixnet.net
 hinwen.com
@@ -1998,12 +2070,29 @@ hjlzv371jw.pixnet.net
 hjr73bn93r.blog.fc2.com
 hjt19fh97p.pixnet.net
 hjt1ppf5153.pixnet.net
+hk-backpack.com //愛縮兔 (農場轉址)
 hk.maheshbhusal.com.np
 hk.saowen.com
+hk6uonews.com //愛縮兔 (農場轉址)
 hkappleweekly.com
+hkd4.com
+hkdailyhub.com //愛縮兔 (農場轉址)
 hkeasychat.com
+hkerfeed.com
+hkheatnews.com //愛縮兔 (農場轉址)
 hkjam.com
-hkon9daily.com
+hklaughpic.com //愛縮兔 (農場轉址)
+hklocalpress.com //愛縮兔 (農場轉址)
+hknews.live //redirects to ifunblog.com
+hknews.pro
+hknewshub.com //愛縮兔 (農場轉址)
+hknewsroom.club //愛縮兔 (農場轉址)
+hknextnew.com //愛縮兔 (農場轉址)
+hknl1dcduf.pixnet.net
+hkon9.com
+hkon9daily.com //愛縮兔 (農場轉址)
+hkpeople-local.com //愛縮兔 (農場轉址)
+hkposts.com
 hktimes.org
 hku86xx55u.pixnet.net
 hkwall.com
@@ -2025,10 +2114,12 @@ hnxv77dv.wordpress.com
 ho58507527.pixnet.net
 ho96007414.pixnet.net
 hoffmam37l477.pixnet.net
+hoiiy1181.pixnet.net
 holakikybernice.blog.fc2.com
+hollenews.com
 hollyemma4662.pixnet.net
 holmesfrazir1.pixnet.net
-homedishesso.com
+homedishesso.com //歡享網
 hon6578elr.blog.fc2.com
 honey99.net
 hoo41j8.pixnet.net
@@ -2036,7 +2127,8 @@ horo88.cc
 horofriend88.com
 horonote.com
 horseride774626360.wordpress.com
-hot2dog.men
+hot2dog.men //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+hotbak.net
 hotcreator.com
 hotcreator.live
 hothk.com
@@ -2047,7 +2139,7 @@ hotnews.hk
 hotnews.news
 hotptt.com
 hotqzone.xyz
-hotstartabloid.com
+hotstartabloid.com //歡享網
 hottimes.co
 hottimes.org
 hotvdo.info
@@ -2071,6 +2163,7 @@ hs3dg91x64v3.pixnet.net
 hssszn.com
 ht38163556.pixnet.net
 htd93dl13t.blog.fc2.com
+html52.com
 htrnxfj1lp.pixnet.net
 htrou698le.pixnet.net
 htz13vl53h.blog.fc2.com
@@ -2093,7 +2186,7 @@ hwlu189.pixnet.net
 hwzryp028.pixnet.net
 hx55828303.pixnet.net
 hxf9hx31.blog.fc2.com
-hxgamesky.com
+hxgamesky.com //歡享網
 hxl31sq24j.pixnet.net
 hxp69ph85v.blog.fc2.com
 hxr19pt17n.blog.fc2.com
@@ -2107,6 +2200,7 @@ hzr37th77j.blog.fc2.com
 hzr97tp77p.pixnet.net
 hzt57lz35p.blog.fc2.com
 i-funny.tw
+i-loves.online //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 i00oo29s.pixnet.net
 i01.in
 i0cqq0qouy.pixnet.net
@@ -2146,7 +2240,7 @@ i6csu0wqk6.pixnet.net
 i6gqw6oouc.pixnet.net
 i6jcfcyv6q.pixnet.net
 i6voo5.pixnet.net
-i77.today
+i77.today //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 i7ook6.pixnet.net
 i7pbo2i5cfh.blog.fc2.com
 i7rpc9r4pto.pixnet.net
@@ -2172,16 +2266,17 @@ iay0810skd.pixnet.net
 iaz67le80v.blog.fc2.com
 ib4111d.pixnet.net
 ib65193469.pixnet.net
-ibj.tw
+ibj.tw //~, 3c.~, fun.~, knowing.~
 ibrahimzs708.wordpress.com
 icemaker17880326.wordpress.com
+ichiryuhk.com
 icofunny.com.hk
-iconabc.com
+iconabc.com //歡享網
 icovideos.com
 idea543.net
 ideapit.com
 ideapit.net
-idoctorgroup.com
+idoctorgroup.com //LIFE生活網
 ieabw013zy.blog.fc2.com
 iec0919byo.blog.fc2.com
 iedr553584.blog.fc2.com
@@ -2189,6 +2284,7 @@ ieh31bx17g.blog.fc2.com
 ieo72vt43t.blog.fc2.com
 ifc16o5deniln.pixnet.net
 ifun01.com
+ifunblog.com //redirects to circle01.life
 ifunmy.cc
 ifunny.tw
 ifuun.com
@@ -2197,7 +2293,7 @@ igygy80026.pixnet.net
 ihealth3.com
 ihobbies.life
 ihot.news
-ihowto.cc
+ihowto.cc //BuzzHand
 ihqzb17321.pixnet.net
 iias.pixnet.net
 iiilab.com
@@ -2211,37 +2307,41 @@ imama.tw
 imkmm66422.pixnet.net
 immediates.net
 imtopsales.com
+imynest.com
 in1r50.pixnet.net
 inew.com.tw
 info.todohealth.com
 info01.win
 infobarrel.com
-ingram13.club
+ingram13.club //愛縮兔 (農場轉址)
 inhanbro.com
 ini0969rua.pixnet.net
 inj13qv28b.blog.fc2.com
 injurylawyernewportnews.com
 inpmv672cf.pixnet.net
 inr7213eet.pixnet.net
-insightslife.news
+insightslife.news //歡享網
 inspirationaltouching.blogspot.*
 interestingpo.com
 io02527879.pixnet.net
 ipetgroup.com
 iphone5315357041.wordpress.com
 iphone813933229.wordpress.com
+ipipi.co //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 iptt.xyz
-ipub.fun
-ipub.one
-ipub.pro
-iqiqi.life
-iqiqi.news
-iqiqi.pro
+ipub.fun //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, happysharing818.~, ...
+ipub.one //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, cmilitary.~, robert.~, ...
+ipub.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, 126.~, ...
+iqiqi.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+iqiqi.news //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+iqiqi.online //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+iqiqi.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 iquizuuu.com
 iranshao.com
 iread.one
 ireaded.com
-irnsor.com
+iriri.co //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+irnsor.com //樂享網
 irqnhc5981.pixnet.net
 irsf0wal86535.pixnet.net
 isaacmariosc.pixnet.net
@@ -2249,11 +2349,13 @@ ise81nl38i.blog.fc2.com
 isforum.net
 ishare777.blogspot.*
 isheart.co
-iso2.cc
+ishmeitian.com
+iso2.cc //愛縮兔 (農場轉址)
 ispot.news
 isuduw.blogspot.*
 itd1268dwy.blog.fc2.com
 ite85hg74z.pixnet.net
+iter01.com
 itestquiz.com
 itislooker.com
 itislooker.net
@@ -2262,20 +2364,21 @@ itmd3.blogspot.*
 itouchtv.cn
 itr22kg47n.blog.fc2.com
 itread01.com
+itsfun.com.tw
 itw01.com
 ivtpnl523.pixnet.net
 iwk09spf0k.pixnet.net
 iwoqlm2597.pixnet.net
 iww75vx99l.blog.fc2.com
 ix89949373.blog.fc2.com
-ixixi.pro
+ixixi.pro //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 iy86wo24.pixnet.net
 iyt43yo64w.pixnet.net
 iyule.pro
 iz28oo4.pixnet.net
 iza00gc26y.pixnet.net
 izhentoo.cc
-j.brotherhood.space
+j.brotherhood.space //愛縮兔 (農場轉址)
 j0czy6pbaw.pixnet.net
 j0e7b170fm8.blog.fc2.com
 j0e7w9a5duc.pixnet.net
@@ -2407,6 +2510,8 @@ jbh5040ksm.blog.fc2.com
 jbi1088ctl.pixnet.net
 jbys4hr0a.pixnet.net
 jbzzv71759.pixnet.net
+jchann.net
+jchannel.cc
 jchwle730.pixnet.net
 jctthc78.pixnet.net
 jd21871873.pixnet.net
@@ -2421,6 +2526,7 @@ jeanetr8rd7ha.pixnet.net
 jeanjennin68.wordpress.com
 jefferdebbinl.pixnet.net
 jeffersonwz617.wordpress.com
+jellyhknews.com //愛縮兔 (農場轉址)
 jennynichkg55.pixnet.net
 jennyshee3v.pixnet.net
 jeremymanniy6.pixnet.net
@@ -2449,7 +2555,8 @@ jiankanghou.com
 jimmieethejqa.pixnet.net
 jimmyfans.com
 jimmyfans.net
-jinchengzhilv.com
+jinbikan.com
+jinchengzhilv.com //歡享網
 jingyanbus.com
 jinianlai.com
 jinlisting.com
@@ -2457,17 +2564,19 @@ jio0692gxb.pixnet.net
 jiq3b6olie6.pixnet.net
 jis74lx44f.pixnet.net
 jj41409976.pixnet.net
+jjmanstudio.com //密訊
 jjzlx59955.pixnet.net
 jk3581sj64.blog.fc2.com
-jkbodynew.com
-jkbodyvip.com
-jkdefender.com
+jkbodynew.com //歡享網
+jkbodyvip.com //歡享網
+jkdefender.com //歡享網
 jkhappytify.com
-jkhealthtree.com
+jkhappytify.info //歡享網
+jkhealthtree.com //歡享網
 jklyxr412.pixnet.net
 jkq21ah41i.blog.fc2.com
 jktip.net
-jkvanguard.com
+jkvanguard.com //歡享網
 jlhft99931.pixnet.net
 jm0928w.pixnet.net
 jmaqn007vd.pixnet.net
@@ -2475,7 +2584,7 @@ jmp3800.pixnet.net
 jmxb6brownbng.pixnet.net
 jnd38.pixnet.net
 jnvjz57573.pixnet.net
-joan65.club
+joan65.club //愛縮兔 (農場轉址)
 job255.wordpress.com
 joec32a58n.pixnet.net
 joelmay12267.pixnet.net
@@ -2517,8 +2626,11 @@ juanitkagtnu.pixnet.net
 judyfi8547.pixnet.net
 jug07uy57w.blog.fc2.com
 juhangye.com
+juicy-news.hk
 juk73kl19w.blog.fc2.com
+juksy.club
 juksy.com
+juksy.me
 jukuk507lm.blog.fc2.com
 juliasl78in20.pixnet.net
 jum37bm21d.pixnet.net
@@ -2536,7 +2648,7 @@ jw33572043.blog.fc2.com
 jw8oo020.pixnet.net
 jwi2850lqw.pixnet.net
 jwk73uh58k.blog.fc2.com
-jwztys.com
+jwztys.com //歡享網
 jx21413798.pixnet.net
 jxb975h3v5.pixnet.net
 jxdzn13753.pixnet.net
@@ -2601,15 +2713,22 @@ k8wko0akai.pixnet.net
 k9a1k8.wordpress.com
 k9jad6uwl2.pixnet.net
 k9rde51ek1.pixnet.net
+kaimalo.com
 kan.world
 kangkang.life
 kanglaikangqu.site
 kannewscast.com
-kanreport.com
+kanreport.com //歡享網
+kanwatch.best
+kanwatch.club
 kanwatch.com
+kanwatch.fun
+kanwatch.live
 kanwatch.me
 kanwatch.online
+kanwatch.pro
 kanwatch.site
+kanwatch.today
 karlkenl7sb.pixnet.net
 kat07ek84s.blog.fc2.com
 katherw620m5f.pixnet.net
@@ -2639,11 +2758,12 @@ kgeos749yu.blog.fc2.com
 kgm24kc84i.blog.fc2.com
 kgriffithjb6.pixnet.net
 kgsmusicw.pixnet.net
+kgula.com
 kguqc828.blog.fc2.com
 kgutierreznor.pixnet.net
 kh017xnormam4.pixnet.net
 khacu10384.pixnet.net
-khaikang.com
+khaikang.com //boMb01
 khg3566byz.blog.fc2.com
 khgfgf42.blogspot.*
 khyhgy09.blogspot.*
@@ -2654,11 +2774,12 @@ kikinote.net
 kimberincf.pixnet.net
 kimi5052723.pixnet.net
 kimjean1202.pixnet.net
-kingsw65.club
-kingtop.net.tw
+kingsw65.club //愛縮兔 (農場轉址)
+kingtop.net.tw //指動傳播科技有限公司
 kiqsm42662.pixnet.net
 kirkmws0645do.pixnet.net
 kirosml945.wordpress.com
+kiwireport.com
 kiwsy.cc
 kj04587736.pixnet.net
 kj4rafaela1.pixnet.net
@@ -2680,11 +2801,12 @@ kmrsbo436.pixnet.net
 kn053r.pixnet.net
 knightjsqd7.pixnet.net
 knlfc73058.pixnet.net
-knowledgeunion.com
+knowledgeunion.com //歡享網
 knowyourinside.com
 knw04tf18o.blog.fc2.com
 kod24nh90x.blog.fc2.com
 koe8us82.blog.fc2.com
+kokoinfo.com
 kora-mesr.com
 koug310.pixnet.net
 kp27m1.pixnet.net
@@ -2693,6 +2815,7 @@ kpf970w1q6.blog.fc2.com
 kpo14ho42p.blog.fc2.com
 kpoppunch.com
 kq3hxcw3.pixnet.net
+kqei608ww.pixnet.net
 kqv33lj13b.blog.fc2.com
 kqz34hp55b.blog.fc2.com
 kr39266979.pixnet.net
@@ -2815,8 +2938,12 @@ l9xrt99lbb.blog.fc2.com
 ladybig.com
 ladyhappyday.com
 laiptt.online
-lala01.com
+laiyuan.com
+lala01.com //boMb01
+lam777.com
+lanzhouyangsheng.com
 lapetrick.pixnet.net
+larid.hk
 larrycastiv2.pixnet.net
 las5856kdq.pixnet.net
 lastbattlerunfun.website
@@ -2824,7 +2951,7 @@ laughbombclub.com
 laughingbombclub.com
 laurens310f1.pixnet.net
 lav4317owr.pixnet.net
-lb1323.club
+lb1323.club //愛縮兔 (農場轉址)
 lb41k6.pixnet.net
 lb77759478.blog.fc2.com
 lbjsuhamptoho.pixnet.net
@@ -2844,13 +2971,13 @@ leesharing.com
 leestevenudg.pixnet.net
 lek05wh61o.blog.fc2.com
 lenahe8h636.pixnet.net
-lengyuexuan.com
+lengyuexuan.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 lengyuexuan213.blogspot.*
 leonayatesset.pixnet.net
 leonn87gv72.pixnet.net
 lesliejp278.pixnet.net
 lesterfredele.pixnet.net
-letgotw.com
+letgotw.com //歡享網
 letptt.com
 letu.life
 lfhowshare.com
@@ -2860,27 +2987,30 @@ lg33avaneiop.pixnet.net
 lhhfgf35.blogspot.*
 li284or.pixnet.net
 lianamsl817.wordpress.com
+liangdian.cc
 lieqi.com
 lieqi.me
 lieqinews.com
-life.com.tw
+life.com.tw //LIFE生活網
 life.cx
-life.tw
+life.tw //LIFE生活網
 lifeartheart.com
 lifehow.cc
 lifeknowlege.com
-lifelink.com.tw
+lifelink.com.tw //sinanews.~, sometimes.~, sinatv.~, ...
 lifelove01.co
 lifelove01.com
-lifenews.me
-lifenews.tw
+lifenews.me //愛縮兔 (農場轉址)
+lifenews.tw //指動傳播科技有限公司
+lifeonea.co
 lifeonea.com
-lifetify.cc
+lifetify.cc //歡享網
 lifeyet.com
 lightenlife.net
-lightnews.tw
+lightnews.tw //指動傳播科技有限公司
 lik44wc87g.blog.fc2.com
 like3c.com
+likelife365.com
 limpehisforeign.com
 line-share.tw
 linjiamm.com
@@ -2889,6 +3019,7 @@ lir29sm97g.pixnet.net
 lisa513889.pixnet.net
 littled6fl3.pixnet.net
 littlepet.cc
+live-localhk.com //愛縮兔 (農場轉址)
 livestrong.com
 ljnfgh.blogspot.*
 lkfortune.com
@@ -2899,14 +3030,16 @@ llr19pj11t.blog.fc2.com
 lltdr5t7lj.pixnet.net
 lmbhy378gx.pixnet.net
 lme85ih05k.pixnet.net
-lmfcofound.club
+lmfcofound.club //愛縮兔 (農場轉址)
 lnhpt55315.pixnet.net
+lnkhg.com
 lno96jb06i.pixnet.net
 lnr71xl17v.blog.fc2.com
 lnx55zb91p.blog.fc2.com
+loltftpro.com
 lon73ft31d.blog.fc2.com
 longheathber.pixnet.net
-look543.com
+look543.com //BuzzHand
 lookerideas.com
 lookerideas.net
 lookernew.com
@@ -2916,6 +3049,8 @@ lookforward.cc
 lookforward.info
 lookingforward.info
 lookit.tw
+looknews.cc //天天要聞/每日要聞
+lookoutdaily.com //愛縮兔 (農場轉址)
 lopezleo95375.pixnet.net
 lopezo5mgd4bx.pixnet.net
 lor1d54.pixnet.net
@@ -2924,15 +3059,16 @@ loser.news
 louisedww3.pixnet.net
 louisholmramo.pixnet.net
 love.itsfun.com.tw
-lovedaily.life
-lovedayfy.com
+lovedaily.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+lovedayfy.com //樂享網
+lovefisher.net
 lovegamett.com
-lovehappytify.com
+lovehappytify.com //歡享網
 lovelife01.com
 lovelifes.net
 lovemoney.tw
 loveonline.me
-lovepathfinder.com
+lovepathfinder.com //歡享網
 loveshares.cc
 lovestory88.com
 lovetoknow.com
@@ -2955,6 +3091,7 @@ lucasstee6906.pixnet.net
 luckylife166.life
 luckylife66.com
 luggagetrunk.blog.fc2.com
+luoow.com
 lv93151115.blog.fc2.com
 lvj99sj57z.blog.fc2.com
 lvjy659.pixnet.net
@@ -3048,13 +3185,15 @@ magic8809.wordpress.com
 mah33tm78p.blog.fc2.com
 mahalo.com
 make9.com
-malaysiable.news
+malaysiable.news //歡享網
 malaysian.love
+malaysiatimes.org //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+malaysiatimes.site //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 maldonaconalf.pixnet.net
 mama.tw
 mamaclub.com
 mamaknews.com
-mamalearning.com
+mamalearning.com //歡享網
 mamatify.com
 mamicode.com
 mamready.com
@@ -3067,7 +3206,7 @@ manorvilletv.blog.fc2.com
 manta.com
 maoanbo.net
 maopets.com
-maoxiansen.com
+maoxiansen.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 marcusq5rhjb.pixnet.net
 margardanti58.pixnet.net
 marianheohos.pixnet.net
@@ -3083,6 +3222,7 @@ marthamaflore.pixnet.net
 martinwacodyj.pixnet.net
 mathewo7258.pixnet.net
 matthewsu0.pixnet.net
+mayibanchang.com.cn
 mb69575090.pixnet.net
 mbl60becpk.pixnet.net
 mc26.com
@@ -3099,13 +3239,14 @@ mdk85be66f.blog.fc2.com
 mdkp617.pixnet.net
 mdndy.com
 meaeya.blogspot.*
-media8.asia
-media8.info
-media8.me
-media8.news
+media8.asia //Media8傳媒
+media8.info //Media8傳媒
+media8.me //Media8傳媒
+media8.news //Media8傳媒
 medialnk.co
 medialnk.com
-meishuile.com
+meetptt.com
+meishuile.com //BuzzHand
 melanishi2567.pixnet.net
 menclub.co
 mendezbenspen.pixnet.net
@@ -3138,9 +3279,13 @@ mingyanjiaju.org
 minniefa92589.pixnet.net
 minnielylfly.pixnet.net
 miriamlaurdai.pixnet.net
-mission-new.com
-mission-tw.com
-missu.co.com
+misback.com //密訊
+missiback.com //密訊
+mission-hosti.com //密訊
+mission-nan.com //密訊
+mission-new.com //密訊
+mission-tw.com //密訊
+missu.co.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 mitchehawkigs.pixnet.net
 mitchelstev78.pixnet.net
 mix-post.com
@@ -3150,7 +3295,7 @@ mk691h.pixnet.net
 mkk25nt21x.blog.fc2.com
 mkoemuoyuw.pixnet.net
 mm32414045.pixnet.net
-mmin12.club
+mmin12.club //愛縮兔 (農場轉址)
 mmtw.org
 mnraga.blogspot.*
 mo990.com
@@ -3159,10 +3304,11 @@ mofun.ml
 mogujiela.com
 mombaby.tw
 momdata.blogspot.*
-momstore.bid
+momstore.bid //樂享網
 money83.com
 moneyaaa.com
 moneymy.cc
+monoc19027.pixnet.net
 mop.com
 moptt.tw
 moralesbusyyp.pixnet.net
@@ -3179,7 +3325,7 @@ mr05226936.blog.fc2.com
 mrb91gy85y.blog.fc2.com
 mrr33bx69i.blog.fc2.com
 mrttw.com
-msfoodvip.com
+msfoodvip.com //歡享網
 msg0253zks.blog.fc2.com
 mt28196322.pixnet.net
 mt47esfgj.blogspot.*
@@ -3197,16 +3343,18 @@ mx30699544.pixnet.net
 mx52579356.pixnet.net
 mxfunny.com
 my74158876.pixnet.net
-mybezza.live
+mybezza.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 mycomic.cc
 myd72cy13j.pixnet.net
 myerscarmix.pixnet.net
 myfbshare.net
 myfortune.cc
 myfunnews.com
+mygsyelq.pixnet.net
 myheart.com.tw
 myjctt78.pixnet.net
 myomgnews.net
+myptt.cc
 myptt.tk
 myshop111.pixnet.net
 myspotnews.com
@@ -3339,25 +3487,27 @@ nclbys945.pixnet.net
 nd27093673.blog.fc2.com
 ndfxvd.blogspot.*
 ne42967165.pixnet.net
-neihantu.co
+neihantu.co //歡享網
 nellieandrekx.pixnet.net
 nelsong81dod.pixnet.net
 nepaliunity.com
 net287.wordpress.com
 new0.net
 new2mh.com
-newlife.sale
-newmalaylife.com
+newlife.sale //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+newmalaylife.com //歡享網
 newmobilelife.com
 news-adding.com
+news-lihkg.com //愛縮兔 (農場轉址)
 news.lazyjerry.com
 news01.cc
 news17zf.pixnet.net
 news18nepal.com
 news520.com
 newsancai.co
-newsbigear.com
+newsbigear.com //歡享網
 newskaleidoscope.xyz
+newsptt.com
 newsreadco.com
 newstube01.tv
 newtonnirb0.pixnet.net
@@ -3408,11 +3558,12 @@ npnt.net
 npr37dd37v.blog.fc2.com
 npt11tl35v.pixnet.net
 nptvp99795.pixnet.net
+npvbnbz97.pixnet.net
 nqp441.pixnet.net
 nrtasd.blogspot.*
 nrzp15dx.wordpress.com
 ns226p.pixnet.net
-nsctdxw.com
+nsctdxw.com //歡享網
 nsn57gl82k.blog.fc2.com
 nsq6143807kaoxi.wordpress.com
 nsq94hi76g.pixnet.net
@@ -3528,6 +3679,7 @@ old3x7.pixnet.net
 olf37p.pixnet.net
 olhd513.pixnet.net
 oll153j.pixnet.net
+olove.online //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 olr3x7.pixnet.net
 olwj83.pixnet.net
 olzj135.pixnet.net
@@ -3535,20 +3687,22 @@ om05846367.blog.fc2.com
 om1pazq7lo.pixnet.net
 om81978416.pixnet.net
 omej439.pixnet.net
-omg4fun.com
+omg4fun.com //BuzzHand
 omg543.com
-omgnew99.com
+omgnew99.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 omgnews.cc
 omgnews.life
-omgtw.com
+omgtw.com //boMb01
+on9news.com //愛縮兔 (農場轉址)
 onb41kv10r.blog.fc2.com
 onefunnyjoke.com
 oneinfo.tw
-onepron.com
-oneworldoo.com
+onepron.com //歡享網
+oneworldoo.com //歡享網
+onlinettt.com //video.~
 onlyeasylife.com
 onnewlife.com
-onthatopne.club
+onthatopne.club //愛縮兔 (農場轉址)
 oo2008lw.pixnet.net
 oo200s7i.pixnet.net
 oo20h0v9.pixnet.net
@@ -3570,7 +3724,7 @@ opc5933zqs.blog.fc2.com
 oq49172132.pixnet.net
 oqh53ut95s.blog.fc2.com
 oql70va41k.pixnet.net
-oqrms.com
+oqrms.com //樂享網
 oquoy.cn
 oqvcx.cn
 or16js3.pixnet.net
@@ -3581,20 +3735,23 @@ or3kd61.pixnet.net
 or3x7d.pixnet.net
 or6rs13.pixnet.net
 or9t51l.pixnet.net
+orange01.online
 orange01.org
+orange01.xyz //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 oreyza043.pixnet.net
-orgs.host
-orgs.life
-orgs.ltd
-orgs.one
-orgs.press
-orgs.pub
+orgs.host //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, feliciakung.~, ...
+orgs.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, happysharing.~, ...
+orgs.ltd //歡享網
+orgs.one //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, sshare.~, ...
+orgs.press //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, seesoutheastasia.~, ...
+orgs.pub //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~ //www.~, yuxiang.~, ...
 orh73r.pixnet.net
 orinnikejordan.blog.fc2.com
-ornsnr.com
+ornsnr.com //樂享網
 ortz519.pixnet.net
 orzhd.com
-orzptt.tk
+orzptt.tk //168ptt.com
+osometalk.com //密訊
 oszps059ze.pixnet.net
 otakuni.co
 oth03bk64n.blog.fc2.com
@@ -3727,6 +3884,7 @@ pa9bym02uk.pixnet.net
 paddyun662.wordpress.com
 padpadblog.life
 pagecup.com
+pai-hang-bang.com
 paoshijian.com
 paoshijian.xyz
 parker90.ipub.pro
@@ -3747,14 +3905,16 @@ pbyhr74611.pixnet.net
 pbz73tx17x.blog.fc2.com
 pcasg.com
 pci4eoep5l.pixnet.net
-pcnews.me
+pcnews.me //愛縮兔 (農場轉址)
 pcx41cx10p.blog.fc2.com
 pdk36qj56e.pixnet.net
+peanutimes.com
 pearllanbarry.pixnet.net
 pearlmaurrams.pixnet.net
 pearlreee1.pixnet.net
 pearsoeiy0tl.pixnet.net
 peculiarism.top
+peekme.cc
 peggybessium0.pixnet.net
 peopleinsider.blogspot.*
 peopleinsider.net
@@ -3786,11 +3946,14 @@ phyllicastrcy.pixnet.net
 picallies.com
 piercemedn.pixnet.net
 pifyu8wfhi.pixnet.net
-pikicast.tw
+pikicast.tw //redirects to www.wishnote.tw
 pineapple99.com
+pingyan643681.pixnet.net
+pinlue.com
+pinpicl.com
 pioneerwe.com
 piq8821mmws.pixnet.net
-pirateking.xyz
+pirateking.xyz //歡享網
 piw757coxdcn.blog.fc2.com
 pixiu88.net
 pixpo.info
@@ -3804,7 +3967,7 @@ pkq532atbg28.blog.fc2.com
 pks51cj32o.pixnet.net
 pl13117194.pixnet.net
 play01ground.com
-play543.com
+play543.com //BuzzHand
 plays01.com
 please.news
 plf8freid9749.pixnet.net
@@ -3817,27 +3980,34 @@ pmm24hy52f.pixnet.net
 pmydae7914.pixnet.net
 pndcwz467.pixnet.net
 pnjzt53719.pixnet.net
+po3c.com
 poad.net
 pogood123.blogspot.*
 pointnet.news
 pol4z4.pixnet.net
 pooas12.pixnet.net
+poporead.com
 posre495.pixnet.net
+possitv.com
 post01.com
 post01.net
 posts.careerengine.us
 posttw.com
 potterk00evk.pixnet.net
-powerergate.com
+powerergate.com //歡享網
 pp11739313.blog.fc2.com
 pp35577195.blog.fc2.com
 pp75221188.pixnet.net
 ppap01.com
 pph49ig44g.blog.fc2.com
+pplomo.com //密訊
 ppt111h9d3.pixnet.net
 ppv13xz77z.blog.fc2.com
 ppwdb69644.pixnet.net
 prbzv19793.pixnet.net
+presentvzvr.pixnet.net
+presslocalhk.com //愛縮兔 (農場轉址)
+pressyourmum.com //愛縮兔 (農場轉址)
 pretties.news
 pretty.presslogic.com
 prettyhealth.life
@@ -3863,12 +4033,17 @@ pttbbs.cc
 pttbbs.com.tw
 pttbee.com
 pttbook.com
+pttbuy.cc
+pttcareer.com
+pttcomic.com
 pttdaily.com
 pttdata.com
 pttday.com
 pttdigit.com
+pttdigits.com
 pttent.com
 pttgame.com
+pttgopolitics.com
 pttgossip.com
 ptthito.com
 ptthot.blogspot.*
@@ -3882,6 +4057,9 @@ pttnews.cc
 pttread.com
 pttreader.com
 pttsport.com
+ptttaiwan.com
+ptttube.com
+pttuser.cc
 pttview.com
 pttview.tk
 pttweb.blogspot.*
@@ -3894,15 +4072,15 @@ pup17.com
 push01.com
 push01.net
 pushme.news
-pushnews.net
+pushnews.net //TEEPR
 pv53jf1z.blog.fc2.com
 pvf55td91x.pixnet.net
-pvonline.us
+pvonline.us //愛縮兔 (農場轉址)
 pvx11rn77d.pixnet.net
 pvxtt55997.pixnet.net
 pw8423vy31.blog.fc2.com
 pwl80qu55a.blog.fc2.com
-pwt15sf85e.blog.fc2.com
+pwt15sf85e.blog.fc2.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 pwvc8s5bsqf.pixnet.net
 pwyrn190.pixnet.net
 px07729133.pixnet.net
@@ -3936,8 +4114,9 @@ q4owenslillia.pixnet.net
 q4yjs17ti9.blog.fc2.com
 q4ynr6huqi.pixnet.net
 q4z7v134vh7.pixnet.net
+q578.com
 q5fletchedwar.pixnet.net
-q64519455luanhui7.wordpress.com
+q64519455luanhui7.wordpress.com //BuzzHand
 q6ese8sem0.blog.fc2.com
 q6gwu0ueku.pixnet.net
 q6i2g2kuqo.pixnet.net
@@ -3972,14 +4151,17 @@ qii24zt94y.blog.fc2.com
 qilook.com
 qinggua.net
 qingpingshan.com
-qiqi.life
-qiqi.news
-qiqi.today
-qiqi.world
-qiqis.life
-qiqis.site
-qiqu.fun
-qiqu.live
+qiqi.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqi.news //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqi.today //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqi.world //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqis.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqis.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqis.online //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqis.site //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+qiqu.fun //奇趣网
+qiqu.life
+qiqu.live //奇趣网
 qiqu.news
 qiqu.world
 qis44eu04k.pixnet.net
@@ -3993,6 +4175,7 @@ qmi0210.pixnet.net
 qmxhrileylpd.pixnet.net
 qnf05kp01s.pixnet.net
 qoiqc6uocw.pixnet.net
+qoks2miuc.pixnet.net
 qomyz85202.pixnet.net
 qosas761qd.pixnet.net
 qp53n0.pixnet.net
@@ -4009,6 +4192,7 @@ qseew6y8soom.blog.fc2.com
 qt34743490.pixnet.net
 qt7393lx26.blog.fc2.com
 qt92649328.pixnet.net
+qu02.com
 questionhub.com
 quiz321.com
 quizpop.me
@@ -4169,22 +4353,25 @@ re68pw9q.pixnet.net
 re80811845.pixnet.net
 read01.com
 read321.com
+read543.com
+readbest.net
 readdoo.com
 readhouse.cn
 readhouse.net
 readingfromtheheart.blogspot.*
 readthis.one
 rebeccamcgeid.pixnet.net
-recipe01.com
+recipe01.com //歡享網
 recipetify.com
 redbomb.news
 redchili21.com
+redorblue.us
 reedterrikas.pixnet.net
 reginaa8s508o.pixnet.net
 reginawashis3.pixnet.net
 reidq10q0w0q.pixnet.net
 rek17uw16d.blog.fc2.com
-religious-news.com.tw
+religious-news.com.tw //指動傳播科技有限公司
 reredispatch.com
 rerewo.com
 reynoldchardg.pixnet.net
@@ -4205,6 +4392,7 @@ ri61478467.blog.fc2.com
 ricemillt1ht.pixnet.net
 richrich2017.pixnet.net
 ridergi463.wordpress.com
+rifgame.com
 rileyjonatq1.pixnet.net
 rio6180lst.blog.fc2.com
 rioslydia3085.pixnet.net
@@ -4233,18 +4421,22 @@ rnx33hp31x.pixnet.net
 robertbrejnk.pixnet.net
 robinf8gp5ai6.pixnet.net
 robinsh0b38.pixnet.net
+rocketgeeks.com
 rodrigurpno.pixnet.net
 rogersp3fo4c.pixnet.net
 roh5096bff.blog.fc2.com
 ronnewmanches.pixnet.net
 ror114t.pixnet.net
+rounsh.com
 roys.joylah.co
 rpd04hh77o.blog.fc2.com
 rpfhz3n9txzf.blog.fc2.com
 rpu0104kka.pixnet.net
 rqi8139zga.pixnet.net
+rqjlkbwn.pixnet.net
 rqy25uzp9i.pixnet.net
 rr31133571.pixnet.net
+rrrjfnp3n1.pixnet.net
 rrt97vn77d.pixnet.net
 rsw59lk83d.blog.fc2.com
 rt59dx3l.blog.fc2.com
@@ -4265,6 +4457,7 @@ rule873.wordpress.com
 rv6oo5.pixnet.net
 rvi95ez81q.blog.fc2.com
 rvpzd93119.pixnet.net
+rvv4389.com
 rvxyu542pp.pixnet.net
 rwhypn732.pixnet.net
 rx18006718.pixnet.net
@@ -4350,26 +4543,26 @@ sdm83yq95a.blog.fc2.com
 sdpqat319.pixnet.net
 searchapp.soft4fun.net
 seed.com
-seeyouni.club
+seeyouni.club //愛縮兔 (農場轉址)
 selal25863.pixnet.net
 sensortex.web.fc2.com
 sergiogwqx.pixnet.net
-sexptt.tk
+sexptt.tk //168ptt.com
 sfkhxt709.pixnet.net
 sfrq150.pixnet.net
 sg53mq2y3x.blog.fc2.com
 sgaas3ialicej.pixnet.net
 sglda82750.pixnet.net
-sgpioneer.com
+sgpioneer.com //歡享網
 sh181e2h.blog.fc2.com
 sha59nc06r.blog.fc2.com
 shannondeloyo.pixnet.net
 shannonluxaq.pixnet.net
-shaqfool.us
+shaqfool.us //愛縮兔 (農場轉址)
 share.readward888.com
-share001.com
-share001.net
-share001.org
+share001.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+share001.net //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+share001.org //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 share1st.com
 share2fb.net
 share4.tw
@@ -4389,16 +4582,17 @@ sherriadrs8.pixnet.net
 sherriixjej.pixnet.net
 sherryneax22.pixnet.net
 shhbkfx.com
-shicheng.news
+shicheng.news //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 shirleynistac.pixnet.net
 shoebags.blog.fc2.com
 shopmore.pixnet.net
+shuyangyang.com.cn
 shz5295mho.blog.fc2.com
 si02wi4i.blog.fc2.com
 sidneykellyma.pixnet.net
 sin1011.pixnet.net
 sina-news.blogspot.com
-sinatimes.tw
+sinatimes.tw //指動傳播科技有限公司
 singaporeable.cc
 sis8.com
 sj41784819.pixnet.net
@@ -4408,11 +4602,11 @@ sk35250355.pixnet.net
 sk66483882.pixnet.net
 skocoims0.pixnet.net
 skye6299637.pixnet.net
-skyqzone.com
-skyyyy.club
+skyqzone.com //樂享網
+skyyyy.club //愛縮兔 (農場轉址)
 sl41134764.pixnet.net
 sl61151567.pixnet.net
-slwqp.com
+slwqp.com //BuzzHand
 sm45577204.pixnet.net
 sm62470210.pixnet.net
 sm82k09.pixnet.net
@@ -4437,6 +4631,7 @@ soul66666.blogspot.*
 soul99.com
 soulbay.tw
 soulmate888.blogspot.*
+sovalvo.com
 spartanburgw.pixnet.net
 spicemami.com
 splendidness.cc
@@ -4459,10 +4654,13 @@ srz58fu43d.blog.fc2.com
 ssau2k2m8.pixnet.net
 sse886gu08.blog.fc2.com
 ssf15uv35r.pixnet.net
+stackoom.com
 stamp3.com
 starfocus.news
-starlucky.cc
+starlucky.cc //樂享網
 starpark.tw
+starsign.club
+starsign.news
 stb54xe74u.pixnet.net
 std6wolfen3c.pixnet.net
 steamxo.com
@@ -4482,15 +4680,16 @@ strickcmpp01.pixnet.net
 successquote.org
 suite101.com
 sullivberdere.pixnet.net
-sundaynews.ch
+sundaynews.ch //愛縮兔 (農場轉址)
 sunffix.com
 sunflyday.com
 sunmon.news
 sunny7335vr.blog.fc2.com
 suntw.net
-super01.cc
+super01.cc //redirects to www.cocomy.net
 superbigapple.com
 superfun-e.com
+support-hk.com //redirects to possitv.com
 supportdap.online
 supportph.com
 susanpj5il865.pixnet.net
@@ -4515,6 +4714,7 @@ t0ifw8wdua.pixnet.net
 t0q0m5uddv.blog.fc2.com
 t0u8a1tvc3.pixnet.net
 t0wbc130xz3.pixnet.net
+t17.techbang.com
 t1b5p20.pixnet.net
 t1b9d11rl9.blog.fc2.com
 t1d7p5vp3z.pixnet.net
@@ -4619,17 +4819,20 @@ t9zbz3jtvf.pixnet.net
 t9znt0qzkf.pixnet.net
 tacbankurltw.wordpress.com
 tacmlw120.pixnet.net
+tagfoody.news
 taisuco.wordpress.com
 taiwan-madnews.com
 taiwan-politicalnews.com
 taiwan1314.com
+taiwanable.cc //歡享網
 taiwanable.com
-taiwandiginews.com.tw
+taiwandiginews.com.tw //指動傳播科技有限公司
 taiwanfansclub.com
 taiwanlikes.com
 takesurveysforcash911.blogspot.*
 talksnew.com
 tammyhawko5.pixnet.net
+tantaninvest.com
 tantannews.com
 tanyablacks5.pixnet.net
 tanyaleoc3y.pixnet.net
@@ -4654,10 +4857,10 @@ tdx57lf19y.blog.fc2.com
 tdz3xb91.blog.fc2.com
 tec98226548shou.wordpress.com
 techroomage.com
-teepr.com
-teepr.net
-teepr.tv
-teepr.tw
+teepr.com //TEEPR
+teepr.net //TEEPR
+teepr.tv //TEEPR
+teepr.tw //TEEPR
 terraze96l.pixnet.net
 tf19919351.pixnet.net
 tfc71vw37l.pixnet.net
@@ -4679,18 +4882,21 @@ thegreatdaily.com
 thegreendaily.net
 thehealthdaily.org
 thehealther.com
+thejumproom.org
 theodoagurodr.pixnet.net
 therestdkw7.pixnet.net
 therichfighter.com
 thesharedaily.com
-thestarsky.com
+thestarsky.com //歡享網
 thf50lh69o.pixnet.net
+thinbug.com
 thompsoarrkf.pixnet.net
 thp35nb73v.pixnet.net
 thtzh15597.pixnet.net
 tianhotel.com
 tigw96207423.wordpress.com
-timeisall.club
+tiksomo.com //密訊
+timeisall.club //愛縮兔 (農場轉址)
 timetw.com
 timlucky88.blogspot.*
 tio93ob80m.blog.fc2.com
@@ -4724,13 +4930,14 @@ toddchristy61.pixnet.net
 tomdondj0.pixnet.net
 toments.com
 tomkylecnny.pixnet.net
+tongfengqu.com
 topnews8.com
 totoread.com
 touchingstory3.blogspot.*
 touchingstory4.blogspot.*
 touchingstory5.blogspot.*
 touchingstory6.blogspot.*
-touchtech.tw
+touchtech.tw //指動傳播科技有限公司
 toutiao.com
 toutiaohaowang.com
 toutiaosg.com
@@ -4749,7 +4956,7 @@ tr79999717.pixnet.net
 traceybanktf.pixnet.net
 tracybenjajoa.pixnet.net
 tracyedithxmv.pixnet.net
-trailblazertimes.com
+trailblazertimes.com //歡享網
 trc441.pixnet.net
 trending.network
 triling.life
@@ -4760,6 +4967,7 @@ trilliok8m18.blog.fc2.com
 tripgotw.com
 tripnotes.org
 trj93dx59n.blog.fc2.com
+truenews.tw
 trvztx15r.pixnet.net
 trw10ty85b.pixnet.net
 trytohear.com
@@ -4769,12 +4977,13 @@ tsnj152.pixnet.net
 tsw94ie76i.pixnet.net
 tsyhgp612.pixnet.net
 ttl7jv71.blog.fc2.com
+ttodaynew.com
 ttp12px36h.blog.fc2.com
 ttp55fx73f.pixnet.net
 ttr31tr99x.pixnet.net
 ttrdj39951.pixnet.net
 ttshow.tw
-tuasiann.com
+tuasiann.com //boMb01
 tues221394583.wordpress.com
 tum01nu20p.pixnet.net
 tuudlisa52741.pixnet.net
@@ -4783,16 +4992,17 @@ tvb62ez13v.blog.fc2.com
 tvt7lt31.blog.fc2.com
 tvu2759mfi.blog.fc2.com
 tw.anyelse.com
+tw.bpm1579.com
 tw.gigacircle.com
 tw223com.blogspot.*
 tw520.me
 tw90427176.pixnet.net
 twblogs.net
 twenga.com
-twgreatdaily.com
-twgreatdaily.fun
-twgreatdaily.life
-twgreatdaily.live
+twgreatdaily.com //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+twgreatdaily.fun //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+twgreatdaily.life //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+twgreatdaily.live //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 twhotnews.com
 twoeggz.com
 twtimes.org
@@ -4850,6 +5060,7 @@ u9c4k9mctr.blog.fc2.com
 u9n4y603tr3.pixnet.net
 u9qqq86rmk.blog.fc2.com
 ua250q6q88.pixnet.net
+uag402g0u4.pixnet.net
 uakjvs865.pixnet.net
 ualia04076.pixnet.net
 uaqwaocauc.pixnet.net
@@ -4882,6 +5093,7 @@ ukuw0gi46c.pixnet.net
 ukz14jc83f.blog.fc2.com
 ulcqin091.pixnet.net
 ulen8denis803.pixnet.net
+umagdaily.com //愛縮兔 (農場轉址)
 umtalk.net
 umy6580401ganzhi3.wordpress.com
 underwears99.blogspot.*
@@ -5022,7 +5234,9 @@ vcs08dn98c.pixnet.net
 vd59373371.blog.fc2.com
 vdnj9zb55x.blog.fc2.com
 vdnwzbfeadqz.pixnet.net
-vdonews.today
+vdo-go.com
+vdo01.com
+vdonews.today //愛縮兔 (農場轉址)
 vdoobv.com
 vdsdss.blogspot.*
 vegrecipebooks.com
@@ -5047,7 +5261,8 @@ vipyl.com
 viralane.com
 viralcham.com
 viveos.net
-vivitw.us
+vivi01.com
+vivitw.us //愛縮兔 (農場轉址)
 vjbzh53113.pixnet.net
 vjd78od68h.blog.fc2.com
 vkj2387gsq.blog.fc2.com
@@ -5056,7 +5271,7 @@ vlh39hb15h.blog.fc2.com
 vlkgjq068.pixnet.net
 vm008j9.pixnet.net
 vm00v61.pixnet.net
-vm8.me
+vm8.me //Media8傳媒
 vmc6691wbx.blog.fc2.com
 vmr75ju39b.blog.fc2.com
 vn11fz9b.blog.fc2.com
@@ -5068,9 +5283,10 @@ voidcn.com
 vom1pdunnov.pixnet.net
 voncho.me
 vonvon.me
+voorp.com
 vork244.pixnet.net
-vovo798.com
-vovonews.com
+vovo798.com //歡享網
+vovonews.com //歡享網
 vpb13tv15z.blog.fc2.com
 vpsdx.com
 vptdp19793.blog.fc2.com
@@ -5092,7 +5308,7 @@ vsk92nb79w.blog.fc2.com
 vsm20cc47d.blog.fc2.com
 vtd97bf35d.blog.fc2.com
 vtvpfdtp79.pixnet.net
-vtyg34.club
+vtyg34.club //愛縮兔 (農場轉址)
 vvhnw451bq.pixnet.net
 vvttw.com
 vvy61pp52e.blog.fc2.com
@@ -5160,9 +5376,11 @@ w9esj630zay.pixnet.net
 w9g8b92uj9.pixnet.net
 w9jxv3y9hew.blog.fc2.com
 w9r4u9zo92.blog.fc2.com
+waagreat.com
 waderamosbf.pixnet.net
 wagnerkelly33.pixnet.net
 wajdke639.pixnet.net
+wakeupyourmind.net
 walkerjoqq.pixnet.net
 walkerraul148.pixnet.net
 wallactemabel.pixnet.net
@@ -5181,7 +5399,7 @@ washink1rg42o.pixnet.net
 washinluitl.pixnet.net
 washinpabr.pixnet.net
 water203.wordpress.com
-watermedia.touchtech.tw
+watermedia.touchtech.tw //指動傳播科技有限公司
 watkinshqj.pixnet.net
 watsonvincema.pixnet.net
 waxgourdw350.blog.fc2.com
@@ -5199,10 +5417,12 @@ webptt.net
 websterdamaur.pixnet.net
 wechat.kanfb.com
 wedianli.com
+weekdayshknews.com //愛縮兔 (農場轉址)
 weiwenku.net
 wendylonnraf.pixnet.net
 wendymyrtlf.pixnet.net
 wetalk.tw
+wewerose.com //歡享網
 wg158u1h.pixnet.net
 wgbud14131.pixnet.net
 wgdbsd.blogspot.*
@@ -5212,6 +5432,7 @@ wh454x8zzz.pixnet.net
 what-character-are-you.com
 whatever666.xyz
 whatfunny.org
+whatnews.cc //密訊
 whbsdfju.blogspot.*
 whgsb.blogspot.*
 wholehk.com
@@ -5219,6 +5440,7 @@ whyhow.online
 wi52607814.pixnet.net
 wi77228013.pixnet.net
 wiki101.com.tw
+wikitechy.com
 wikuw86wy.pixnet.net
 wilburfe710.blog.fc2.com
 williewillixn.pixnet.net
@@ -5244,17 +5466,21 @@ wogs88gc.wordpress.com
 wol73k.pixnet.net
 wolfgangts99.blog.fc2.com
 wolfgangts99.pixnet.net
+woman-house.com
 woman.horo88.cc
 womanaaa.com
 womanmake.com
+women-shuo.com
 womenclub.co
 wonder4.co
 wonderhowto.com
 woowa.fun
 wor73df89m.pixnet.net
-wosnews.com
+wordailyhk.com //愛縮兔 (農場轉址)
+wosnews.com //愛縮兔 (農場轉址)
 wow.kus0.tw
-wowo391.com
+wowo391.com //歡享網
+woyaokantoutiao.com
 woymg288.blog.fc2.com
 wp.news365.my
 wple8donj4t.pixnet.net
@@ -5267,6 +5493,7 @@ wrv79vf22o.blog.fc2.com
 wsc202kq00.blog.fc2.com
 wsc646as84.blog.fc2.com
 wsy26ie02i.pixnet.net
+wtbfsthy.pixnet.net
 wtfyou7788.net
 wtsfamen.com
 wu33671187.pixnet.net
@@ -5274,13 +5501,12 @@ wubzj616kv.pixnet.net
 wui55cu20q.pixnet.net
 wusc0sack.pixnet.net
 wutl590002.blog.fc2.com
-wuwu666.com
+wuwu666.com //歡享網
 wv1204c.pixnet.net
 wvt38bonnity.pixnet.net
-ww.happy123.org
-ww.share001.org
 wwjok27192.pixnet.net
 wwn83px11z.blog.fc2.com
+www9.gocar2.com
 wwwwtrolly88.com
 wwyo84ky.wordpress.com
 wx.abbao.cn
@@ -5415,6 +5641,7 @@ xb45842468.blog.fc2.com
 xbd95ht93t.blog.fc2.com
 xbjdn37735.pixnet.net
 xbntvh5z7.pixnet.net
+xbuba.com
 xcnnews.com
 xczpe19199.pixnet.net
 xdd77xb31p.blog.fc2.com
@@ -5444,12 +5671,14 @@ xianso.com
 xiaoyuanjiu.com
 xibao.be
 xibao.tw
-xingzuonew.com
-xingzuovip.com
+xingzuonew.com //歡享網
+xingzuovip.com //歡享網
+xinjiaponew.com //歡享網
+xinjiapovip.com //歡享網
 xinwennews.com
 xiqiangnm.com
 xjh7tmmarake.pixnet.net
-xjpsunshine.com
+xjpsunshine.com //歡享網
 xjrnbx3xd.pixnet.net
 xjrqw964jw.blog.fc2.com
 xjv04oy85s.blog.fc2.com
@@ -5471,6 +5700,7 @@ xnn01gf49q.pixnet.net
 xnpxv55391.pixnet.net
 xnvpx33779.pixnet.net
 xo98212418.blog.fc2.com
+xoer.cc
 xomba.com
 xop61nx07q.pixnet.net
 xp373g9acd.blog.fc2.com
@@ -5478,6 +5708,8 @@ xp88925678.pixnet.net
 xp89525158.pixnet.net
 xpf17nx31b.blog.fc2.com
 xph13hf51p.pixnet.net
+xqiqi.online //大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+xqiqi.top
 xr56265789.blog.fc2.com
 xs76176406.blog.fc2.com
 xsp97ov25a.pixnet.net
@@ -5507,11 +5739,11 @@ xxz97zp1jv.pixnet.net
 xyl6335hwt.blog.fc2.com
 xyun.org
 xyzhaha.com
-xyzhuanshu.com
+xyzhuanshu.com //歡享網
 xyzptt.com
 xz37bd3f.blog.fc2.com
 xzbj5thz1.pixnet.net
-xzhappytify.com
+xzhappytify.com //歡享網
 xzhlp1r51n.pixnet.net
 xzhreee.blogspot.*
 xznsvd516.pixnet.net
@@ -5591,7 +5823,7 @@ ycw60ae88s.blog.fc2.com
 ydk88gp97b.blog.fc2.com
 ydx80ig74f.blog.fc2.com
 ye36882085.pixnet.net
-yebabyvip.com
+yebabyvip.com //歡享網
 yec44io40k.blog.fc2.com
 yes-news.com
 yeslib.com
@@ -5614,10 +5846,10 @@ yidianzixun.tw
 yidp740.pixnet.net
 yiebst3064.pixnet.net
 yingtao.gjoyz.co
-yipee.cc
+yipee.cc //3c.~, app.~, gapp.~, ...
 yj17154944.pixnet.net
 yj56782680.pixnet.net
-ylallstar.com
+ylallstar.com //歡享網
 ylde289.pixnet.net
 ylfug31619.pixnet.net
 ymaakwsu4i.pixnet.net
@@ -5655,7 +5887,8 @@ yt3florencapn.pixnet.net
 yu61117369.pixnet.net
 yucwmb510.pixnet.net
 yue44oa48c.blog.fc2.com
-yuernew.com
+yuerguard.com //歡享網
+yuernew.com //歡享網
 yugxhwq3.pixnet.net
 yvap174.pixnet.net
 yw91018005.pixnet.net
@@ -5684,6 +5917,7 @@ z1pxr3pbdx.pixnet.net
 z1pzh7tdxn.pixnet.net
 z1t3v3hloz.pixnet.net
 z1vvj5rfb1.blog.fc2.com
+z29d.com //www3.~, ...
 z2myu5f6qvm.pixnet.net
 z2trv1chzq.pixnet.net
 z2w48oo.pixnet.net
@@ -5763,7 +5997,7 @@ z84et2.pixnet.net
 z85ct1.pixnet.net
 z8jyt9xpf5.blog.fc2.com
 z8wfk057quq.blog.fc2.com
-z98737406.tw
+z98737406.tw //指動傳播科技有限公司
 z9a9a0iseo.pixnet.net
 z9d7h71hd1.pixnet.net
 z9drz5tzv7.pixnet.net
@@ -5808,13 +6042,14 @@ zgxue.com
 zhentoo.com
 zhentoo.net
 zhentoo.site
-zhhappiness.com
-zhhappytify.info
+zhhappiness.com //歡享網
+zhhappytify.info //歡享網
+zhipanyou.com
 zhizhejie.com
 zhji599ooj.blog.fc2.com
 zhonguojujiao.wordpress.com
 zhoucuimei.cc
-zhsunflower.com
+zhsunflower.com //歡享網
 zhu.lu
 zhulinlin.net
 zhwj528.pixnet.net
@@ -5841,7 +6076,7 @@ zodiac168.com
 zodiacfoo.com
 zona512.wordpress.com
 zonepeer.com
-zonghevip.com
+zonghevip.com //歡享網
 zongyizixun.blogspot.*
 zoo851w.pixnet.net
 zp51jp9x.blog.fc2.com
@@ -5855,6 +6090,7 @@ zta35pf70b.blog.fc2.com
 ztecf295sp.pixnet.net
 ztjrd15137.pixnet.net
 ztxjh13517.pixnet.net
+zungxvehuan.pixnet.net
 zuopy.com
 zv03ukvm.pixnet.net
 zvl79vb39l.pixnet.net
@@ -5869,6 +6105,7 @@ zwxh071.pixnet.net
 zwyt625.pixnet.net
 zx17751391.pixnet.net
 zx79511191.blog.fc2.com
+zxc191228.pixnet.net
 zxhrh.blogspot.*
 zxmftjnuy.pixnet.net
 zxrxv37719.pixnet.net
