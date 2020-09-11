@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.helper
+package hk.collaction.contentfarmblocker.util
 
 import android.annotation.SuppressLint
 import android.app.usage.UsageStats
@@ -12,8 +12,7 @@ import androidx.annotation.RequiresApi
 import java.util.SortedMap
 import java.util.TreeMap
 
-@SuppressLint("WrongConstant")
-object AppUsageUtil {
+object AppUsageUtils {
     private const val PACKAGE_NAME_UNKNOWN = "unknown"
 
     /**
@@ -22,12 +21,21 @@ object AppUsageUtil {
      * @param context Context
      * @return boolean
      */
+    @SuppressLint("WrongConstant")
     fun checkAppUsagePermission(context: Context?): Boolean {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val usageStatsManager = context?.getSystemService("usagestats") as UsageStatsManager?
+            val usageStatsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
+                context?.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager?
+            } else {
+                context?.getSystemService("usagestats") as UsageStatsManager?
+            }
             val currentTime = System.currentTimeMillis()
             // try to get app usage state in last 1 min
-            val stats = usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, currentTime - 60 * 1000, currentTime)
+            val stats = usageStatsManager?.queryUsageStats(
+                UsageStatsManager.INTERVAL_DAILY,
+                currentTime - 60 * 1000,
+                currentTime
+            )
             stats?.isNullOrEmpty()?.let {
                 return !it
             }
@@ -47,13 +55,22 @@ object AppUsageUtil {
         }
     }
 
+    @SuppressLint("WrongConstant")
     fun getTopActivityPackageName(context: Context): String {
         var topActivityPackageName = PACKAGE_NAME_UNKNOWN
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val usageStatsManager = context.getSystemService("usagestats") as UsageStatsManager?
+            val usageStatsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
+                context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager?
+            } else {
+                context.getSystemService("usagestats") as UsageStatsManager?
+            }
             val time = System.currentTimeMillis()
             // We get usage stats for the last 10 seconds
-            val usageStatsList = usageStatsManager?.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, time - 1000 * 10, time)
+            val usageStatsList = usageStatsManager?.queryUsageStats(
+                UsageStatsManager.INTERVAL_DAILY,
+                time - 1000 * 10,
+                time
+            )
             // Sort the stats by the last time used
             if (usageStatsList != null) {
                 val sortedMap: SortedMap<Long, UsageStats> = TreeMap()

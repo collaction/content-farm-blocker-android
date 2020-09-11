@@ -1,6 +1,5 @@
-package hk.collaction.contentfarmblocker.helper
+package hk.collaction.contentfarmblocker.util
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
@@ -11,59 +10,24 @@ import android.content.res.Resources
 import android.net.Uri
 import android.os.Build
 import android.os.Handler
+import android.os.Looper
 import android.provider.Browser
-import android.provider.Settings
-import android.util.Log
-import android.widget.RelativeLayout
 import androidx.preference.PreferenceManager
-import com.blankj.utilcode.util.SizeUtils
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
-import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
+import com.orhanobut.logger.Logger
 import hk.collaction.contentfarmblocker.BuildConfig
-import hk.collaction.contentfarmblocker.ui.activity.DetectorActivity
-import hk.collaction.contentfarmblocker.ui.activity.MainActivity
-import java.math.BigInteger
-import java.security.MessageDigest
+import hk.collaction.contentfarmblocker.ui.detector.DetectorActivity
+import hk.collaction.contentfarmblocker.ui.main.MainActivity
 import java.util.Locale
 
 /**
- * UtilHelper Class
  * Created by Himphen on 10/1/2016.
  */
 object UtilHelper {
-    const val DELAY_AD_LAYOUT = 100L
     const val PREF_IAP = "iap"
     const val PREF_LANGUAGE = "PREF_LANGUAGE"
     const val PREF_LANGUAGE_COUNTRY = "PREF_LANGUAGE_COUNTRY"
-
-    fun initAdView(
-        context: Context?,
-        adLayout: RelativeLayout,
-        isPreserveSpace: Boolean = false
-    ): AdView? {
-        if (context == null) return null
-
-        if (isPreserveSpace) {
-            adLayout.layoutParams.height = SizeUtils.dp2px(50f)
-        }
-        val defaultPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
-        try {
-            if (!defaultPreferences.getBoolean(PREF_IAP, false)) {
-                val adView = AdView(context)
-                adView.adUnitId = BuildConfig.ADMOB_BANNER_ID
-                adView.adSize = AdSize.BANNER
-                adLayout.addView(adView)
-                adView.loadAd(AdRequest.Builder().build())
-                return adView
-            }
-        } catch (e: Exception) {
-            logException(e)
-        }
-        return null
-    }
 
     @Suppress("DEPRECATION")
     fun detectLanguage(context: Context) {
@@ -90,7 +54,6 @@ object UtilHelper {
         res.updateConfiguration(conf, dm)
     }
 
-    const val TAG = "TAG"
     const val IAP_PID_10 = "iap_10"
     const val IAP_PID_20 = "iap_20"
     const val IAP_PID_50 = "iap_50"
@@ -147,7 +110,7 @@ object UtilHelper {
                     activity.startActivity(intent)
                 }
             } finally {
-                Handler().postDelayed({
+                Handler(Looper.getMainLooper()).postDelayed({
                     toggleDefaultApp(activity, true)
                 }, 1000)
             }
@@ -164,13 +127,13 @@ object UtilHelper {
      */
     private fun isUsingSameTab(activity: Activity): Boolean {
         val settings = PreferenceManager.getDefaultSharedPreferences(activity)
-        if (AppUsageUtil.checkAppUsagePermission(activity) && settings.getBoolean(
+        if (AppUsageUtils.checkAppUsagePermission(activity) && settings.getBoolean(
                 "pref_previous_app_detect",
                 false
             )
         ) {
             val browserPackageName = settings.getString("pref_browser", "")
-            val lastAppPackageName = AppUsageUtil.getTopActivityPackageName(activity)
+            val lastAppPackageName = AppUsageUtils.getTopActivityPackageName(activity)
             return browserPackageName == lastAppPackageName
         }
         return true
@@ -197,7 +160,7 @@ object UtilHelper {
                     PackageManager.DONT_KILL_APP
                 )
             }
-            Log.d(TAG, "toggleDefaultApp() $isEnable")
+            Logger.d("toggleDefaultApp() $isEnable")
         }
     }
 
@@ -205,23 +168,7 @@ object UtilHelper {
         if (BuildConfig.DEBUG) {
             e.printStackTrace()
         } else {
-            FirebaseCrashlytics.getInstance().recordException(e)
+            Firebase.crashlytics.recordException(e)
         }
-    }
-
-    @SuppressLint("HardwareIds")
-    fun getAdMobDeviceID(context: Context): String {
-        val androidId =
-            Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
-        return androidId.md5().toUpperCase(Locale.getDefault())
-    }
-}
-
-fun String.md5(): String {
-    return try {
-        val md = MessageDigest.getInstance("MD5")
-        BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
-    } catch (e: Exception) {
-        ""
     }
 }

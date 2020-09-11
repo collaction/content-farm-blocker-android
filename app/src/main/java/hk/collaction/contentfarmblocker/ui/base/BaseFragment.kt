@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.fragment
+package hk.collaction.contentfarmblocker.ui.base
 
 import androidx.fragment.app.Fragment
 

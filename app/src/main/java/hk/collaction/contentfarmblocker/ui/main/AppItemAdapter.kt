@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.adapter
+package hk.collaction.contentfarmblocker.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -14,8 +14,8 @@ import hk.collaction.contentfarmblocker.model.AppItem
  * Created by himphen on 25/5/16.
  */
 class AppItemAdapter(
-        private val dataList: List<AppItem>,
-        private val listener: ItemClickListener
+    private val dataList: List<AppItem>,
+    private val listener: ItemClickListener
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface ItemClickListener {
@@ -23,7 +23,9 @@ class AppItemAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ItemViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_info_app, parent, false))
+        return ItemViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item_info_app, parent, false)
+        )
     }
 
     override fun onBindViewHolder(rawHolder: RecyclerView.ViewHolder, position: Int) {

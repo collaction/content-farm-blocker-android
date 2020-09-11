@@ -5,7 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.preference.PreferenceManager
-import hk.collaction.contentfarmblocker.helper.UtilHelper.toggleDefaultApp
+import hk.collaction.contentfarmblocker.util.UtilHelper.toggleDefaultApp
 
 /*
   Created by Himphen on 2/9/2017.

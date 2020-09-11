@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.fragment
+package hk.collaction.contentfarmblocker.ui.blocker
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.preference.PreferenceManager
 import com.afollestad.materialdialogs.MaterialDialog
 import hk.collaction.contentfarmblocker.R
-import hk.collaction.contentfarmblocker.helper.UtilHelper
+import hk.collaction.contentfarmblocker.ui.base.BaseFragment
+import hk.collaction.contentfarmblocker.util.UtilHelper
 import kotlinx.android.synthetic.main.fragment_blocker.*
 
 /**
@@ -27,8 +28,10 @@ class BlockerFragment : BaseFragment() {
         domain = arguments?.getString("domain") ?: ""
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_blocker, container, false)
     }
 
@@ -43,17 +46,17 @@ class BlockerFragment : BaseFragment() {
     private fun showWhiteConfirmDialog() {
         context?.let { context ->
             MaterialDialog(context)
-                    .title(R.string.ui_add_to_whitelist)
-                    .message(R.string.ui_whitelist_message)
-                    .positiveButton(R.string.ui_okay) {
-                        val settings = PreferenceManager.getDefaultSharedPreferences(context)
-                        var result = settings.getString("pref_whitelist", "")
-                        result = (domain.trim { it <= ' ' } + "\n" + result).trim { it <= ' ' }
-                        settings.edit().putString("pref_whitelist", result).apply()
-                        UtilHelper.goToUrl(activity, urlString)
-                    }
-                    .negativeButton(R.string.ui_cancel)
-                    .show()
+                .title(R.string.ui_add_to_whitelist)
+                .message(R.string.ui_whitelist_message)
+                .positiveButton(R.string.ui_okay) {
+                    val settings = PreferenceManager.getDefaultSharedPreferences(context)
+                    var result = settings.getString("pref_whitelist", "")
+                    result = (domain.trim { it <= ' ' } + "\n" + result).trim { it <= ' ' }
+                    settings.edit().putString("pref_whitelist", result).apply()
+                    UtilHelper.goToUrl(activity, urlString)
+                }
+                .negativeButton(R.string.ui_cancel)
+                .show()
         }
     }
 

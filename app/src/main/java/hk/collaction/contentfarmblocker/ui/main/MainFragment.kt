@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.fragment
+package hk.collaction.contentfarmblocker.ui.main
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -26,18 +26,16 @@ import com.anjlab.android.iab.v3.TransactionDetails
 import com.blankj.utilcode.util.AppUtils
 import hk.collaction.contentfarmblocker.BuildConfig
 import hk.collaction.contentfarmblocker.R
-import hk.collaction.contentfarmblocker.helper.AppUsageUtil
-import hk.collaction.contentfarmblocker.helper.UtilHelper
-import hk.collaction.contentfarmblocker.helper.UtilHelper.IAP_PID_10
-import hk.collaction.contentfarmblocker.helper.UtilHelper.IAP_PID_20
-import hk.collaction.contentfarmblocker.helper.UtilHelper.IAP_PID_50
-import hk.collaction.contentfarmblocker.helper.UtilHelper.PREF_IAP
-import hk.collaction.contentfarmblocker.helper.UtilHelper.isPurchased
-import hk.collaction.contentfarmblocker.helper.UtilHelper.toggleDefaultApp
 import hk.collaction.contentfarmblocker.model.AppItem
-import hk.collaction.contentfarmblocker.ui.activity.MainActivity
-import hk.collaction.contentfarmblocker.ui.adapter.AppItemAdapter
-import hk.collaction.contentfarmblocker.ui.adapter.AppItemAdapter.ItemClickListener
+import hk.collaction.contentfarmblocker.ui.main.AppItemAdapter.ItemClickListener
+import hk.collaction.contentfarmblocker.util.AppUsageUtils
+import hk.collaction.contentfarmblocker.util.UtilHelper
+import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_10
+import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_20
+import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_50
+import hk.collaction.contentfarmblocker.util.UtilHelper.PREF_IAP
+import hk.collaction.contentfarmblocker.util.UtilHelper.isPurchased
+import hk.collaction.contentfarmblocker.util.UtilHelper.toggleDefaultApp
 import java.lang.ref.WeakReference
 import java.util.ArrayList
 import java.util.Random
@@ -139,7 +137,8 @@ class MainFragment : PreferenceFragmentCompat() {
         findPreference<Preference>("pref_default_list")?.onPreferenceClickListener =
             Preference.OnPreferenceClickListener {
                 try {
-                    val uri = Uri.parse("https://github.com/collaction/content-farm-blocker-android/blob/master/app/src/main/res/raw/site.txt")
+                    val uri =
+                        Uri.parse("https://github.com/collaction/content-farm-blocker-android/blob/master/app/src/main/res/raw/site.txt")
                     val intent = Intent(Intent.ACTION_VIEW, uri)
                     startActivity(intent)
                 } catch (e: ActivityNotFoundException) {
@@ -307,7 +306,7 @@ class MainFragment : PreferenceFragmentCompat() {
         super.onResume()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             prefPreviousAppDetect?.isEnabled = true
-            if (AppUsageUtil.checkAppUsagePermission(context)) {
+            if (AppUsageUtils.checkAppUsagePermission(context)) {
                 if (sharedPreferences.getBoolean("pref_previous_app_detect", false)) {
                     prefPreviousAppDetect?.summary =
                         getString(R.string.pref_previous_app_summary_on)
@@ -332,7 +331,7 @@ class MainFragment : PreferenceFragmentCompat() {
                 prefPreviousAppDetect?.summary = getString(R.string.pref_previous_app_permission)
                 prefPreviousAppDetect?.onPreferenceClickListener =
                     Preference.OnPreferenceClickListener {
-                        AppUsageUtil.requestAppUsagePermission(context)
+                        AppUsageUtils.requestAppUsagePermission(context)
                         false
                     }
                 prefPreviousAppDetect?.onPreferenceChangeListener =

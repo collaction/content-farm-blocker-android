@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "hk.collaction.contentfarmblocker"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 194102 // 0 = alpha, 1 = beta, 2 = release
         versionName "Herbicide 410"
         multiDexEnabled true
@@ -23,9 +24,6 @@ android {
             debuggable true
             minifyEnabled false
             shrinkResources false
-            buildConfigField "String", "ADMOB_BANNER_ID", properties.getProperty('key.admob_banner_id')
-            buildConfigField "String", "ADMOB_APP_ID", properties.getProperty("key.admob_app_id")
-            resValue "string", "ADMOB_APP_ID", properties.getProperty("key.admob_app_id")
             buildConfigField "String", "GOOGLE_IAP_KEY", properties.getProperty("key.google_iap_key")
             buildConfigField "String", "CONTACT_EMAIL", properties.getProperty("key.contact_email")
         }
@@ -34,9 +32,6 @@ android {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "ADMOB_BANNER_ID", properties.getProperty('key.admob_banner_id')
-            buildConfigField "String", "ADMOB_APP_ID", properties.getProperty("key.admob_app_id")
-            resValue "string", "ADMOB_APP_ID", properties.getProperty("key.admob_app_id")
             buildConfigField "String", "GOOGLE_IAP_KEY", properties.getProperty("key.google_iap_key")
             buildConfigField "String", "CONTACT_EMAIL", properties.getProperty("key.contact_email")
         }
@@ -60,19 +55,18 @@ dependencies {
     // Jetbrains
     implementation 'org.jetbrains:annotations:19.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
 
     // Google Android Support
-    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation "androidx.core:core-ktx:1.3.0"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.core:core-ktx:1.3.1"
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'com.google.android.gms:play-services-ads:19.2.0'
-    implementation 'com.google.android.material:material:1.1.0'
-    implementation 'com.google.firebase:firebase-core:17.4.3'
-    implementation 'com.google.firebase:firebase-crashlytics:17.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:17.2.1'
 
     // Material Dialog
     implementation 'com.afollestad.material-dialogs:core:3.1.1'

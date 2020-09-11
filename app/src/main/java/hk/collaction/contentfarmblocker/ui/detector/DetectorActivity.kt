@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.activity
+package hk.collaction.contentfarmblocker.ui.detector
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.preference.PreferenceManager
 import hk.collaction.contentfarmblocker.R
-import hk.collaction.contentfarmblocker.helper.UtilHelper.goToUrl
+import hk.collaction.contentfarmblocker.ui.base.BaseActivity
+import hk.collaction.contentfarmblocker.ui.blocker.BlockerActivity
+import hk.collaction.contentfarmblocker.util.UtilHelper.goToUrl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -57,7 +59,6 @@ class DetectorActivity : BaseActivity() {
             }
         }
     }
-
 
     private fun isContentFarm(domain: String, settings: SharedPreferences): Boolean {
         val whitelistArray =

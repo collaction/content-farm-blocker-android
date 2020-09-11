@@ -11,7 +11,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name="hk.collaction.contentfarmblocker.App"
+        android:name="hk.collaction.contentfarmblocker.core.App"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,7 +25,7 @@
         </receiver>
 
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.DetectorActivity"
+            android:name=".ui.detector.DetectorActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true"
@@ -52,23 +52,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.BlockerActivity"
+            android:name=".ui.blocker.BlockerActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true" />
-
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
-        <!-- For Google Ads -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/ADMOB_APP_ID" />
 
         <meta-data
             android:name="com.google.android.gms.version"

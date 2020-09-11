@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.ui.activity
+package hk.collaction.contentfarmblocker.ui.base
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import hk.collaction.contentfarmblocker.R
-import hk.collaction.contentfarmblocker.helper.UtilHelper.detectLanguage
+import hk.collaction.contentfarmblocker.util.UtilHelper.detectLanguage
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
@@ -31,9 +31,9 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected fun initActionBar(
-            toolbar: Toolbar,
-            titleString: String? = null, subtitleString: String? = null,
-            @StringRes titleId: Int? = null, @StringRes subtitleId: Int? = null
+        toolbar: Toolbar,
+        titleString: String? = null, subtitleString: String? = null,
+        @StringRes titleId: Int? = null, @StringRes subtitleId: Int? = null
     ) {
         setSupportActionBar(toolbar)
         supportActionBar?.let { ab ->
@@ -60,8 +60,8 @@ abstract class BaseActivity : AppCompatActivity() {
             initActionBar(toolbar, titleString = titleString, titleId = titleId)
 
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment)
-                    .commit()
+                .replace(R.id.container, fragment)
+                .commit()
         }
     }
 }
