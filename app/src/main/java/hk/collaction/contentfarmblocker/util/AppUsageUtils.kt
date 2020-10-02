@@ -23,22 +23,20 @@ object AppUsageUtils {
      */
     @SuppressLint("WrongConstant")
     fun checkAppUsagePermission(context: Context?): Boolean {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val usageStatsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-                context?.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager?
-            } else {
-                context?.getSystemService("usagestats") as UsageStatsManager?
-            }
-            val currentTime = System.currentTimeMillis()
-            // try to get app usage state in last 1 min
-            val stats = usageStatsManager?.queryUsageStats(
-                UsageStatsManager.INTERVAL_DAILY,
-                currentTime - 60 * 1000,
-                currentTime
-            )
-            stats?.isNullOrEmpty()?.let {
-                return !it
-            }
+        val usageStatsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
+            context?.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager?
+        } else {
+            context?.getSystemService("usagestats") as UsageStatsManager?
+        }
+        val currentTime = System.currentTimeMillis()
+        // try to get app usage state in last 1 min
+        val stats = usageStatsManager?.queryUsageStats(
+            UsageStatsManager.INTERVAL_DAILY,
+            currentTime - 60 * 1000,
+            currentTime
+        )
+        stats?.isNullOrEmpty()?.let {
+            return !it
         }
 
         return false

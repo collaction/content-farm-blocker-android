@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -29,14 +28,13 @@ import hk.collaction.contentfarmblocker.R
 import hk.collaction.contentfarmblocker.model.AppItem
 import hk.collaction.contentfarmblocker.ui.main.AppItemAdapter.ItemClickListener
 import hk.collaction.contentfarmblocker.util.AppUsageUtils
-import hk.collaction.contentfarmblocker.util.UtilHelper
-import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_10
-import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_20
-import hk.collaction.contentfarmblocker.util.UtilHelper.IAP_PID_50
-import hk.collaction.contentfarmblocker.util.UtilHelper.PREF_IAP
-import hk.collaction.contentfarmblocker.util.UtilHelper.isPurchased
-import hk.collaction.contentfarmblocker.util.UtilHelper.toggleDefaultApp
-import java.lang.ref.WeakReference
+import hk.collaction.contentfarmblocker.util.Utils
+import hk.collaction.contentfarmblocker.util.Utils.IAP_PID_10
+import hk.collaction.contentfarmblocker.util.Utils.IAP_PID_20
+import hk.collaction.contentfarmblocker.util.Utils.IAP_PID_50
+import hk.collaction.contentfarmblocker.util.Utils.PREF_IAP
+import hk.collaction.contentfarmblocker.util.Utils.isPurchased
+import hk.collaction.contentfarmblocker.util.Utils.toggleDefaultApp
 import java.util.ArrayList
 import java.util.Random
 
@@ -180,9 +178,9 @@ class MainFragment : PreferenceFragmentCompat() {
                             resources.getStringArray(R.array.language_locale_code)
                         val languageLocaleCountryCodeArray =
                             resources.getStringArray(R.array.language_locale_country_code)
-                        editor.putString(UtilHelper.PREF_LANGUAGE, languageLocaleCodeArray[index])
+                        editor.putString(Utils.PREF_LANGUAGE, languageLocaleCodeArray[index])
                             .putString(
-                                UtilHelper.PREF_LANGUAGE_COUNTRY,
+                                Utils.PREF_LANGUAGE_COUNTRY,
                                 languageLocaleCountryCodeArray[index]
                             )
                             .apply()
@@ -353,45 +351,29 @@ class MainFragment : PreferenceFragmentCompat() {
      * Get all browser apps
      */
     private fun loadBrowserList() {
-        LoadBrowserListAsyncTask(activity, prefBrowser).execute()
-    }
+        activity?.let { activity ->
+            val appList = ArrayList<AppItem>()
+            var browserDialog: MaterialDialog? = null
 
-    class LoadBrowserListAsyncTask(
-        private val activity: Activity?,
-        private val prefBrowser: Preference?
-    ) : AsyncTask<Void?, Void?, Void?>() {
-
-        private val activityReference: WeakReference<Activity> = WeakReference<Activity>(activity)
-        private val settings: SharedPreferences =
-            PreferenceManager.getDefaultSharedPreferences(activity)
-        private var progressDialog: MaterialDialog? = null
-        private var browserDialog: MaterialDialog? = null
-        private val appList = ArrayList<AppItem>()
-
-        override fun onPreExecute() {
-            super.onPreExecute()
-            activityReference.get()?.let { activity ->
-                progressDialog = MaterialDialog(activity)
-                    .message(R.string.ui_loading)
-                    .cancelable(false)
-            }
-            progressDialog?.show()
             toggleDefaultApp(activity, false)
-        }
 
-        override fun doInBackground(vararg voids: Void?): Void? {
-            appList.clear()
-            val packageManager = activityReference.get()?.packageManager
+            val packageManager = activity.packageManager
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
-            val pkgAppsList = packageManager?.queryIntentActivities(intent, 0)
+            val pkgAppsList = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                packageManager?.queryIntentActivities(intent, PackageManager.MATCH_ALL)
+            } else {
+                packageManager?.queryIntentActivities(intent, 0)
+            }
+
             pkgAppsList?.let {
                 for (info in pkgAppsList) {
                     val packageName = info.activityInfo.packageName
                     /* Just skip this app */
-                    if (packageName == activityReference.get()?.packageName) {
+                    if (packageName == activity.packageName) {
                         continue
                     }
-                    /* Add the browser to the appList */try {
+                    /* Add the browser to the appList */
+                    try {
                         val applicationInfo = packageManager.getApplicationInfo(packageName, 0)
                         appList.add(
                             AppItem(
@@ -404,43 +386,28 @@ class MainFragment : PreferenceFragmentCompat() {
                     }
                 }
             }
-            /* Making the loading longer would make the world better */
-            try {
-                Thread.sleep(500)
-            } catch (ignored: InterruptedException) {
+
+            if (sharedPreferences.getBoolean("pref_enable", false)) {
+                toggleDefaultApp(activity, true)
             }
-            return null
+
+            val appItemAdapter = AppItemAdapter(appList, object : ItemClickListener {
+                override fun onItemDetailClick(appItem: AppItem) {
+                    sharedPreferences.edit()
+                        .putString("pref_browser", appItem.packageName)
+                        .putString("pref_browser_app_name", appItem.appName)
+                        .apply()
+                    prefBrowser?.summary =
+                        sharedPreferences.getString("pref_browser_app_name", appItem.appName)
+                    browserDialog?.dismiss()
+                }
+            })
+            browserDialog = MaterialDialog(activity)
+                .title(R.string.pref_browser_title)
+                .customListAdapter(appItemAdapter)
+                .negativeButton(R.string.ui_cancel)
+            browserDialog.show()
         }
-
-        override fun onPostExecute(aVoid: Void?) {
-            super.onPostExecute(aVoid)
-            if (settings.getBoolean("pref_enable", false)) {
-                toggleDefaultApp(activityReference.get(), true)
-            }
-
-            progressDialog?.dismiss()
-
-            activityReference.get()?.let { activity ->
-                val appItemAdapter = AppItemAdapter(appList, object : ItemClickListener {
-                    override fun onItemDetailClick(appItem: AppItem) {
-                        settings.edit()
-                            .putString("pref_browser", appItem.packageName)
-                            .putString("pref_browser_app_name", appItem.appName)
-                            .apply()
-                        prefBrowser?.summary =
-                            settings.getString("pref_browser_app_name", appItem.appName)
-                        browserDialog?.dismiss()
-                    }
-                })
-
-                browserDialog = MaterialDialog(activity)
-                    .title(R.string.pref_browser_title)
-                    .customListAdapter(appItemAdapter)
-                    .negativeButton(R.string.ui_cancel)
-                browserDialog?.show()
-            }
-        }
-
     }
 
     private fun checkPayment(productId: String) {

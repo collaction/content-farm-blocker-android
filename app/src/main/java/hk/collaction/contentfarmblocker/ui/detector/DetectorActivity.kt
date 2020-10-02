@@ -8,7 +8,7 @@ import androidx.preference.PreferenceManager
 import hk.collaction.contentfarmblocker.R
 import hk.collaction.contentfarmblocker.ui.base.BaseActivity
 import hk.collaction.contentfarmblocker.ui.blocker.BlockerActivity
-import hk.collaction.contentfarmblocker.util.UtilHelper.goToUrl
+import hk.collaction.contentfarmblocker.util.Utils.goToUrl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

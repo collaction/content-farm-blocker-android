@@ -1,4 +1,4 @@
-package hk.collaction.contentfarmblocker.util.extension
+package hk.collaction.contentfarmblocker.util.ext
 
 import java.math.BigInteger
 import java.security.MessageDigest

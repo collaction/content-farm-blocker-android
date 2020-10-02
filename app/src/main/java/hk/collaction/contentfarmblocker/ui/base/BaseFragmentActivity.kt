@@ -3,7 +3,7 @@ package hk.collaction.contentfarmblocker.ui.base
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import hk.collaction.contentfarmblocker.util.UtilHelper.detectLanguage
+import hk.collaction.contentfarmblocker.util.Utils.detectLanguage
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**

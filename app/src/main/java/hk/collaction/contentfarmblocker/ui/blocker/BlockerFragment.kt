@@ -8,7 +8,7 @@ import androidx.preference.PreferenceManager
 import com.afollestad.materialdialogs.MaterialDialog
 import hk.collaction.contentfarmblocker.R
 import hk.collaction.contentfarmblocker.ui.base.BaseFragment
-import hk.collaction.contentfarmblocker.util.UtilHelper
+import hk.collaction.contentfarmblocker.util.Utils
 import kotlinx.android.synthetic.main.fragment_blocker.*
 
 /**
@@ -39,7 +39,7 @@ class BlockerFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         domainTv.text = String.format("%s %s", domain, domainTv.text)
         backButton.setOnClickListener { activity?.finish() }
-        goButton.setOnClickListener { UtilHelper.goToUrl(activity, urlString) }
+        goButton.setOnClickListener { Utils.goToUrl(activity, urlString) }
         whitelistButton.setOnClickListener { showWhiteConfirmDialog() }
     }
 
@@ -53,7 +53,7 @@ class BlockerFragment : BaseFragment() {
                     var result = settings.getString("pref_whitelist", "")
                     result = (domain.trim { it <= ' ' } + "\n" + result).trim { it <= ' ' }
                     settings.edit().putString("pref_whitelist", result).apply()
-                    UtilHelper.goToUrl(activity, urlString)
+                    Utils.goToUrl(activity, urlString)
                 }
                 .negativeButton(R.string.ui_cancel)
                 .show()

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import hk.collaction.contentfarmblocker.R
-import hk.collaction.contentfarmblocker.util.UtilHelper.detectLanguage
+import hk.collaction.contentfarmblocker.util.Utils.detectLanguage
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**

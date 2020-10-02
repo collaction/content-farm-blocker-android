@@ -24,7 +24,7 @@ import java.util.Locale
 /**
  * Created by Himphen on 10/1/2016.
  */
-object UtilHelper {
+object Utils {
     const val PREF_IAP = "iap"
     const val PREF_LANGUAGE = "PREF_LANGUAGE"
     const val PREF_LANGUAGE_COUNTRY = "PREF_LANGUAGE_COUNTRY"
@@ -144,24 +144,24 @@ object UtilHelper {
     }
 
     fun toggleDefaultApp(context: Context?, isEnable: Boolean) {
-        if (context != null) {
-            val pm = context.packageManager
-            val component = ComponentName(context, DetectorActivity::class.java)
-            if (isEnable) {
-                pm.setComponentEnabledSetting(
-                    component,
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.DONT_KILL_APP
-                )
-            } else {
-                pm.setComponentEnabledSetting(
-                    component,
-                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                    PackageManager.DONT_KILL_APP
-                )
-            }
-            Logger.d("toggleDefaultApp() $isEnable")
+        if (context == null) return
+
+        val pm = context.packageManager
+        val component = ComponentName(context, DetectorActivity::class.java)
+        if (isEnable) {
+            pm.setComponentEnabledSetting(
+                component,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP
+            )
+        } else {
+            pm.setComponentEnabledSetting(
+                component,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP
+            )
         }
+        Logger.d("toggleDefaultApp() $isEnable")
     }
 
     fun logException(e: Exception) {
